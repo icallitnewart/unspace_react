@@ -1,0 +1,351 @@
+.contact {
+
+    .visual_sub {
+        .inner {
+            .pic {
+                //background: url(../img/visual_sub_contact.jpg) top/cover;
+            }
+        }
+    }
+    
+    
+    
+    .container {
+        width: 100%;
+        padding-top: 50px;
+    
+        .inner {
+            display: flex;
+            width: 1180px;
+            margin: 50px auto 100px auto;
+    
+            .title {
+                width: 20%;
+                font: 600 30px/1.3 $font1;
+                color: $mainColor;
+                text-align: right;
+            }
+        }
+    }
+
+    
+    
+    // Get in touch CSS
+    .container.getintouch {
+
+        .contactForm {
+            width: 50%;
+            padding: 0px 50px 30px;
+
+            h2 {
+                text-align: right;
+
+                span {
+                    display: inline-block;
+                    font: 600 20px/1 $font1;
+                    color: #fff;
+                    background: $mainColor;
+                    padding: 10px;
+                }
+            }
+
+            fieldset { border: 0; }
+
+            table {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0 20px;
+                margin-top: -10px;
+
+                tr {
+                    width: 100%;
+                    padding: 0px 20px;
+
+                    &.errMsg {
+                        th {
+                            opacity: 0;
+                        }
+
+                        td {
+                            font: 600 12px/1 $font2;
+                            color: $pointColor;
+                            padding-left: 1em;
+                            
+                        }
+                    }
+
+                    &.formBtns {
+                        th {
+                            width: 100%;
+                            background: transparent;
+                            padding-top: 20px;
+                            font-size: 0;
+
+                            input {
+                                display: inline-block;
+                                width: 150px;
+                                height: 45px;
+                                margin-right: 10px;
+                                font: 600 12px/1 $font1;
+                                letter-spacing: 1px;
+                                cursor: pointer;
+                            }
+
+                            input[type=reset] {
+                                border: 1px solid $mainColor;
+                                background: #fff;
+                                color: $mainColor;
+                            }
+
+                            input[type=submit] {
+                                border: 0;
+                                border: 0;
+                                background: $mainColor;
+                                color: #fff;
+                                transition: .5s;
+
+                                &:hover {
+                                    color: $pointColor;
+                                }
+                            }
+                        }
+                    }
+
+                    th:not(:last-child) {
+                        display: block;
+                        width: 100%;
+                        min-width: 120px;
+                        height: 20px;
+                        text-align: left;
+                        
+                        font: 600 14px/10px $font1;
+                        color: $mainColor;
+                    }
+
+                    td {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        font-size: 0;
+
+                        input[type=text], input[type=number], input[type=email] {
+                            width: 100%;
+                            height: 45px;
+                            border: 0;
+                            text-indent: 1em;
+                            font: 14px/1 $font1;
+                            color: #333;
+                            outline: none;
+                            border: 1px solid $subColor1;
+                            border-bottom: 4px solid $subColor1;
+                        }
+
+                        textarea {
+                            width: 100%;
+                            height: 200px;
+                            resize: none;
+                            border: 0;
+                            font: 14px/1 $font1;
+                            color: #333;
+                            outline: none;
+                            text-indent: 1em;
+                            padding: 20px 0;
+                            border: 1px solid $subColor1;
+                            border-bottom: 4px solid $subColor1;
+                        }
+
+                    }
+                    
+                }
+            }
+        }
+
+        .contactDetail {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: space-between;
+            width: 30%;
+            height: 650px;
+            padding: 50px;
+            border-left: 1px solid #ddd;
+
+            div {
+
+                h3, h4, h5 {
+                    font: 600 16px/1 $font1;
+                    color: #555;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font: normal 14px/1.3 $font2;
+                    color: #666;
+                    margin-bottom: 10px;
+                }
+                
+                a {
+                    font: 500 14px/1 $font1;
+                    color: #555;
+
+                    &:hover {
+                        color: $pointColor;
+                    }
+
+                    i {
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background: $pointColor;
+                        color: #fff;
+                        font-size: 10px;
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+    }
+
+    .container.location {
+        margin-bottom: 150px;
+
+        .location {
+            position: relative;
+            width: 100%;
+            height: 444px;
+            margin: 0 50px;
+    
+            h1 {
+                font: 600 24px/1 $font1;
+    
+                span {
+                    display: inline-block;
+                    padding: 10px;
+                    color: #fff;
+                    background: $mainColor;
+                }
+            }
+    
+            #map {
+                width: 70%;
+                height: calc(100% - 44px);
+                filter: grayscale(.7);
+                transition: .5s;
+                float: left;
+    
+                &:hover {
+                    filter: grayscale(0);
+                }
+            }
+    
+            .branchBtns {
+                position: absolute;
+                bottom: 0px;
+                right: calc(30% + 10px);
+                display: flex;
+                flex-direction: column;
+                width: 120px;
+    
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 120px;
+                    height: 50px;
+                    margin-bottom: 10px;
+                    font: 600 12px/1 $font1;
+                    border: 1px solid $mainColor;
+                    background: #fff;
+                    color: $mainColor;
+                    transition: .5s;
+    
+                    span {
+                        display: block;
+                        margin-top: 5px;
+                        font: 600 10px/1 $font1;
+                    }
+    
+                    &.on, &:hover {
+                        background: $mainColor; 
+                        color: #fff; 
+                        span { color: $pointColor; }
+                    }
+                }
+            }
+    
+            .address {
+                width: 28%;
+                margin-left: 2%;
+                height: calc(100% - 44px);
+                float: left;
+                text-align: center;
+                border: 2px solid #eee;
+    
+                .officeTitle {
+                    width: 100%;
+                    padding: 35px 20px;
+                    background: #eee;
+    
+                    h2 {
+                        font: bold 20px/1 $font1;
+                        color: $mainColor;
+                        margin-bottom: 10px;
+                        letter-spacing: 1px;
+                    }
+    
+                    h3 {
+                        font: 600 14px/1 $font1;
+                        color: $mainColor;
+                    }
+    
+                }
+    
+                .addressDetail {
+                    width: 100%;
+                    height: calc(100% - 114px);
+                    padding: 45px 30px;
+    
+                    h4 {
+                        font: 600 14px/1.5 $font1;
+                        color: #333;
+                        margin-bottom: 20px;
+                        
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 20px;
+                            height: 2px;
+                            background: $mainColor;
+                            margin: 0 auto;
+                            margin-top: 15px;
+                        }
+                    }
+    
+                    p {
+                        font: 600 12px/1.5 $font1;
+                        color: #555;
+                        margin-bottom: 10px;
+    
+                        span {
+                            color: $pointColor;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                }
+    
+    
+            &::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+    }
+    
+    
+    
+}

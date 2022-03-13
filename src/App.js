@@ -1,4 +1,5 @@
 import { Route, Switch } from 'react-router-dom';
+import "./css/style.css";
 
 //pages
 import Home from "./pages/Home";
@@ -6,11 +7,11 @@ import About from "./pages/About";
 import Media from "./pages/Media";
 import Community from "./pages/Community";
 import Contact from "./pages/Contact";
-import Join from "./pages/Join";
-import Login from "./pages/Login";
+import Membership from "./pages/Membership";
 
 //components
 import Header from "./components/common/Header";
+import Footer from "./components/common/Footer";
 
 function App() {
   return (
@@ -24,8 +25,8 @@ function App() {
       <Route exact path="/media" component={Media}></Route>
       <Route exact path="/community" component={Community}></Route>
       <Route exact path="/contact" component={Contact}></Route>
-      <Route exact path="/join" component={Join}></Route>
-      <Route exact path="/login" component={Login}></Route>
+      <Route exact path="/membership" component={Membership}></Route>
+      <Route path="/" component={Footer}></Route>
     </div>
   );
 }
