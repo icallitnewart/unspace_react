@@ -4,7 +4,7 @@ import About from "../components/home/About";
 import Location from "../components/home/Location";
 import Philosophy from "../components/home/Philosophy";
 import Quote from "../components/home/Quote";
-import Style from "../components/home/Style";
+import Gallery from "../components/home/Gallery";
 import Subscribe from "../components/home/Subscribe";
 import Trending from "../components/home/Trending";
 import Visual from "../components/home/Visual";
@@ -19,7 +19,7 @@ function Home() {
             <Philosophy />
             <Quote />
             <Subscribe />
-            <Style />
+            <Gallery />
             <Location />
         </>
     )

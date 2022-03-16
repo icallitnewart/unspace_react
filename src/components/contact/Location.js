@@ -1,4 +1,11 @@
+import { useEffect } from "react";
+import CreateMap from "../../hooks/map.js";
+
 function Location() {
+    useEffect(()=> {
+        new CreateMap(".location", ".branchBtns");
+    });
+
     return (
         <section className="container location">
             <div className="inner">

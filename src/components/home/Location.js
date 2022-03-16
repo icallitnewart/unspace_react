@@ -1,4 +1,11 @@
+import { useEffect } from "react";
+import CreateMap from "../../hooks/map.js";
+
 function Location() {
+    useEffect(()=> {
+        const map = new CreateMap("#location", ".branchBtns");
+    });
+
     return (
         <section id="location">
             <div className="inner">

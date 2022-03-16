@@ -609,12 +609,17 @@
             li {
                 margin-right: 20px;
 
-                a {
+                span {
                     font: 600 14px/1 $font1;
                     color: $subColor1;
+                    cursor: pointer;
+
+                    &::before {
+                        content: "#";
+                    }
                 }
                 
-                &.on a, &:hover a {
+                &.on span, &:hover span {
                     color: $pointColor;
                 }
             }
