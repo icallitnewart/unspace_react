@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useFetchFlickrData } from "../../hooks/useFetchFlickrData.js";
+import Loader from "../common/Loader";
 
 function Projects() {
     const [ enableClick, setEnableClick ] = useState(true);
@@ -50,9 +51,8 @@ function Projects() {
                         )
                     }   
                     </ul>
-                    {
-                    !isLoaded 
-                    ? <p>로딩중</p>
+                    {!isLoaded 
+                    ? <Loader />
                     : <div className="wrap" ref={pics}>
                         {
                             flickrData.map((item, index)=> {

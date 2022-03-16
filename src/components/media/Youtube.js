@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState, useRef } from "react";
+import Loader from "../common/Loader";
 
 function Youtube() {
     const [ videos, setVideos ] = useState([]);
@@ -45,7 +46,7 @@ function Youtube() {
                 
                 {
                     !isLoaded
-                    ? <p>로딩중입니다</p>
+                    ? <Loader />
                     : videos.map((video, index)=> {
                         const title = video.snippet.title;
                         let date = video.snippet.publishedAt;

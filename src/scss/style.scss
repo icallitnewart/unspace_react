@@ -28,7 +28,54 @@ $mobile: 599px;
 @import "./sub/contact";
 
 
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+
+    .dots {
+        display: flex;
+        justify-content: space-around;
+        width: 110px;
+    
+        .dot {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            animation: loading 2s infinite ease-in-out;
+            background-color: $subColor1;
+
+            @for $i from 1 through 4 {
+                &:nth-child(#{$i}) {
+                    animation-delay: 0s + .5 * $i;
+                }
+            }
+        }
+    }
+}
+
+
 //animation
+@keyframes loading {
+    0% {
+        opacity: .4;
+        transform: scale(1, 1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        opacity: .4;
+        transform: scale(1, 1);
+    }
+}
+
 @keyframes moveRight {
     0% {
         transform: translate(-100%, 50%);

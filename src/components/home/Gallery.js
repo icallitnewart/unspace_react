@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useFetchFlickrData } from "../../hooks/useFetchFlickrData.js";
+import Loader from "../common/Loader";
 
 function Gallery() {
     //flickr 데이터 타입
@@ -10,6 +11,8 @@ function Gallery() {
     const [ flickr, isLoaded ] = useFetchFlickrData(tagType); 
     const [ flickrData, setFlickrData ] = useState([]);
     const [ bigImg, setBigImg ] = useState(null);
+
+    console.log(isLoaded);
 
     useEffect(()=> {
         setFlickrData(flickr);
@@ -34,8 +37,9 @@ function Gallery() {
                     )
                 }   
                 </ul>
-                {!isLoaded && <p>로딩중</p>}
-                <div className="wrap">
+                {!isLoaded
+                ? <Loader />
+                : <div className="wrap">
                     <article>
                         {(bigImg) && <img src={`https://live.staticflickr.com/${bigImg.server}/${bigImg.id}_${bigImg.secret}_b.jpg`} />}
                     </article>
@@ -51,6 +55,7 @@ function Gallery() {
                         })
                     }
                 </div>
+                }
             </div>
         </section>
     )
