@@ -33,6 +33,44 @@
     // Get in touch CSS
     .container.getintouch {
 
+        .success {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: flex-start;
+            width: 50%;
+            padding: 70px;
+            text-align: center;
+            
+            .mailIcon {
+                font-size: 70px;
+                margin-bottom: 10px;
+                color: $mainColor;
+            }
+
+            h2 {
+                font: bold 30px/1.3 $font1;
+                margin-bottom: 40px;
+                color: $mainColor;
+            }
+
+            div {
+                display: flex;
+                justify-content: space-around;
+                width: 100px;
+                color: $mainColor;
+                margin-bottom: 40px;
+            }
+
+            p {
+                font: 18px/1.5 $font1;
+                color: $subColor1;
+                padding: 30px;
+                background: $subColor1;
+                color: #fff;
+            }
+        }
+
         .contactForm {
             width: 50%;
             padding: 0px 50px 30px;
@@ -60,19 +98,6 @@
                 tr {
                     width: 100%;
                     padding: 0px 20px;
-
-                    &.errMsg {
-                        th {
-                            opacity: 0;
-                        }
-
-                        td {
-                            font: 600 12px/1 $font2;
-                            color: $pointColor;
-                            padding-left: 1em;
-                            
-                        }
-                    }
 
                     &.formBtns {
                         th {
@@ -112,7 +137,8 @@
                     }
 
                     th:not(:last-child) {
-                        display: block;
+                        display: flex;
+                        justify-content: space-between;
                         width: 100%;
                         min-width: 120px;
                         height: 20px;
@@ -120,6 +146,15 @@
                         
                         font: 600 14px/10px $font1;
                         color: $mainColor;
+
+                        .errMsg {
+                            font: bold 12px/1 $font1;
+                            color: $pointColor;
+
+                            &::before {
+                                content: "*";
+                            }
+                        }
                     }
 
                     td {

@@ -1,63 +1,169 @@
+import { useEffect } from "react";
+import { useState } from "react";
+
 function Getintouch() {
+    const initValue = {
+        username: "",
+        phoneNum: "",
+        email: "",
+        enquiry: ""
+    }
+    const [ input, setInput ] = useState(initValue);
+    const [ err, setErr ] = useState({});
+    const [ isSubmit, setIsSubmit ] = useState(false);
+    const [ success, setSuccess ] = useState(false);
+
+    const handleChange = (e)=> {
+        const { name, value } = e.target;
+        setInput({ ...input, [name] : value });
+    };
+
+    //폼 유효성 검사
+    const checkErr = (value)=> {
+        let errs = {};
+        const num = /^[0-9]+$/;
+
+        if(!value.username || value.username.length < 4) {
+            errs.username = "Please enter at least 4 letters of your name.";
+        }
+        if(!value.phoneNum || !num.test(value.phoneNum)) {
+            errs.phoneNum = "Please enter numbers only.";
+        }
+        if(!value.email || !/@/.test(value.email) || !/[.]/.test(value.email)) {
+            errs.email = "Please enter a correct email address.";
+        }
+        if(!value.enquiry || value.enquiry.length < 10) {
+            errs.enquiry = "Please enter 10 letters at least.";
+        }
+
+        return errs;
+    };
+
+    const handleSubmit = (e)=> {
+        e.preventDefault();
+        setIsSubmit(true);
+        setErr(checkErr(input));
+    }
+
+    useEffect(()=> {
+        const len = Object.keys(err).length;
+
+        (len === 0 && isSubmit) 
+        ? setSuccess(true) 
+        : setSuccess(false)
+    }, [err]);
+
+    console.log(success);
+
     return (
         <section className="container getintouch">
             <div className="inner">
                 <div className="title">
                     <h1>Get in touch</h1>
                 </div>
-                <form action="/" method="post" className="contactForm">
-                    <h2><span>Leave us a message</span></h2>
-                    <fieldset>
-                        <legend className="hidden">Contact Us Form</legend>
-                        <table summary="Customer's name, phone number, email, enquiry">
-                            <caption className="hidden">Contact Us Form</caption>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">
-                                        <label htmlFor="username">Name</label>
-                                    </th>
-                                    <td>
-                                        <input type="text" name="username" id="username" placeholder="Your Name" required />
-                                    </td>
-                                </tr>
-                                {/* <!--<tr className="errMsg">
-                                    <th>Error Message</th>
-                                    <td></td>
-                                </tr>--> */}
-                                <tr>
-                                    <th scope="row">
-                                        <label htmlFor="phoneNum">Phone Number</label>
-                                    </th>
-                                    <td>
-                                        <input type="number" name="phoneNum" id="phoneNum" placeholder="Your Phone Number" required />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <label htmlFor="email">E-mail</label>
-                                    </th>
-                                    <td>
-                                        <input type="email" name="email" id="email" placeholder="Your Email Address" required />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <label htmlFor="enquiry">Enquiry</label>
-                                    </th>
-                                    <td>
-                                        <textarea name="enquiry" id="enquiry" placeholder="What are your enquiries?"></textarea>
-                                    </td>
-                                </tr>
-                                <tr className="formBtns">
-                                    <th colSpan="2">
-                                        <input type="reset" value="CANCEL" />
-                                        <input type="submit" value="SUBMIT" />
-                                    </th>
-                                </tr>
-                            </tbody>
-                        </table>                    
-                    </fieldset>
-                </form>
+                {success 
+                ?  <div className="success">
+                        <span className="mailIcon"><i className="far fa-envelope"></i></span>
+                        <h2>Thank you for leaving a message!</h2>
+                        <div>
+                            <i className="fa-solid fa-diamond"></i>
+                            <i className="fa-solid fa-diamond"></i>
+                            <i className="fa-solid fa-diamond"></i>
+                        </div>
+                        <p>Your interest in our company is greatly appreciated. We will contact you within 2-3 working days. If you wish to contact us faster, please make a call, visit us, or try live chat as indicated on the right side.</p>
+                    </div>
+                :   <form action="/" method="post" className="contactForm" onSubmit={handleSubmit}>
+                        <h2><span>Leave us a message</span></h2>
+                        <fieldset>
+                            <legend className="hidden">Contact Us Form</legend>
+                            <table summary="Customer's name, phone number, email, enquiry">
+                                <caption className="hidden">Contact Us Form</caption>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <label htmlFor="username">Name</label>
+                                            {err.username && 
+                                                <p className="errMsg">{err.username}
+                                                </p>
+                                            }
+                                        </th>
+                                        <td>
+                                            <input 
+                                                type="text" 
+                                                name="username" 
+                                                id="username" 
+                                                placeholder="Your Name (at least 4 letters)"
+                                                onChange={handleChange}
+                                                defaultValue={input.username}
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <label htmlFor="phoneNum">Phone Number</label>{err.phoneNum && 
+                                                <p className="errMsg">{err.phoneNum}
+                                                </p>
+                                            }
+                                        </th>
+                                        <td>
+                                            <input 
+                                                type="text" 
+                                                name="phoneNum" 
+                                                id="phoneNum" 
+                                                placeholder="Your Phone Number (number only)" 
+                                                onChange={handleChange}
+                                                defaultValue={input.phoneNum}
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <label htmlFor="email">E-mail</label>
+                                            {err.email && 
+                                                <p className="errMsg">{err.email}
+                                                </p>
+                                            }
+                                        </th>
+                                        <td>
+                                            <input 
+                                                type="text" 
+                                                name="email" 
+                                                id="email" 
+                                                placeholder="Your Email Address" 
+                                                onChange={handleChange}
+                                                defaultValue={input.email}
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <label htmlFor="enquiry">Enquiry</label>
+                                            {err.enquiry && 
+                                                <p className="errMsg">{err.enquiry}
+                                                </p>
+                                            }
+                                        </th>
+                                        <td>
+                                            <textarea 
+                                                name="enquiry" 
+                                                id="enquiry" 
+                                                placeholder="What are your enquiries? (at least 10 letters)"
+                                                onChange={handleChange}
+                                                defaultValue={input.enquiry}
+                                            ></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr className="formBtns">
+                                        <th colSpan="2">
+                                            <input type="reset" value="CANCEL" />
+                                            <input type="submit" value="SUBMIT" />
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>                    
+                        </fieldset>
+                    </form>
+                }
                 <div className="contactDetail">
                     <div>
                         <h3>Call Us</h3>

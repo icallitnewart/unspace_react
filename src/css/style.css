@@ -3070,6 +3070,34 @@ a {
       font: 600 30px/1.3 Montserrat;
       color: #3a3e46;
       text-align: right; }
+.contact .container.getintouch .success {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  width: 50%;
+  padding: 70px;
+  text-align: center; }
+  .contact .container.getintouch .success .mailIcon {
+    font-size: 70px;
+    margin-bottom: 10px;
+    color: #3a3e46; }
+  .contact .container.getintouch .success h2 {
+    font: bold 30px/1.3 Montserrat;
+    margin-bottom: 40px;
+    color: #3a3e46; }
+  .contact .container.getintouch .success div {
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    color: #3a3e46;
+    margin-bottom: 40px; }
+  .contact .container.getintouch .success p {
+    font: 18px/1.5 Montserrat;
+    color: #767e8f;
+    padding: 30px;
+    background: #767e8f;
+    color: #fff; }
 .contact .container.getintouch .contactForm {
   width: 50%;
   padding: 0px 50px 30px; }
@@ -3091,12 +3119,6 @@ a {
     .contact .container.getintouch .contactForm table tr {
       width: 100%;
       padding: 0px 20px; }
-      .contact .container.getintouch .contactForm table tr.errMsg th {
-        opacity: 0; }
-      .contact .container.getintouch .contactForm table tr.errMsg td {
-        font: 600 12px/1 Open Sans;
-        color: salmon;
-        padding-left: 1em; }
       .contact .container.getintouch .contactForm table tr.formBtns th {
         width: 100%;
         background: transparent;
@@ -3123,13 +3145,19 @@ a {
           .contact .container.getintouch .contactForm table tr.formBtns th input[type=submit]:hover {
             color: salmon; }
       .contact .container.getintouch .contactForm table tr th:not(:last-child) {
-        display: block;
+        display: flex;
+        justify-content: space-between;
         width: 100%;
         min-width: 120px;
         height: 20px;
         text-align: left;
         font: 600 14px/10px Montserrat;
         color: #3a3e46; }
+        .contact .container.getintouch .contactForm table tr th:not(:last-child) .errMsg {
+          font: bold 12px/1 Montserrat;
+          color: salmon; }
+          .contact .container.getintouch .contactForm table tr th:not(:last-child) .errMsg::before {
+            content: "*"; }
       .contact .container.getintouch .contactForm table tr td {
         display: block;
         width: 100%;
