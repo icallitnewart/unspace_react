@@ -173,6 +173,11 @@
             flex-wrap: wrap;
             width: 80%;
 
+            &.on article {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+
             article {
                 position: relative;
                 width: calc(100% - 40px);
@@ -180,6 +185,16 @@
                 margin: 0px 20px;
                 margin-bottom: 20px;
                 overflow: hidden;
+                cursor: pointer;
+                transition: 1.5s;
+                transform: translateX(40px);
+                opacity: 0;
+
+                @for $i from 1 through 5 {
+                    &:nth-of-type(#{$i}) {
+                        transition-delay: 0s + 0.3 * $i;
+                    }
+                }
 
                 .pic {
                     width: 100%;
@@ -217,7 +232,7 @@
                         top: 30px;
                         text-align: center;
 
-                        span {
+                        span:nth-of-type(1) {
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -233,8 +248,9 @@
                             }  
                         }
 
-                        a {
+                        span:nth-of-type(2) {
                             font: 12px/1 $font1;
+                            color: #333;
                         }
                     }
 
