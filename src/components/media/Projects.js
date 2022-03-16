@@ -1,9 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { useFetchFlickrData } from "../../hooks/useFetchFlickrData.js";
 import Loader from "../common/Loader";
+import Popup from "../common/Popup";
 
 function Projects() {
     const [ enableClick, setEnableClick ] = useState(true);
+    const [ popup, setPopup ] = useState({
+        isVisible: false,
+        targetItem: null
+    });
     const pics = useRef(null);
 
     //flickr 데이터 타입
@@ -57,19 +62,16 @@ function Projects() {
                         {
                             flickrData.map((item, index)=> {
                                 const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_w.jpg`;
-                                const imgSrcBig = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`;
                                 const num = index < 9 ? "0" + (index + 1) : index + 1;  
 
                                 return (
-                                    <article key={index}>
-                                        <a href={imgSrcBig}>
-                                            <img className="pic" src={imgSrc} />
-                                            <div className="textBox">
-                                                <h2>{num}</h2>
-                                                <p>{item.title}</p>
-                                                <span>{item.owner}</span>
-                                            </div>
-                                        </a>
+                                    <article key={index} onClick={()=> setPopup({isVisible: true, targetItem: item})}>
+                                        <img className="pic" src={imgSrc} />
+                                        <div className="textBox">
+                                            <h2>{num}</h2>
+                                            <p>{item.title}</p>
+                                            <span>{item.owner}</span>
+                                        </div>
                                     </article>
                                 )
                             })
@@ -78,6 +80,13 @@ function Projects() {
                     }
                 </div>
             </div>
+            {popup.isVisible && 
+                <Popup 
+                    type="flickr" 
+                    targetItem={popup.targetItem} 
+                    setPopup={setPopup} 
+                />
+            }
         </section>
     )
 }

@@ -1,8 +1,14 @@
 import { useState, useEffect } from "react";
 import { useFetchFlickrData } from "../../hooks/useFetchFlickrData.js";
 import Loader from "../common/Loader";
+import Popup from "../common/Popup";
 
 function Gallery() {
+    const [ popup, setPopup ] = useState({
+        isVisible: false,
+        targetItem: null
+    });
+
     //flickr 데이터 타입
     const tags = [ "popular", "modern", "contemporary", "minimalist", "mid-century" ];
     const [ tagType, setTagType ] = useState("popular");
@@ -11,8 +17,6 @@ function Gallery() {
     const [ flickr, isLoaded ] = useFetchFlickrData(tagType); 
     const [ flickrData, setFlickrData ] = useState([]);
     const [ bigImg, setBigImg ] = useState(null);
-
-    console.log(isLoaded);
 
     useEffect(()=> {
         setFlickrData(flickr);
@@ -25,7 +29,7 @@ function Gallery() {
     }, [flickrData]);
 
     return (
-        <section id="style">
+        <section id="gallery">
             <div className="inner">
                 <h1>Choose Your Style</h1>
                 <ul className="hashtags">
@@ -48,7 +52,7 @@ function Gallery() {
                             const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`;
 
                             return (
-                                <article key={index}>
+                                <article key={index} onClick={()=> setPopup({isVisible: true, targetItem: item})}>
                                     <img src={imgSrc} alt={item.title} onMouseOver={()=> setBigImg(item)} />
                                 </article>
                             )
@@ -57,6 +61,13 @@ function Gallery() {
                 </div>
                 }
             </div>
+            {popup.isVisible && 
+                <Popup 
+                    type="flickr" 
+                    targetItem={popup.targetItem} 
+                    setPopup={setPopup} 
+                />
+            }
         </section>
     )
 }

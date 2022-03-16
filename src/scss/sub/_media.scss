@@ -10,7 +10,7 @@
     padding: 50px 0px;
     margin-bottom: 100px;
 
-    .inner {
+    >.inner {
         display: flex;
         width: 1180px;
         margin: 0 auto;
@@ -77,6 +77,8 @@
                     position: relative;
                     width: calc(100% / 2);
                     padding: 10px;
+                    cursor: pointer;
+                    font-size: 0;
     
                     &:hover {
     
@@ -94,11 +96,6 @@
                                 transition: .5s .2s;
                             }
                         }
-                    }
-    
-                    a {
-                        font-size: 0;
-                        display: block;
                     }
     
                     .pic {
@@ -157,7 +154,7 @@
     width: 100%;
     margin-bottom: 100px;
 
-    .inner {
+    >.inner {
         display: flex;
         width: 1180px;
         margin: 0 auto;

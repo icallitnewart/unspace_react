@@ -586,10 +586,10 @@
 }
 
 
-#style {
+#gallery {
     width: 100%;
 
-    .inner {
+    >.inner {
         width: 1180px;
         margin: 0 auto;
         padding: 100px 0 120px 0;
@@ -1073,7 +1073,7 @@
     }
 }
 
-#style {
+#gallery {
 
     .inner {
         width: 100%;    
@@ -1304,9 +1304,9 @@
     }
 }
 
-#style {
+#gallery {
 
-    .inner {
+    >.inner {
         padding: 50px 2vw 70px 2vw;    
 
         .hashtags {

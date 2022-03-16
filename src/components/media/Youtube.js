@@ -1,11 +1,18 @@
 import axios from "axios";
 import { useEffect, useState, useRef } from "react";
 import Loader from "../common/Loader";
+import Popup from "../common/Popup";
 
 function Youtube() {
     const [ videos, setVideos ] = useState([]);
     const [ isLoaded, setIsLoaded ] = useState(null);
+    const [ popup, setPopup ] = useState({
+        isVisible: false,
+        targetItem: null
+    });
     const playlist = useRef(null);
+
+    console.log(popup.video);
 
     useEffect(()=> {
         callData();
@@ -55,9 +62,12 @@ function Youtube() {
                         if(desc.length > 100) {
                             desc = desc.substr(0, 100) + "...";
                         }
-                        
+
                         return (
-                            <article key={index} onClick={()=> window.open(`https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}`, "_blank")}>
+                            <article key={index} onClick={()=> setPopup({
+                                isVisible: true,
+                                targetItem: video
+                            })}>
                                 <img className="pic" src={video.snippet.thumbnails.maxres.url} />
                                 <div className="textBox">
                                     <div className="playBtn">
@@ -71,8 +81,16 @@ function Youtube() {
                 }
                 </div>
             </div>
+            {popup.isVisible && 
+                <Popup 
+                    type="youtube" 
+                    targetItem={popup.targetItem} 
+                    setPopup={setPopup} 
+                />
+            }
         </section>
     )
 }
+
 
 export default Youtube;
