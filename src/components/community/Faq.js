@@ -1,4 +1,55 @@
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+
 function Faq() {
+    const [ items, setItems ] = useState([]);
+    const [ answer, setAnswer ] = useState({ code: "" });
+    const types = [
+        { 
+            type : "Payment",
+            icon : "far fa-credit-card"
+        }, 
+        { 
+            type : "Membership",
+            icon : "fas fa-users"
+        }, 
+        { 
+            type : "Products",
+            icon : "fas fa-box-open"
+        }, 
+        { 
+            type : "A/S",
+            icon : "fas fa-tools"
+        }
+    ];
+    const [ type, setType ] = useState(types[0].type);
+
+    useEffect(()=> {
+        callData(type);
+    }, [type])
+
+    const callData = async (type)=> {
+        const url = process.env.PUBLIC_URL + "/db/faq.json";
+
+        await axios
+        .get(url)
+        .then((data)=> {
+            const faq = data.data.data;
+            const itemsByType = faq.filter((el)=> el.type === type);
+            
+            setItems(itemsByType);
+        })
+    }
+
+    const selectCategory = (e)=> {
+        const category = e.currentTarget.querySelector("span").textContent;
+        setType(category);
+    }
+
+    const showAnswer = (code)=> {
+        setAnswer({ code: code });
+    }
+
     return (
         <section className="container faqBoard">
             <div className="inner">
@@ -6,153 +57,45 @@ function Faq() {
                     <h1>Frequently Asked Questions</h1>
                 </div>
                 <div className="board">
-                    <div className="category">
-                        <a href="#" className="on">
-                            <i className="far fa-credit-card"></i>
-                            <span>Payment</span>
-                        </a>
-                        <a href="#">
-                            <i className="fas fa-users"></i>
-                            <span>Membership</span>
-                        </a>
-                        <a href="#">
-                            <i className="fas fa-box-open"></i>
-                            <span>Products</span>
-                        </a>
-                        <a href="#">
-                            <i className="fas fa-tools"></i>
-                            <span>A/S</span>
-                        </a>
-                    </div>
+                    <ul className="category">
+                        {types.map((el, index)=>
+                            <li 
+                                className={(el.type===type) ? "on" : ""} 
+                                key={index}
+                                onClick={selectCategory}
+                            >
+                                <i className={el.icon}></i>
+                                <span>{el.type}</span>
+                            </li>
+                        )}
+                    </ul>
                     <table className="boardForm" summary="Frequently Asked Questions and Answers">
                         <caption className="hidden">Frequently Asked Questions Board</caption>
                         <tbody>
-                            <tr className="question">
-                                <th scope="row">
-                                    PAYMENT
-                                </th>
-                                <td>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla officia, placeat incidunt eos amet cupiditate.
-                                    <a href="#" className="viewMore">
-                                        <span></span>
-                                        <span></span>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr className="question">
-                                <th scope="row">
-                                    PAYMENT
-                                </th>
-                                <td>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla officia, placeat incidunt eos amet cupiditate.
-                                    <a href="#" className="viewMore">
-                                        <span></span>
-                                        <span></span>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr className="question">
-                                <th scope="row">
-                                    PAYMENT
-                                </th>
-                                <td>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla officia, placeat incidunt eos amet cupiditate.
-                                    <a href="#" className="viewMore">
-                                        <span></span>
-                                        <span></span>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr className="question">
-                                <th scope="row">
-                                    PAYMENT
-                                </th>
-                                <td>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla officia, placeat incidunt eos amet cupiditate.
-                                    <a href="#" className="viewMore">
-                                        <span></span>
-                                        <span></span>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr className="question">
-                                <th scope="row">
-                                    PAYMENT
-                                </th>
-                                <td>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla officia, placeat incidunt eos amet cupiditate.
-                                    <a href="#" className="viewMore">
-                                        <span></span>
-                                        <span></span>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr className="question">
-                                <th scope="row">
-                                    PAYMENT
-                                </th>
-                                <td>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla officia, placeat incidunt eos amet cupiditate.
-                                    <a href="#" className="viewMore">
-                                        <span></span>
-                                        <span></span>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr className="question">
-                                <th scope="row">
-                                    PAYMENT
-                                </th>
-                                <td>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla officia, placeat incidunt eos amet cupiditate.
-                                    <a href="#" className="viewMore">
-                                        <span></span>
-                                        <span></span>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr className="question">
-                                <th scope="row">
-                                    PAYMENT
-                                </th>
-                                <td>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla officia, placeat incidunt eos amet cupiditate.
-                                    <a href="#" className="viewMore">
-                                        <span></span>
-                                        <span></span>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr className="question">
-                                <th scope="row">
-                                    PAYMENT
-                                </th>
-                                <td>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla officia, placeat incidunt eos amet cupiditate.
-                                    <a href="#" className="viewMore">
-                                        <span></span>
-                                        <span></span>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr className="question">
-                                <th scope="row">
-                                    PAYMENT
-                                </th>
-                                <td>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla officia, placeat incidunt eos amet cupiditate.
-                                    <a href="#" className="viewMore">
-                                        <span></span>
-                                        <span></span>
-                                    </a>
-                                </td>
-                            </tr>
-                            {/* <!-- <tr className="answer">
-                                <th scope="row">ANSWER</th>
-                                <td>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quis non ullam facere commodi asperiores nisi, quasi beatae iusto eaque deserunt excepturi, architecto obcaecati distinctio accusantium nobis dicta et itaque!
-                                </td>
-                            </tr> --> */}
+                            {items.map((item, index)=>
+                                <React.Fragment key={index}>
+                                <tr 
+                                    className={(answer.code === item.code) ? "question on" : "question"} 
+                                    onClick={()=> showAnswer(item.code)}>
+                                    <th scope="row">
+                                        {item.type.toUpperCase()}
+                                    </th>
+                                    <td>
+                                        {item.question}
+                                        <a href="#" className="viewMore">
+                                            <span></span>
+                                            <span></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr 
+                                    className={(answer.code === item.code) ? "answer" : "answer hide"}
+                                >
+                                    <th scope="row">ANSWER</th>
+                                    <td>{item.answer}</td>
+                                </tr>
+                                </React.Fragment>
+                            )}
                         </tbody>
                     </table>
                     <div className="searchBox">

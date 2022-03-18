@@ -41,8 +41,9 @@
                 height: 150px;
                 margin-bottom: 20px;
                 border: 1px solid $subColor1;
+                cursor: pointer;
 
-                a {
+                li {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -558,12 +559,15 @@
                 }
 
                 td {
-                    height: auto;
                     color: #555;
                     background: #eee;
                     white-space: normal;
                     overflow: auto;
                     text-overflow: unset;
+                }
+
+                &.hide {
+                    display: none;
                 }
             }
         }

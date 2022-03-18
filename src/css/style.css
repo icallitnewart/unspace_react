@@ -2209,8 +2209,9 @@ a {
         width: 100%;
         height: 150px;
         margin-bottom: 20px;
-        border: 1px solid #767e8f; }
-        .community .container .inner .board .category a {
+        border: 1px solid #767e8f;
+        cursor: pointer; }
+        .community .container .inner .board .category li {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -2219,17 +2220,17 @@ a {
           height: 100%;
           border-right: 1px solid #767e8f;
           transition: .5s; }
-          .community .container .inner .board .category a.on, .community .container .inner .board .category a:hover {
+          .community .container .inner .board .category li.on, .community .container .inner .board .category li:hover {
             background: #767e8f; }
-            .community .container .inner .board .category a.on i, .community .container .inner .board .category a.on span, .community .container .inner .board .category a:hover i, .community .container .inner .board .category a:hover span {
+            .community .container .inner .board .category li.on i, .community .container .inner .board .category li.on span, .community .container .inner .board .category li:hover i, .community .container .inner .board .category li:hover span {
               color: #fff; }
-          .community .container .inner .board .category a:last-child {
+          .community .container .inner .board .category li:last-child {
             border-right: 0; }
-          .community .container .inner .board .category a i {
+          .community .container .inner .board .category li i {
             font-size: 40px;
             color: #3a3e46;
             margin-bottom: 10px; }
-          .community .container .inner .board .category a span {
+          .community .container .inner .board .category li span {
             font: 600 14px/1 Montserrat;
             color: #3a3e46; }
       .community .container .inner .board .searchBox {
@@ -2550,12 +2551,13 @@ a {
       background: #eee;
       color: #3a3e46; }
     .community .faqBoard .board .boardForm .answer td {
-      height: auto;
       color: #555;
       background: #eee;
       white-space: normal;
       overflow: auto;
       text-overflow: unset; }
+    .community .faqBoard .board .boardForm .answer.hide {
+      display: none; }
 .community .noticeBoard .board .boardForm {
   width: 100%;
   margin-bottom: 20px;
