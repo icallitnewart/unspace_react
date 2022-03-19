@@ -588,17 +588,16 @@
             thead {
                 tr {
                     width: 100%;
+                    background: $subColor1;
 
                     th {
-                        width: 20%;
                         padding: 20px;
-                        font: 600 12px/1 $font2;
+                        font: 12px/1 $font1;
                         letter-spacing: 1px;
-                        color: $mainColor;
+                        color: #fff;
                         //background: #eee;
                         border-bottom: 1px solid #ccc;
                         transition: .5s;
-                        
                     }
                 }
             }
@@ -613,7 +612,6 @@
                     }
 
                     td {
-                        width: 80%;
                         max-width: 564px;
                         padding: 20px;
                         font: 600 12px/1.3 $font2;
@@ -625,11 +623,149 @@
                         text-overflow: ellipsis;
                         transition: .5s;
 
-                        &:first-child {
+                        &.idx {
+                            width: 10%;
                             text-align: center;
+                        }
+
+                        &.title {
+                            width: 70%;
+                            text-align: left;
+                        }
+
+                        &.author {
+                            width: 10%;
                         }
                     }
                 }
+            }
+        }
+
+        .noticePost {
+            width: 100%;
+            margin-bottom: 20px;
+            border-top: 2px solid $mainColor;
+            border-collapse: collapse;
+
+            tbody {
+                tr {
+                    width: 100%;
+
+                    td {
+                        letter-spacing: 1px;
+                        transition: .5s;
+                    }
+                }
+
+                .title {
+                    background: $subColor1;
+                    text-align: left;
+
+                    td {    
+                        padding: 20px;
+                        font: 14px/1 $font2;
+                        color: #eee;
+                    }
+                }
+
+                .extraDetail {
+                    background: #eee;
+                    border-bottom: 1px solid #bbb;
+
+                    td {
+                        padding: 15px 20px;
+                        font: 12px/1 $font1;
+                        color: #444;
+
+                        &:nth-of-type(1) {
+                            width: 80%;
+                            text-align: left;
+                        }
+                        &:nth-of-type(2) {
+                            width: 20%;
+                            text-align: right;
+                        }
+                    }
+                }
+                
+                .content {
+                    border-bottom: 2px solid $mainColor;
+
+                    .contentBox {
+                        width: 100%;
+                        display: flex;
+                        align-items: flex-start;
+                        min-height: 300px;
+                        padding: 30px 20px;
+                        font: 14px/1.4 $font2;
+                        text-align: justify;
+                        color: #555;
+                    }
+                }
+
+                .moveTo {
+                    border-bottom: 2px solid $mainColor;
+                    
+                    td p {
+                        display: flex;
+                        padding: 12px 20px;
+                        
+                        &:hover {
+                            background: #f8f8f8;
+                        }
+                        
+                        a, span {
+                            font: 13px/1 $font2;
+                            color: #666;
+                            
+                            span {
+                                font: bold 12px/1 $font2;
+                            }
+                        }
+
+                        &:first-child {
+                            border-bottom: 1px solid #ddd;
+                        }
+                    }
+                }
+
+                .viewBtns {
+                    td {
+                        padding-top: 30px;
+                    }
+
+                    button {
+                        width: 100px;
+                        height: 40px;
+                        border: 0px;
+                        font: 12px/1 $font1;
+                        color: #eee;
+                        letter-spacing: 1px;
+                        cursor: pointer;
+
+                        &.prevBtn, &.nextBtn {
+                            background: $mainColor;
+                            margin-right: 10px;
+                            float: left;
+
+                            &:hover {
+                                color: $pointColor;
+                            }
+                        }
+
+                        &.listBtn {
+                            background: $subColor1;
+                            float: right;
+                        }
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            clear: both;
+                        }
+                    }
+
+                } 
             }
         }
     }

@@ -4,3 +4,10 @@ export const setFlickrData = data => {
         payload: data
     }
 }
+
+export const setNoticeData = data => {
+    return {
+        type: 'SET_NOTICE',
+        payload: data
+    }
+}

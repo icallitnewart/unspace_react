@@ -2565,13 +2565,13 @@ a {
   border-bottom: 2px solid #3a3e46;
   border-collapse: collapse; }
   .community .noticeBoard .board .boardForm thead tr {
-    width: 100%; }
+    width: 100%;
+    background: #767e8f; }
     .community .noticeBoard .board .boardForm thead tr th {
-      width: 20%;
       padding: 20px;
-      font: 600 12px/1 Open Sans;
+      font: 12px/1 Montserrat;
       letter-spacing: 1px;
-      color: #3a3e46;
+      color: #fff;
       border-bottom: 1px solid #ccc;
       transition: .5s; }
   .community .noticeBoard .board .boardForm tbody tr {
@@ -2580,7 +2580,6 @@ a {
     .community .noticeBoard .board .boardForm tbody tr:hover td {
       background: #eee; }
     .community .noticeBoard .board .boardForm tbody tr td {
-      width: 80%;
       max-width: 564px;
       padding: 20px;
       font: 600 12px/1.3 Open Sans;
@@ -2591,8 +2590,92 @@ a {
       overflow: hidden;
       text-overflow: ellipsis;
       transition: .5s; }
-      .community .noticeBoard .board .boardForm tbody tr td:first-child {
+      .community .noticeBoard .board .boardForm tbody tr td.idx {
+        width: 10%;
         text-align: center; }
+      .community .noticeBoard .board .boardForm tbody tr td.title {
+        width: 70%;
+        text-align: left; }
+      .community .noticeBoard .board .boardForm tbody tr td.author {
+        width: 10%; }
+.community .noticeBoard .board .noticePost {
+  width: 100%;
+  margin-bottom: 20px;
+  border-top: 2px solid #3a3e46;
+  border-collapse: collapse; }
+  .community .noticeBoard .board .noticePost tbody tr {
+    width: 100%; }
+    .community .noticeBoard .board .noticePost tbody tr td {
+      letter-spacing: 1px;
+      transition: .5s; }
+  .community .noticeBoard .board .noticePost tbody .title {
+    background: #767e8f;
+    text-align: left; }
+    .community .noticeBoard .board .noticePost tbody .title td {
+      padding: 20px;
+      font: 14px/1 Open Sans;
+      color: #eee; }
+  .community .noticeBoard .board .noticePost tbody .extraDetail {
+    background: #eee;
+    border-bottom: 1px solid #bbb; }
+    .community .noticeBoard .board .noticePost tbody .extraDetail td {
+      padding: 15px 20px;
+      font: 12px/1 Montserrat;
+      color: #444; }
+      .community .noticeBoard .board .noticePost tbody .extraDetail td:nth-of-type(1) {
+        width: 80%;
+        text-align: left; }
+      .community .noticeBoard .board .noticePost tbody .extraDetail td:nth-of-type(2) {
+        width: 20%;
+        text-align: right; }
+  .community .noticeBoard .board .noticePost tbody .content {
+    border-bottom: 2px solid #3a3e46; }
+    .community .noticeBoard .board .noticePost tbody .content .contentBox {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      min-height: 300px;
+      padding: 30px 20px;
+      font: 14px/1.4 Open Sans;
+      text-align: justify;
+      color: #555; }
+  .community .noticeBoard .board .noticePost tbody .moveTo {
+    border-bottom: 2px solid #3a3e46; }
+    .community .noticeBoard .board .noticePost tbody .moveTo td p {
+      display: flex;
+      padding: 12px 20px; }
+      .community .noticeBoard .board .noticePost tbody .moveTo td p:hover {
+        background: #f8f8f8; }
+      .community .noticeBoard .board .noticePost tbody .moveTo td p a, .community .noticeBoard .board .noticePost tbody .moveTo td p span {
+        font: 13px/1 Open Sans;
+        color: #666; }
+        .community .noticeBoard .board .noticePost tbody .moveTo td p a span, .community .noticeBoard .board .noticePost tbody .moveTo td p span span {
+          font: bold 12px/1 Open Sans; }
+      .community .noticeBoard .board .noticePost tbody .moveTo td p:first-child {
+        border-bottom: 1px solid #ddd; }
+  .community .noticeBoard .board .noticePost tbody .viewBtns td {
+    padding-top: 30px; }
+  .community .noticeBoard .board .noticePost tbody .viewBtns button {
+    width: 100px;
+    height: 40px;
+    border: 0px;
+    font: 12px/1 Montserrat;
+    color: #eee;
+    letter-spacing: 1px;
+    cursor: pointer; }
+    .community .noticeBoard .board .noticePost tbody .viewBtns button.prevBtn, .community .noticeBoard .board .noticePost tbody .viewBtns button.nextBtn {
+      background: #3a3e46;
+      margin-right: 10px;
+      float: left; }
+      .community .noticeBoard .board .noticePost tbody .viewBtns button.prevBtn:hover, .community .noticeBoard .board .noticePost tbody .viewBtns button.nextBtn:hover {
+        color: salmon; }
+    .community .noticeBoard .board .noticePost tbody .viewBtns button.listBtn {
+      background: #767e8f;
+      float: right; }
+    .community .noticeBoard .board .noticePost tbody .viewBtns button::after {
+      content: "";
+      display: block;
+      clear: both; }
 
 @media screen and (max-width: 1179px) {
   .contact .container {

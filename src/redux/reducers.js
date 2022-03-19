@@ -35,8 +35,18 @@ const flickrReducer = (state = initFlickr, action)=> {
     }
 }
 
+const noticeReducer = (state = [], action)=> {
+    switch(action.type) {
+        case "SET_NOTICE" :
+            return { ...state, notice: action.payload }
+        default :
+            return state;
+    }
+}
+
 const reducers = combineReducers({
-    flickrReducer
+    flickrReducer,
+    noticeReducer
 })
 
 export default reducers;
