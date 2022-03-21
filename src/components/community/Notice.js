@@ -3,38 +3,57 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useParams, useHistory } from "react-router-dom";
 import NoticePost from "./NoticePost";
+import SearchBox from "./SearchBox";
 
 function Notice() {
     const { id } = useParams(); 
     const history = useHistory();
-    const [ items, setItems ] = useState([]);
     const dispatch = useDispatch();
+
+    //호출한 데이터 저장
+    const [ data, setData ] = useState([]);
+    //화면에 띄울 데이터 저장
+    const [ items, setItems ] = useState([]);
+    //하이라이트 처리할 검색어 저장
+    const [ highlight, setHighlight ] = useState("");
 
     useEffect(()=> {
         callData();
     }, []);
 
     useEffect(()=> {
-        dispatch({ type: 'SET_NOTICE', payload: items });
-    }, [items]);
+        setItems(data);
+        dispatch({ type: 'SET_NOTICE', payload: data });
+    }, [data]);
 
     const callData = async ()=> {
         const url = process.env.PUBLIC_URL + "/db/notice.json";
 
         await axios
         .get(url)
-        .catch((error)=> console.error(error))
-        .then((data)=> {
-            setItems(data.data.data);
-        });
-    }
+        .then((data)=> setData(data.data.data))
+        .catch((error)=> console.error(error));
+    };
+
+    //검색시 검색어 하이라이트 처리 함수
+    const highlightText = (words)=> {
+        if(highlight !== "") {
+            const text = words.split(new RegExp(`(${highlight})`, 'gi'));
+            return text.map((txt, index)=> 
+                txt=== highlight 
+                ? <mark key={index}>{txt}</mark>
+                : txt
+            )
+        }
+    };
+
     return (
         <section className="container noticeBoard">
             <div className="inner">
                 <div className="title">
                     <h1>Notice</h1>
                 </div>
-                <div className="noticeBoard board">
+                <div className="board">
                     {(!id)
                     ?  <>
                             <table className="boardForm" summary="Notice Board">
@@ -48,20 +67,25 @@ function Notice() {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {[...items].reverse().map((item, index)=>
+                                    {items.length > 0 
+                                    ? [...items].reverse().map((item, index)=>
                                         <tr key={index} onClick={()=> history.push(`/community/notice/${item.idx}`)}>
                                             <td className="idx">{item.idx}</td>
-                                            <td className="title">{item.title} </td>
-                                            <td className="author">{item.author}</td>
+                                            <td className="title">{highlight ? highlightText(item.title) : item.title} </td>
+                                            <td className="author">{highlight ? highlightText(item.author) : item.author}</td>
                                             <td className="date">{item.date}</td>
                                         </tr>
+                                    ) : (
+                                        <tr className="noResult"><td colSpan={4}>No Results found.</td></tr>
                                     )}
                                 </tbody>
                             </table>
-                            <div className="searchBox">
-                                <input type="text" name="search" id="searchFaq" />
-                                <i className="fas fa-search"></i>
-                            </div>
+                            <SearchBox 
+                                type={"notice"}
+                                data={data} 
+                                setItems={setItems} 
+                                setHighlight={setHighlight}
+                            />
                             <div className="pagination">
                                 <a href="#" className="prevBtn">
                                     <i className="fas fa-chevron-left"></i>
