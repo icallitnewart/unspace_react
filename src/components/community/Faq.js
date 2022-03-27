@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import SearchBox from "./SearchBox";
+import Pagination from "./Pagination";
 
 function Faq() {
     //호출한 데이터 저장
@@ -33,9 +34,17 @@ function Faq() {
     ];
     const [ type, setType ] = useState(types[0].type);
 
+    //Pagination 옵션
+    const maxItems = 5;
+    const totalItems = items.length;
+    const [ page, setPage ] = useState(1);
+    const startIndex = (page - 1) * maxItems;
+    const endIndex = startIndex + maxItems;
+
     //FAQ 타입에 따른 데이터 호출
     useEffect(()=> {
         callData(type);
+        setPage(1);
     }, [type]);
 
     //화면에 띄울 데이터 저장
@@ -107,7 +116,7 @@ function Faq() {
                         <caption className="hidden">Frequently Asked Questions Board</caption>
                         <tbody>
                             {(items.length > 0)
-                            ? items.map((item, index)=>
+                            ? items.slice(startIndex, endIndex).map((item, index)=>
                                 <React.Fragment key={index}>
                                 <tr 
                                     className={(answer.code === item.code) ? "question on" : "question"} 
@@ -141,26 +150,12 @@ function Faq() {
                         setItems={setItems}
                         setHighlight={setHighlight}
                     />
-                    <div className="pagination">
-                        <a href="#" className="prevBtn">
-                            <i className="fas fa-chevron-left"></i>
-                        </a>
-                        <ul>
-                            <li className="on"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">6</a></li>
-                            <li><a href="#">7</a></li>
-                            <li><a href="#">8</a></li>
-                            <li><a href="#">9</a></li>
-                            <li><a href="#">10</a></li>
-                        </ul>
-                        <a href="#" className="nextBtn">
-                            <i className="fas fa-chevron-right"></i>
-                        </a>
-                    </div>
+                    <Pagination
+                        totalItems={totalItems}
+                        maxItems={maxItems}
+                        page={page}
+                        setPage={setPage}
+                    />
                 </div>
         </div>
         </section>

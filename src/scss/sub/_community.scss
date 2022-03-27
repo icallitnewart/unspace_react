@@ -123,7 +123,7 @@
                     li {
                         margin: 0 10px; 
 
-                        a {
+                        button {
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -131,16 +131,19 @@
                             height: 25px;
                             font: 600 14px/1 $font1;
                             color: #333;
+                            background: transparent;
+                            border: 0;
+                            cursor: pointer;
                         }
 
-                        &.on a, &:hover a {
+                        &.on button, &:hover button {
                             font: bold 14px/1 $font1;
                             color: $pointColor;
                         }
                     }
                 }
 
-                >a {
+                .prevBtn, .nextBtn {
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -149,15 +152,21 @@
                     background: $mainColor;
                     color: #fff;
                     transition: .5s;
+                    border: 0;
 
                     i {
                         font-size: 10px;
                     }
 
-                    &:hover {
+                    &:enabled:hover {
                         background: #fff;
                         border: 1px solid $mainColor;
                         color: $mainColor;
+                        cursor: pointer;
+                    }
+
+                    &:disabled {
+                        background: #bbb;
                     }
                 }
                 

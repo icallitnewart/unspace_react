@@ -2272,18 +2272,21 @@ a {
           margin: 0 10px; }
           .community .container .inner .board .pagination ul li {
             margin: 0 10px; }
-            .community .container .inner .board .pagination ul li a {
+            .community .container .inner .board .pagination ul li button {
               display: flex;
               justify-content: center;
               align-items: center;
               width: 25px;
               height: 25px;
               font: 600 14px/1 Montserrat;
-              color: #333; }
-            .community .container .inner .board .pagination ul li.on a, .community .container .inner .board .pagination ul li:hover a {
+              color: #333;
+              background: transparent;
+              border: 0;
+              cursor: pointer; }
+            .community .container .inner .board .pagination ul li.on button, .community .container .inner .board .pagination ul li:hover button {
               font: bold 14px/1 Montserrat;
               color: salmon; }
-        .community .container .inner .board .pagination > a {
+        .community .container .inner .board .pagination .prevBtn, .community .container .inner .board .pagination .nextBtn {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -2291,13 +2294,17 @@ a {
           height: 25px;
           background: #3a3e46;
           color: #fff;
-          transition: .5s; }
-          .community .container .inner .board .pagination > a i {
+          transition: .5s;
+          border: 0; }
+          .community .container .inner .board .pagination .prevBtn i, .community .container .inner .board .pagination .nextBtn i {
             font-size: 10px; }
-          .community .container .inner .board .pagination > a:hover {
+          .community .container .inner .board .pagination .prevBtn:enabled:hover, .community .container .inner .board .pagination .nextBtn:enabled:hover {
             background: #fff;
             border: 1px solid #3a3e46;
-            color: #3a3e46; }
+            color: #3a3e46;
+            cursor: pointer; }
+          .community .container .inner .board .pagination .prevBtn:disabled, .community .container .inner .board .pagination .nextBtn:disabled {
+            background: #bbb; }
 .community .faqBoard .board .boardForm {
   width: 100%;
   margin: 20px 0;

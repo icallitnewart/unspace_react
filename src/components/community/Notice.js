@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useParams, useHistory } from "react-router-dom";
 import NoticePost from "./NoticePost";
 import SearchBox from "./SearchBox";
+import Pagination from "./Pagination";
 
 function Notice() {
     const { id } = useParams(); 
@@ -16,6 +17,13 @@ function Notice() {
     const [ items, setItems ] = useState([]);
     //하이라이트 처리할 검색어 저장
     const [ highlight, setHighlight ] = useState("");
+
+    //Pagination 옵션
+    const maxItems = 5;
+    const totalItems = items.length;
+    const [ page, setPage ] = useState(1);
+    const startIndex = (page - 1) * maxItems;
+    const endIndex = startIndex + maxItems;
 
     useEffect(()=> {
         callData();
@@ -68,7 +76,7 @@ function Notice() {
                                 </thead>
                                 <tbody>
                                     {items.length > 0 
-                                    ? [...items].reverse().map((item, index)=>
+                                    ? [...items].reverse().slice(startIndex, endIndex).map((item, index)=>
                                         <tr key={index} onClick={()=> history.push(`/community/notice/${item.idx}`)}>
                                             <td className="idx">{item.idx}</td>
                                             <td className="title">{highlight ? highlightText(item.title) : item.title} </td>
@@ -86,26 +94,12 @@ function Notice() {
                                 setItems={setItems} 
                                 setHighlight={setHighlight}
                             />
-                            <div className="pagination">
-                                <a href="#" className="prevBtn">
-                                    <i className="fas fa-chevron-left"></i>
-                                </a>
-                                <ul>
-                                    <li className="on"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#">6</a></li>
-                                    <li><a href="#">7</a></li>
-                                    <li><a href="#">8</a></li>
-                                    <li><a href="#">9</a></li>
-                                    <li><a href="#">10</a></li>
-                                </ul>
-                                <a href="#" className="nextBtn">
-                                    <i className="fas fa-chevron-right"></i>
-                                </a>
-                            </div>
+                            <Pagination
+                                totalItems={totalItems}
+                                maxItems={maxItems}
+                                page={page}
+                                setPage={setPage}
+                            />
                         </>
                     :   <NoticePost id={id} />
                     }
