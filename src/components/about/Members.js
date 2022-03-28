@@ -1,6 +1,8 @@
-function Members() {
+import { forwardRef } from "react";
+
+function Members(props, ref) {
     return (
-        <section className="members">
+        <section className="members" ref={ref}>
             <div className="inner">
                 <div className="detail">
                     <h1>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, impedit."</h1>
@@ -25,4 +27,4 @@ function Members() {
     )
 }
 
-export default Members;
+export default forwardRef(Members);

@@ -1,13 +1,8 @@
 .about {
 
-.visual_sub {
-    .pic {
-        //background: url(../img/visual_sub_about.jpg) top/cover;
-    }
-}
-
 .intro {
     width: 100%;
+    padding: 120px 0px 50px;
 
     .inner {
         width: 1180px;
@@ -15,7 +10,7 @@
 
         .wrap {
             width: 100%;
-            padding: 120px 50px;
+            padding: 0px 50px;
 
             article {
                 display: flex;
@@ -94,7 +89,7 @@
 
 .members {
     width: 100%;
-    margin-bottom: 150px;
+    padding: 100px 0px 50px;
 
     .inner {
         position: relative;
@@ -207,7 +202,7 @@
 
 .services {
     width: 100%;
-    margin-bottom: 150px;
+    padding: 100px 0px 150px;
 
     .inner {
         display: flex;

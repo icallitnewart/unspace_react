@@ -1,7 +1,6 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState, forwardRef } from "react";
 
-function Getintouch() {
+function Getintouch(props, ref) {
     const initValue = {
         username: "",
         phoneNum: "",
@@ -53,10 +52,8 @@ function Getintouch() {
         : setSuccess(false)
     }, [err]);
 
-    console.log(success);
-
     return (
-        <section className="container getintouch">
+        <section className="container getintouch" ref={ref}>
             <div className="inner">
                 <div className="title">
                     <h1>Get in touch</h1>
@@ -187,4 +184,4 @@ function Getintouch() {
     )
 }
 
-export default Getintouch;
+export default forwardRef(Getintouch);

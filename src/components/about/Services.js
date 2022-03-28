@@ -1,6 +1,8 @@
-function Services() {
+import { forwardRef } from "react";
+
+function Services(props, ref) {
     return (
-        <section className="services">
+        <section className="services" ref={ref}>
             <div className="inner">
                 <div className="wrap">
                     <article>
@@ -48,4 +50,4 @@ function Services() {
     )
 }
 
-export default Services;
+export default forwardRef(Services);

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 
 function Visual_sub({ title, pic, desc, tab }) {
-    const type = useParams().type;
+    const { type } = useParams();
     
     return (
         <figure className="visual_sub">
@@ -20,11 +20,12 @@ function Visual_sub({ title, pic, desc, tab }) {
                             <div 
                                 key={index}
                                 className={
-                                    (type && item.name.slice("")===type) ? "on" : ""
-                                }
+                                    (type && item.name.replace(/ /gi,"")===type) ? "on" : ""
+                                } 
+                                onClick={item.event}
                             >
                                 <span>0{index + 1}</span>
-                                <span onClick={item.event}>{item.name}</span>
+                                <span>{item.name}</span>
                             </div>
                         )
 

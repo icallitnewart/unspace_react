@@ -1488,13 +1488,14 @@ a {
   #header_sub .inner .btnCall {
     right: 5vw; } }
 .about .intro {
-  width: 100%; }
+  width: 100%;
+  padding: 120px 0px 50px; }
   .about .intro .inner {
     width: 1180px;
     margin: 0 auto; }
     .about .intro .inner .wrap {
       width: 100%;
-      padding: 120px 50px; }
+      padding: 0px 50px; }
       .about .intro .inner .wrap article {
         display: flex;
         width: calc(100% / 3 - 30px);
@@ -1544,7 +1545,7 @@ a {
         clear: both; }
 .about .members {
   width: 100%;
-  margin-bottom: 150px; }
+  padding: 100px 0px 50px; }
   .about .members .inner {
     position: relative;
     width: 1180px;
@@ -1640,7 +1641,7 @@ a {
       clear: both; }
 .about .services {
   width: 100%;
-  margin-bottom: 150px; }
+  padding: 100px 0px 150px; }
   .about .services .inner {
     display: flex;
     width: 1180px;

@@ -1,6 +1,8 @@
-function Intro() {
+import { forwardRef } from "react";
+
+function Intro(props, ref) {
     return (
-        <section className="intro">
+        <section className="intro" ref={ref}>
             <div className="inner">
                 <div className="wrap">
                     <article style={{ 
@@ -28,4 +30,4 @@ function Intro() {
     )
 }
 
-export default Intro;
+export default forwardRef(Intro);

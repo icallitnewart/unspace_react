@@ -1,13 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, forwardRef } from "react";
 import CreateMap from "../../hooks/map.js";
 
-function Location() {
+function Location(props, ref) {
     useEffect(()=> {
         new CreateMap(".location", ".branchBtns");
     });
 
     return (
-        <section className="container location">
+        <section className="container location" ref={ref}>
             <div className="inner">
                 <div className="title">
                     <h1>Location</h1>
@@ -38,4 +38,4 @@ function Location() {
     )
 }
 
-export default Location;
+export default forwardRef(Location);
