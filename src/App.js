@@ -23,11 +23,10 @@ function App() {
       </Switch>
       
       <Route exact path="/about" component={About}></Route>
-      <Route exact path="/media" component={Media}></Route>
-      <Route exact path="/community" component={Community}></Route>
-      <Route exact path="/community/notice/:id" component={Community}></Route>
+      <Route exact path="/media/:type" component={Media}></Route>
+      <Route exact path="/community/:type/:id?" component={Community}></Route>
       <Route exact path="/contact" component={Contact}></Route>
-      <Route exact path="/membership" component={Membership}></Route>
+      <Route exact path="/membership/:type" component={Membership}></Route>
       <Route path="/" component={Footer}></Route>
     </div>
   );

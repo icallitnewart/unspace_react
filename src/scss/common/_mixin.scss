@@ -32,3 +32,8 @@
         color: $color;
     }
 }
+
+@mixin sub_title() {
+    font: bold 42px/1 $font1;
+    color: $mainColor;
+}

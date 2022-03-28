@@ -1,4 +1,8 @@
+import { useParams } from "react-router-dom";
+
 function Visual_sub({ title, pic, desc, tab }) {
+    const type = useParams().type;
+    
     return (
         <figure className="visual_sub">
             <div className="inner">
@@ -13,9 +17,14 @@ function Visual_sub({ title, pic, desc, tab }) {
                     <div className="guide">
                     {
                         tab.map((item, index)=> 
-                            <div key={index}>
+                            <div 
+                                key={index}
+                                className={
+                                    (type && item.name.slice("")===type) ? "on" : ""
+                                }
+                            >
                                 <span>0{index + 1}</span>
-                                <span>{item}</span>
+                                <span onClick={item.event}>{item.name}</span>
                             </div>
                         )
 

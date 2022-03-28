@@ -16,10 +16,10 @@ function Header({ type }) {
                     <ul id="gnb">
                         <li><NavLink activeStyle={active} exact to="/">HOME</NavLink></li>
                         <li><NavLink activeStyle={active} exact to="/about">ABOUT US</NavLink></li>
-                        <li><NavLink activeStyle={active} exact to="/media">MEDIA</NavLink></li>
-                        <li><NavLink activeStyle={active} exact to="/community">COMMUNITY</NavLink></li>
+                        <li><NavLink activeStyle={active} exact to="/media/projects">MEDIA</NavLink></li>
+                        <li><NavLink activeStyle={active} exact to="/community/faq">COMMUNITY</NavLink></li>
                         <li><NavLink activeStyle={active} exact to="/contact">CONTACT</NavLink></li>
-                        <li><NavLink activeStyle={active} exact to="/membership"><i className="fas fa-user-circle"></i></NavLink></li>
+                        <li><NavLink activeStyle={active} exact to="/membership/login"><i className="fas fa-user-circle"></i></NavLink></li>
                     </ul>
                 </nav>
         

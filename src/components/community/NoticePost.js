@@ -75,7 +75,7 @@ function NoticePost({ id }) {
                     <td colSpan="2">
                         {items.prev && <button className="prevBtn" onClick={()=> history.push(`/community/notice/${items.prev.idx}`)}>PREV</button>}
                         {items.next && <button className="nextBtn" onClick={()=> history.push(`/community/notice/${items.next.idx}`)}>NEXT</button>}
-                        <button className="listBtn" onClick={()=> history.push('/community')}>LIST</button>
+                        <button className="listBtn" onClick={()=> history.push('/community/notice')}>LIST</button>
                     </td>
                 </tr>
             </tbody>
