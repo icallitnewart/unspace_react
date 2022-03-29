@@ -1930,11 +1930,11 @@ a {
   width: 1180px;
   height: 850px;
   margin: 0 auto;
-  padding: 150px 100px; }
+  padding: 150px 60px; }
   .join .login .inner .loginForm {
-    width: 50%;
+    width: 60%;
     height: 100%;
-    padding: 70px 100px; }
+    padding: 70px 120px; }
     .join .login .inner .loginForm h1 {
       text-align: center;
       margin-bottom: 10px; }
@@ -1995,7 +1995,7 @@ a {
         cursor: pointer; }
   .join .login .inner .banner {
     position: relative;
-    width: 50%;
+    width: 40%;
     height: 100%; }
     .join .login .inner .banner img {
       width: 100%;

@@ -301,15 +301,12 @@
         width: 1180px;
         height: 850px;
         margin: 0 auto;
-        padding: 150px 100px;
+        padding: 150px 60px;
 
         .loginForm {
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: center;
-            width: 50%;
+            width: 60%;
             height: 100%;
-            padding: 70px 100px;
+            padding: 70px 120px;
 
             h1 {
                 text-align: center;
@@ -401,7 +398,7 @@
 
         .banner {
             position: relative;
-            width: 50%;
+            width: 40%;
             height: 100%;
 
             img {
