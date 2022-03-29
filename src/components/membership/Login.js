@@ -5,19 +5,19 @@ function Login() {
     const initValue = { 
         userid: "",
         password: ""
-    }
+    };
     const [ inputs, setInputs ] = useState(initValue);
+
     const handleChange = (e)=> {
         const { name, value } = e.target;
         setInputs({ ...inputs, [name] : value });
     };
+    
     const handleCheck = (e)=> {
         const { name } = e.target;
         const isChecked = e.target.checked;
         setInputs({ ...inputs, [name] : isChecked });
-    }
-
-    console.log(inputs);
+    };
 
     return (
         <section className="login">
