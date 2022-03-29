@@ -1916,6 +1916,123 @@ a {
       border: 0; }
       .join .policy .inner .buttons input[type=submit]:hover {
         color: salmon; }
+.join .login .inner {
+  display: flex;
+  width: 1180px;
+  height: 850px;
+  margin: 0 auto;
+  padding: 150px 100px; }
+  .join .login .inner .loginForm {
+    width: 50%;
+    height: 100%;
+    padding: 70px 100px; }
+    .join .login .inner .loginForm h1 {
+      text-align: center;
+      margin-bottom: 10px; }
+      .join .login .inner .loginForm h1 span {
+        position: relative;
+        font: bold 14px/1 Montserrat;
+        letter-spacing: 3px;
+        color: salmon;
+        padding: 10px 20px; }
+    .join .login .inner .loginForm fieldset {
+      border: 0;
+      margin-bottom: 30px; }
+    .join .login .inner .loginForm table {
+      border-collapse: separate;
+      border-spacing: 0px 20px;
+      width: 100%; }
+      .join .login .inner .loginForm table tr th {
+        display: block;
+        text-align: left;
+        width: 100%;
+        height: 20px;
+        font: 600 12px/1 Montserrat;
+        color: #3a3e46;
+        letter-spacing: 2px; }
+        .join .login .inner .loginForm table tr th input[type=submit] {
+          width: 100%;
+          height: 40px;
+          border: 0px;
+          font: 14px/1 Montserrat;
+          letter-spacing: 2px;
+          background: #3a3e46;
+          color: #eee;
+          cursor: pointer; }
+      .join .login .inner .loginForm table tr td {
+        display: block;
+        width: 100%; }
+        .join .login .inner .loginForm table tr td input[type=text], .join .login .inner .loginForm table tr td input[type=password] {
+          width: 100%;
+          height: 40px;
+          background: #eee;
+          border: 0px;
+          outline: none;
+          padding: 0px 10px; }
+        .join .login .inner .loginForm table tr td label[for=remember] {
+          font: 13px/13px Montserrat;
+          cursor: pointer; }
+          .join .login .inner .loginForm table tr td label[for=remember] input[type=checkbox] {
+            width: 12px;
+            height: 12px;
+            vertical-align: middle;
+            margin-right: 3px; }
+    .join .login .inner .loginForm p {
+      text-align: right; }
+      .join .login .inner .loginForm p span {
+        font: 14px/1 Open Sans;
+        color: salmon;
+        text-decoration: underline;
+        cursor: pointer; }
+  .join .login .inner .banner {
+    position: relative;
+    width: 50%;
+    height: 100%; }
+    .join .login .inner .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .join .login .inner .banner .textBox {
+      position: absolute;
+      z-index: 2;
+      top: 80px;
+      left: 0px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%; }
+      .join .login .inner .banner .textBox h2 {
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font: 20px/1 Montserrat;
+        margin-bottom: 10px; }
+      .join .login .inner .banner .textBox h3 {
+        width: 100%;
+        text-align: center;
+        color: #efefef;
+        font: 600 40px/1 Montserrat;
+        letter-spacing: 1px;
+        margin-bottom: 50px; }
+      .join .login .inner .banner .textBox a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        font: 24px/1 Montserrat;
+        color: #eee;
+        background: #767e8f;
+        letter-spacing: 2px;
+        animation: fontColor 1.5s infinite; }
+    .join .login .inner .banner::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      display: block;
+      background: rgba(58, 62, 70, 0.5); }
 
 @media screen and (max-width: 1179px) {
   .join .inner {
@@ -2851,6 +2968,13 @@ a {
         .popup > .inner .closeBtn span:nth-of-type(2) {
           transform: translate(-50%, -50%) rotate(-45deg); }
 
+@keyframes fontColor {
+  0% {
+    color: #eee; }
+  50% {
+    color: rgba(250, 128, 114, 0.726); }
+  100% {
+    color: #eee; } }
 @keyframes spinning {
   0% {
     transform: rotate(0deg); }

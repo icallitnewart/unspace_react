@@ -143,6 +143,19 @@ $mobile: 599px;
 
 
 //animation
+@keyframes fontColor {
+    0% {
+        color: #eee;
+    }
+
+    50% {
+        color: rgba(250, 128, 114, 0.726);
+    }
+
+    100% {
+        color: #eee;
+    }
+}
 @keyframes spinning {
     0% {
         transform: rotate(0deg);
