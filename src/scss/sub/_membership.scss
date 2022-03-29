@@ -5,7 +5,7 @@
         position: relative;
         width: 1180px;
         margin: 0 auto;
-        padding: 100px 50px 0;
+        padding: 130px 50px;
         animation: fadeIn 3s, moveUp 1s;
     
         fieldset {
@@ -20,51 +20,11 @@
     
         .content {
             width: 100%;
-            margin-bottom: 150px;
-            border: 1px solid $mainColor;
-        
-            .title {
-                transform: translate(25px, -40px);
-                width: 100%;
-                text-align: right;
-        
-                h1 {
-                    position: relative;
-                    display: inline-block;
-        
-                    span {
-                        position: relative;
-                        display: inline-block;
-                        padding: 5px;
-                        font: bold 50px/1 $font1;
-                        color: $mainColor;
-                        background: #fff;
-                        border: 1px solid $mainColor;
-                    }
-    
-                    span span {
-                        padding: 8px;
-                    }
-        
-                    &::before {
-                        position: absolute;
-                        z-index: -1;
-                        display: block;
-                        top: -10px;
-                        right: -10px;
-                        content: "";
-                        z-index: 0;
-                        width: 50px;
-                        height: 50px;
-                        background: $mainColor;
-                    }
-                }
-            }
         
             .textBox {
                 width: 100%;
                 height: 100%;
-                padding: 0 50px 50px 50px;
+                padding: 0px 50px 50px 50px;
     
                 h2 {
                     font: bold 26px/1 $font1;
@@ -80,31 +40,57 @@
     
                     tr {
                         width: 100%;
-                        height: 50px;
     
-                        th {
-                            width: 20%;
-                            background: $mainColor;
-                            font: 600 14px/50px $font1;
+                        th:not(.buttons) {
+                            width: 25%;
+                            vertical-align: top;
+                            font: 600 12px/50px $font1;
+                            letter-spacing: 2px;
                             color: #fff;
+
+                            label, span {
+                                display: inline-block;
+                                width: 100%;
+                                background: $mainColor;
+                            }
+
+                            label[for=comments] {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 200px;
+                            }
                         }
     
                         td {
-                            width: 80%;
+                            width: 75%;
     
                             input[type=text], input[type=password] {
                                 width: 100%;
                                 height: 50px;
                                 border: 0;
                                 background: #eee;
-                                text-indent: 1em;
-                                font: 600 14px/50px $font1;
+                                text-indent: 2em;
+                                font: 600 12px/50px $font1;
                                 outline: none;
+                            }
+
+                            .errMsg {
+                                font: 600 13px/1.3 $font1;
+                                color: $pointColor;
+                                margin: 9px 7px 0px;
+
+                                &::before {
+                                    content: "*";
+                                    vertical-align: middle;
+                                }
                             }
                         }
     
                         .check {
-                            background: #eee;
+                            >div {
+                                background: #eee;
+                            }
                             
                             label {
                                 display: inline-flex;
@@ -116,7 +102,7 @@
                                 
     
                                 &:first-child {
-                                    margin-left: 15px;
+                                    margin-left: 2em;
                                 }
     
                                 input[type=checkbox] {
@@ -127,6 +113,7 @@
     
                         .textArea {
                             display: flex;
+                            flex-wrap: wrap;
                             width: 100%;
     
                             textarea {
@@ -136,10 +123,47 @@
                                 border: 0;
                                 background: #eee;
                                 outline: none;
-                                padding: 15px;
+                                padding: 1.5em 2em;
+                                font: 13px/1.4 $font1;
+
+                                &::placeholder {
+                                    font: 600 12px/1 $font1;
+                                }
                             }
                         }
                         
+                    }
+
+                    .buttons {
+                        width: 100%;
+                        padding-top: 50px;
+                
+                        input {
+                            display: inline-block;
+                            width: 150px;
+                            height: 50px;
+                            font: 600 12px/1 $font1;
+                            letter-spacing: 2px;
+                            cursor: pointer;
+                            transition: .5s;
+                        }
+                
+                        input[type=reset] {
+                            background: #fff;
+                            color: $mainColor;
+                            border: 1px solid $mainColor;
+                            margin-right: 20px;
+                        }
+                
+                        input[type=submit] {
+                            background: $mainColor;
+                            color: #fff;
+                            border: 0;
+                
+                            &:hover {
+                                color: $pointColor;
+                            }
+                        }
                     }
                 }
     
@@ -153,7 +177,7 @@
         position: relative;
         width: 1180px;
         margin: 0 auto;
-        padding: 100px 50px 0;
+        padding: 150px 50px 50px;
         animation: fadeIn 3s, moveUp 1s;
 
         .content{
@@ -204,7 +228,7 @@
             .textBox {
                 width: 100%;
                 height: 100%;
-                padding: 0 50px 50px 50px;
+                padding: 0px 50px;
     
                 h2, h3 {
                     font: bold 26px/1 $font1;
@@ -236,38 +260,34 @@
                     }
                 }
             }
-        }
-    
-        .buttons {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin-bottom: 150px;
-    
-            input {
-                display: inline-block;
-                width: 150px;
-                height: 50px;
-                font: 600 14px/1 $font1;
-                cursor: pointer;
-                transition: .5s;
-            }
-    
-            input[type=reset] {
-                background: #fff;
-                color: $mainColor;
-                border: 2px solid $mainColor;
-                margin-right: 20px;
-            }
-    
-            input[type=submit] {
-                background: $mainColor;
-                color: #fff;
-                border: 0;
-    
-                &:hover {
-                    color: $pointColor;
+
+            .button {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%; 
+                padding: 0px 50px 50px;
+
+                .agreeBtn {
+                    padding: 12px 20px;
+                    font: 18px/1 $font1;
+                    border: 1px solid $mainColor;
+                    background: $mainColor;
+                    color: #fff;
+                    cursor: pointer;
+                    transition: .5s;
+
+                    &:hover {
+                        color: $pointColor;
+                    }
+                    
+                    i {
+                        font-size: 10px;
+                        vertical-align: middle;
+                        margin-left: 5px;
+                        animation: arrow 1s infinite;
+                    }
                 }
+
             }
         }
 

@@ -34,12 +34,7 @@ function Membership() {
         <section className="content join">
             <Visual {...visual} />
             {type==="login" && <Login />}
-            {type==="signup" &&
-            <>
-                <Signup />
-                <Policy />
-            </>
-            }
+            {type==="signup" && <Signup />}
         </section>
     )
 }
