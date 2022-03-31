@@ -19,27 +19,27 @@ function Location() {
 
     return (
         <section id="location">
+            <div className="container">
+                <div id="map" ref={mapContainer}></div>
+                <ul className="branchBtns" ref={btns}>
+                    {
+                        branchOptions.map((opt, index)=>
+                            <li
+                                key={index}
+                                className={activeIndex === index ? "branchBtn on" : "branchBtn"}
+                                onClick={()=> {
+                                    (activeIndex !== index) &&
+                                    changeMap(index);
+                                }}
+                            >
+                                {opt.title} 
+                                <span>{opt.area}</span>
+                            </li>
+                        )
+                    }
+                </ul>
+            </div>
             <div className="inner">
-                <div className="container">
-                    <div id="map" ref={mapContainer}></div>
-                    <ul className="branchBtns" ref={btns}>
-                        {
-                            branchOptions.map((opt, index)=>
-                                <li
-                                    key={index}
-                                    className={activeIndex === index ? "branchBtn on" : "branchBtn"}
-                                    onClick={()=> {
-                                        (activeIndex !== index) &&
-                                        changeMap(index);
-                                    }}
-                                >
-                                    {opt.title} 
-                                    <span>{opt.area}</span>
-                                </li>
-                            )
-                        }
-                    </ul>
-                </div>
                 <div className="address">
                     <div className="officeTitle">
                         <h2>{activeBranch.title}</h2>
