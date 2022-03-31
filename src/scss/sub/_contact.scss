@@ -1,14 +1,4 @@
 .contact {
-
-    .visual_sub {
-        .inner {
-            .pic {
-                //background: url(../img/visual_sub_contact.jpg) top/cover;
-            }
-        }
-    }
-    
-    
     
     .container {
         width: 100%;
@@ -283,7 +273,7 @@
                 flex-direction: column;
                 width: 120px;
     
-                a {
+                li {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -295,6 +285,7 @@
                     border: 1px solid $mainColor;
                     background: #fff;
                     color: $mainColor;
+                    cursor: pointer;
                     transition: .5s;
     
                     span {

@@ -795,7 +795,7 @@
                 flex-direction: column;
                 width: 150px;
     
-                a {
+                li {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -806,6 +806,7 @@
                     font: 600 12px/1 $font1;
                     background: #fff;
                     color: $mainColor;
+                    cursor: pointer;
                     transition: .5s;
     
                     span {

@@ -714,7 +714,7 @@ a {
         display: flex;
         flex-direction: column;
         width: 150px; }
-        #location .inner .container .branchBtns a {
+        #location .inner .container .branchBtns li {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -725,15 +725,16 @@ a {
           font: 600 12px/1 Montserrat;
           background: #fff;
           color: #3a3e46;
+          cursor: pointer;
           transition: .5s; }
-          #location .inner .container .branchBtns a span {
+          #location .inner .container .branchBtns li span {
             display: block;
             margin-top: 5px;
             font: 600 10px/1 Montserrat; }
-          #location .inner .container .branchBtns a.on, #location .inner .container .branchBtns a:hover {
+          #location .inner .container .branchBtns li.on, #location .inner .container .branchBtns li:hover {
             background: #767e8f;
             color: #fff; }
-            #location .inner .container .branchBtns a.on span, #location .inner .container .branchBtns a:hover span {
+            #location .inner .container .branchBtns li.on span, #location .inner .container .branchBtns li:hover span {
               color: #c3cee6; }
     #location .inner .address {
       width: calc(30% - 40px);
@@ -2817,7 +2818,7 @@ a {
       display: flex;
       flex-direction: column;
       width: 120px; }
-      .contact .container.location .location .branchBtns a {
+      .contact .container.location .location .branchBtns li {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -2829,15 +2830,16 @@ a {
         border: 1px solid #3a3e46;
         background: #fff;
         color: #3a3e46;
+        cursor: pointer;
         transition: .5s; }
-        .contact .container.location .location .branchBtns a span {
+        .contact .container.location .location .branchBtns li span {
           display: block;
           margin-top: 5px;
           font: 600 10px/1 Montserrat; }
-        .contact .container.location .location .branchBtns a.on, .contact .container.location .location .branchBtns a:hover {
+        .contact .container.location .location .branchBtns li.on, .contact .container.location .location .branchBtns li:hover {
           background: #3a3e46;
           color: #fff; }
-          .contact .container.location .location .branchBtns a.on span, .contact .container.location .location .branchBtns a:hover span {
+          .contact .container.location .location .branchBtns li.on span, .contact .container.location .location .branchBtns li:hover span {
             color: salmon; }
     .contact .container.location .location .address {
       width: 28%;
