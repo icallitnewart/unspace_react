@@ -93,16 +93,21 @@ a {
 #visual {
   width: 100%;
   padding-top: 100px;
-  background: linear-gradient(to left, #fff 50%, #3a3e46 50%); }
+  background: linear-gradient(to left, #fff 70%, #3a3e46 30%); }
   #visual .bgs img {
+    opacity: 0;
     position: absolute;
     z-index: 1;
     top: 0px;
-    right: 0;
+    right: 0px;
     width: 70%;
     height: 900px;
     object-fit: cover;
+    transition: 4s;
     filter: brightness(0.8); }
+    #visual .bgs img.on {
+      opacity: 1;
+      transition: 4s; }
   #visual::after {
     content: "";
     display: block;
@@ -232,12 +237,13 @@ a {
       bottom: 40px;
       transform: translateX(-50%);
       font-size: 0; }
-      #visual .inner .pagination a {
+      #visual .inner .pagination span {
         color: #c3cee6;
-        margin-right: 5px; }
-        #visual .inner .pagination a i {
+        margin-right: 7px;
+        cursor: pointer; }
+        #visual .inner .pagination span i {
           font-size: 10px;
-          transform: scale(0.7); }
+          transform: scale(0.85); }
 
 #trending {
   width: 100%;
