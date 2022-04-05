@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useEffect } from "react";
 import { useSlider } from "../../hooks/useSlider.js";
 
 function Members(props, ref) {
@@ -45,16 +45,34 @@ function Members(props, ref) {
         items, 
         style, 
         activeIndex,
+        isClicked,
         moveSlide 
     } = useSlider(data, 500, true);
 
     const activeItem = items.filter((item)=> item.idx === activeIndex);
+
+    //슬라이더 텍스트 애니메이션 효과
+    useEffect(()=> {
+        if(isClicked) { //버튼 클릭시 
+            ref.current.classList.remove("sliderOn");
+            const timer = setTimeout(()=> 
+            ref.current.classList.add("sliderOn"), 0);
+
+            return ()=> clearTimeout(timer);
+        } 
+        else {  //자동 재생시
+            ref.current.classList.add("sliderOn");
+            const timer = setTimeout(()=> ref.current.classList.remove("sliderOn"), 2000);
+    
+            return ()=> clearTimeout(timer);
+        }
+    }, [activeIndex, isClicked]);
     
     return (
         <section className="members" ref={ref}>
             <div className="inner">
                 <div className="detail">
-                    <h1>{`"${activeItem[0].greeting}"`}</h1>
+                    <h1><span>{`"${activeItem[0].greeting}"`}</span></h1>
                     <span>{activeItem[0].name}</span>
                     <span>― {activeItem[0].position}</span>
                     <p>{activeItem[0].career}</p>
@@ -72,7 +90,7 @@ function Members(props, ref) {
                 </div>
                 <div className="textBox">
                     <p>
-                        {activeItem[0].desc}
+                        <span>{activeItem[0].desc}</span>
                     </p>
                 </div>
                 <button className="prevBtn" onClick={()=> moveSlide("up")}>

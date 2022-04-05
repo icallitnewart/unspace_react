@@ -1585,6 +1585,10 @@ a {
 .about .members {
   width: 100%;
   padding: 100px 0px 50px; }
+  .about .members.sliderOn .inner .detail h1 span {
+    animation: slider 0.5s; }
+  .about .members.sliderOn .inner .textBox p span {
+    animation: slider 0.5s; }
   .about .members .inner {
     position: relative;
     width: 1180px;
@@ -1606,15 +1610,17 @@ a {
         margin-top: 100px;
         margin-bottom: 20px;
         padding-right: 50px; }
-      .about .members .inner .detail span {
+        .about .members .inner .detail h1 span {
+          display: inline-block; }
+      .about .members .inner .detail > span {
         display: block;
         width: 100%;
         text-align: right; }
-        .about .members .inner .detail span:nth-of-type(1) {
+        .about .members .inner .detail > span:nth-of-type(1) {
           font: 600 18px/1 Montserrat;
           color: salmon;
           margin-bottom: 10px; }
-        .about .members .inner .detail span:nth-of-type(2) {
+        .about .members .inner .detail > span:nth-of-type(2) {
           font: 600 14px/1 Montserrat;
           color: #666;
           margin-bottom: 40px; }
@@ -1652,6 +1658,8 @@ a {
         color: rgba(255, 255, 255, 0.9);
         padding: 25px;
         border: 1px solid #aaa; }
+        .about .members .inner .textBox p span {
+          display: inline-block; }
     .about .members .inner > button {
       position: absolute;
       top: 50%;
@@ -3026,6 +3034,13 @@ a {
         .popup > .inner .closeBtn span:nth-of-type(2) {
           transform: translate(-50%, -50%) rotate(-45deg); }
 
+@keyframes slider {
+  0% {
+    opacity: 0;
+    transform: translateY(15px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
 @keyframes arrow {
   0% {
     transform: translateX(3px); }

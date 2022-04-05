@@ -91,6 +91,16 @@
     width: 100%;
     padding: 100px 0px 50px;
 
+    &.sliderOn .inner {
+        .detail h1 span {
+            animation: slider 0.5s;
+        }
+
+        .textBox p span {
+            animation: slider 0.5s;
+        }
+    }
+
     .inner {
         position: relative;
         width: 1180px;
@@ -114,9 +124,13 @@
                 margin-top: 100px;
                 margin-bottom: 20px;
                 padding-right: 50px;
+
+                span {
+                    display: inline-block;
+                }
             }
 
-            span {
+            >span {
                 display: block;
                 width: 100%;
                 text-align: right;
@@ -179,6 +193,10 @@
                 color: rgba(255, 255, 255, 0.9);
                 padding: 25px;
                 border: 1px solid #aaa;
+
+                span {
+                    display: inline-block;
+                }
             }
 
             

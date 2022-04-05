@@ -100,7 +100,7 @@ const useSlider = (data, duration, autoplay)=> {
     //자동 재생시 작동
     useEffect(()=> {
         if(autoplay) {
-            const slider = setInterval(()=> moveTo("down"), duration * 4);
+            const slider = setInterval(()=> moveTo("down"), duration * 6);
     
             return ()=> clearInterval(slider);
         }
@@ -125,6 +125,7 @@ const useSlider = (data, duration, autoplay)=> {
         items, 
         style, 
         activeIndex,
+        isClicked,
         moveSlide 
     }
 };
