@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, forwardRef } from "react";
 
-function Visual() {
+function Visual(prop, ref) {
     const [ activeBg, setActiveBg ] = useState(0);
     const [ stop, setStop ] = useState(false);
 
@@ -52,7 +52,7 @@ function Visual() {
     }, [activeBg]);
 
     return (       
-        <figure id="visual">
+        <figure id="visual" ref={ref}>
             <div className="bgs">
                 {imgs.map((img, index)=> 
                         <img 
@@ -100,4 +100,4 @@ function Visual() {
     )
 }
 
-export default Visual;
+export default forwardRef(Visual);

@@ -1,6 +1,8 @@
-function Subscribe() {
+import { forwardRef } from "react";
+
+function Subscribe(prop, ref) {
     return (
-        <section id="subscribe">
+        <section id="subscribe" ref={ref}>
             <div className="inner">
                 <h1>SUBSCRIBE</h1>
                 <h2>Don't miss out the latest trends!</h2>
@@ -11,4 +13,4 @@ function Subscribe() {
     )
 }
 
-export default Subscribe;
+export default forwardRef(Subscribe);

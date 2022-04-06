@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, forwardRef } from "react";
 import { useKakaoMap } from "../../hooks/useKakaoMap.js";
 
-function Location() {
+function Location(prop, ref) {
     const mapContainer = useRef(null);
     const btns = useRef(null);
 
@@ -18,7 +18,7 @@ function Location() {
     }, [activeIndex, branchOptions]);
 
     return (
-        <section id="location">
+        <section id="location" ref={ref}>
             <div className="container">
                 <div id="map" ref={mapContainer}></div>
                 <ul className="branchBtns" ref={btns}>
@@ -74,4 +74,4 @@ function Location() {
     )
 }
 
-export default Location;
+export default forwardRef(Location);

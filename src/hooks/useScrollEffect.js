@@ -5,7 +5,7 @@ const useScrollEffect = (sections)=> {
         sections.forEach((section)=> {
             const position = section.current.getBoundingClientRect().top;
 
-            if(position + 400 < window.innerHeight) section.current.classList.add("on");
+            if(position + 300 < window.innerHeight) section.current.classList.add("on");
         });
     };
 

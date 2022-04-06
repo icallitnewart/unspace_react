@@ -1,6 +1,8 @@
-function Philosophy() {
+import { forwardRef } from "react";
+
+function Philosophy(prop, ref) {
     return (
-        <section id="philosophy">
+        <section id="philosophy" ref={ref}>
             <div className="inner">
                 <div className="textBox">
                     <div className="lines">
@@ -19,4 +21,4 @@ function Philosophy() {
     )
 }
 
-export default Philosophy;
+export default forwardRef(Philosophy);

@@ -1,6 +1,7 @@
+import { forwardRef } from "react";
 import { useSlider } from "../../hooks/useSlider.js";
 
-function Trending() {
+function Trending(prop, ref) {
     const data= [
         {
             idx : 1,
@@ -35,7 +36,7 @@ function Trending() {
     } = useSlider(data, 500);
 
     return (
-        <section id="trending">
+        <section id="trending" ref={ref}>
             <div className="inner">
                 <div className="textBox">
                     <h1>Trending</h1>
@@ -77,4 +78,4 @@ function Trending() {
     )
 }
 
-export default Trending;
+export default forwardRef(Trending);

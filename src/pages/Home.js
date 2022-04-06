@@ -1,3 +1,6 @@
+import { useRef } from "react";
+import { useScrollEffect } from "../hooks/useScrollEffect";
+
 //components
 import Header from "../components/common/Header";
 import About from "../components/home/About";
@@ -10,17 +13,30 @@ import Trending from "../components/home/Trending";
 import Visual from "../components/home/Visual";
 
 function Home() {
+    const visual = useRef(null);
+    const trending = useRef(null);
+    const about = useRef(null);
+    const philosophy = useRef(null);
+    const quote = useRef(null);
+    const subscribe = useRef(null);
+    const gallery = useRef(null);
+    const location = useRef(null);
+
+    //스크롤 애니메이션 효과
+    const sections = [ visual, trending, about, philosophy, quote, subscribe, gallery, location ];
+    useScrollEffect(sections);
+
     return (
         <>
             <Header type="main" />
-            <Visual />
-            <Trending />
-            <About />
-            <Philosophy />
-            <Quote />
-            <Subscribe />
-            <Gallery />
-            <Location />
+            <Visual ref={visual} />
+            <Trending ref={trending} />
+            <About ref={about} />
+            <Philosophy ref={philosophy} />
+            <Quote ref={quote} />
+            <Subscribe ref={subscribe} />
+            <Gallery ref={gallery} />
+            <Location ref={location} />
         </>
     )
 }

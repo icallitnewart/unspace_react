@@ -189,6 +189,46 @@
     width: 100%;
     background: #eee;
 
+    //Scroll Animation : Start
+    &.on .inner {
+        >.textBox {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+        .slider .wrap article {
+            video, .textBox {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    }
+    .inner {
+        >.textBox {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: 1s;
+        }
+
+        .slider .wrap article {
+            video, .textBox {
+                opacity: 0;
+                transition-duration: 1s;
+            }
+
+            video { 
+                transform: translateY(30px); 
+                transition-delay: .3s !important; 
+            }
+
+            .textBox { 
+                transform: translateY(-30px);
+                transition-delay: .6s; 
+            }
+        }
+    }
+    //Scroll Animation : End
+
     .inner {
         position: relative;
         display: flex;
@@ -310,6 +350,34 @@
 #about {
     width: 100%;
 
+    //Scroll Animation : Start
+    &.on .inner {
+        .buttons, .textBox, img {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        img {
+            box-shadow: 20px 20px 0px $mainColor;
+        }
+    }
+    .inner {
+        .buttons, .textBox, img {
+            opacity: 0;
+            transition: 1s;
+        }
+
+        .buttons { 
+            transform: translateY(30px); 
+            transition-delay: .6s; 
+        }
+
+        .textBox { 
+            transform: translateY(-30px); 
+            transition-delay: .3s; 
+        }
+    }
+    //Scroll Animation : End
+
     .inner {
         position: relative;
         display: flex;
@@ -410,7 +478,6 @@
             height: auto;
             aspect-ratio: 1 / 1;
             margin-right: 80px;
-            box-shadow: 20px 20px 0px $mainColor;
         }
 
     }
@@ -419,6 +486,37 @@
 
 #philosophy {
     width: 100%;
+
+    //Scroll Animation : Start
+    &.on .inner .textBox {
+        .lines {
+            .top, .bottom {
+                width: 100%;
+            }
+            .left, .right {
+                height: 100%;
+            }
+        }
+
+        h1, p {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    .inner .textBox {
+        .lines div {
+            transition: 1s;
+        }
+
+        h1, p { 
+            opacity: 0;
+            transition: 1s; 
+        }
+
+        h1 { transform: translateY(20px); }
+        p { transform: translateY(-20px); }
+    }
+    //Scroll Animation : End
 
     .inner {
         position: relative;
@@ -442,13 +540,12 @@
 
                 div {
                     position: absolute;
-                    transition: 0.5s;
                 }
 
                 .top {
                     top: 0;
-                    right: 0;
-                    width: 100%;
+                    left: 0;
+                    width: 0%;
                     height: 4px;
                     background: $mainColor;
                 }
@@ -457,14 +554,14 @@
                     bottom: 0;
                     left: 0;
                     width: 4px;
-                    height: 100%;
+                    height: 0%;
                     background: $mainColor;
                 }
 
                 .bottom {
                     bottom: 0;
-                    left: 0;
-                    width: 100%;
+                    right: 0;
+                    width: 0%;
                     height: 4px;
                     background: $mainColor;
                 }
@@ -473,7 +570,7 @@
                     top: 0;
                     right: 0;
                     width: 4px;
-                    height: 100%;
+                    height: 0%;
                     background: $mainColor;
                 }
             }
@@ -514,6 +611,23 @@
 
 #quote {
     width: 100%;
+
+    //Scroll Animation : Start
+    &.on .inner {
+        p, span {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    .inner {
+        p, span {
+            opacity: 0;
+            transition: 1s;
+        }
+        p { transform: translateY(-20px); }
+        span { transform: translateY(20px); }
+    }
+    //Scroll Animation : End
     
     .inner {
         position: relative;
@@ -549,9 +663,24 @@
 #subscribe {
     position: relative;
     width: 100%;
-    //background: url(../img/subscribe.jpg) center/cover;
-    //background-attachment: fixed;
     background-color: $mainColor;
+
+    //Scroll Animation : Start
+    &.on .inner {
+        h1, h2, input, button {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    .inner {
+        h1, h2, input, button {
+            opacity: 0;
+            transition: 1s;
+        }
+        h1, h2 { transform: translateY(-20px); }
+        input, button { transform: translateY(20px); }
+    }
+    //Scroll Animation : End
 
     .inner {
         position: relative;
@@ -610,6 +739,16 @@
 
 #gallery {
     width: 100%;
+
+    //Scroll Animation : Start
+    &.on {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(30px);
+    //Scroll Animation : End
 
     >.inner {
         width: 1180px;
@@ -689,104 +828,22 @@
     }
 }
 
-#info {
-    width: 100%;
-    background-color: $subColor1;
-
-    .inner {
-        display: flex;
-        width: 1180px;
-        height: 600px;
-        margin: 0 auto;
-
-        #map {
-            width: 40%;
-            background-color: $subColor2;
-        }
-
-        .faq {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: right;
-            width: 60%;
-            height: 100%;
-            //padding: 60px 50px;
-
-            h1 {
-                font: bold 80px/1 $font1;
-                color: $subColor2;
-                text-align: right;
-                margin-bottom: 30px;
-            }
-
-            ul {
-                width: calc(100% - 50px);
-                background-color: #eee;
-                margin: 0px 0px 20px 50px;
-
-                li {
-                    width: 100%;
-                    height: auto;
-                    //background-color: $subColor2;
-
-                    a {
-                        display: inline-block;
-                        width: 100%;
-                        height: 100%;
-                        font: bold 14px/45px $font2;
-                        color: $mainColor;
-                        text-indent: 20px;
-                        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-                        transition: .5s;
-                    }
-
-                    &:not(:last-child) a::after {
-                        content: "";
-                        display: block;
-                        width: 100%;
-                        height: 1px;
-                        //background-color: #fff;
-                    }
-
-                    &:hover a, &.on a {
-                        background-color: $mainColor;
-                        color: #fff;
-                    }
-
-                    .answer {
-                        width: 100%;
-                        height: auto;
-                        background: #ddd;
-                        //border-bottom: 1px solid #eee;
-                        padding: 20px;
-
-                        p {
-                            font: 14px/1.5 $font2;
-                            color: #333;
-                        }
-                    }
-                }
-            }
-
-            >a {
-                @include viewBtn($bgColor: transparent, $color: $subColor2);
-                padding: 0;
-                margin-left: 50px;
-                margin-bottom: 20px;
-            }
-
-
-        }
-
-    }
-}
-
 #location {
     position: relative;
     width: 100%;
     background: #e3e4e6;
-    //padding-bottom: 30px;
+
+    //Scroll Animation : Start
+    &.on .inner .address {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    .inner .address {
+        opacity: 0;
+        transition: 1s;
+        transform: translateX(20px);
+    }
+    //Scroll Animation : End
     
     .container {
         position: absolute;
@@ -844,8 +901,6 @@
         width: 1180px;
         height: 400px;
         margin: 0 auto;
-
-
         
         .address {
             position: absolute;

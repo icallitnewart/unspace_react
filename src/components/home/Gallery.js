@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, forwardRef } from "react";
 import { useFetchFlickrData } from "../../hooks/useFetchFlickrData.js";
 import Loader from "../common/Loader";
 import Popup from "../common/Popup";
 
-function Gallery() {
+function Gallery(prop, ref) {
     const [ popup, setPopup ] = useState({
         isVisible: false,
         targetItem: null
@@ -29,7 +29,7 @@ function Gallery() {
     }, [flickrData]);
 
     return (
-        <section id="gallery">
+        <section id="gallery" ref={ref}>
             <div className="inner">
                 <h1>Choose Your Style</h1>
                 <ul className="hashtags">
@@ -72,4 +72,4 @@ function Gallery() {
     )
 }
 
-export default Gallery;
+export default forwardRef(Gallery);

@@ -1,6 +1,8 @@
-function About() {
+import { forwardRef } from "react";
+
+function About(prop, ref) {
     return (
-        <section id="about">
+        <section id="about" ref={ref}>
             <div className="inner">
                 
                 <img src="img/section1.jpg" alt="" />
@@ -32,4 +34,4 @@ function About() {
     )
 }
 
-export default About;
+export default forwardRef(About);
