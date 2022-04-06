@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useParams, useHistory } from "react-router-dom";
+import { useHighlight } from "../../hooks/useHighlight";
 import NoticePost from "./NoticePost";
 import SearchBox from "./SearchBox";
 import Pagination from "./Pagination";
@@ -11,12 +12,13 @@ function Notice() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    //호출한 데이터 저장
+    //호출한 데이터
     const [ data, setData ] = useState([]);
-    //화면에 띄울 데이터 저장
+    //화면에 띄울 데이터
     const [ items, setItems ] = useState([]);
-    //하이라이트 처리할 검색어 저장
+    //검색어 하이라이트
     const [ highlight, setHighlight ] = useState("");
+    const highlightText = useHighlight(highlight);
 
     //Pagination 옵션
     const maxItems = 5;
@@ -41,18 +43,6 @@ function Notice() {
         .get(url)
         .then((data)=> setData(data.data.data))
         .catch((error)=> console.error(error));
-    };
-
-    //검색시 검색어 하이라이트 처리 함수
-    const highlightText = (words)=> {
-        if(highlight !== "") {
-            const text = words.split(new RegExp(`(${highlight})`, 'gi'));
-            return text.map((txt, index)=> 
-                txt=== highlight 
-                ? <mark key={index}>{txt}</mark>
-                : txt
-            )
-        }
     };
 
     return (

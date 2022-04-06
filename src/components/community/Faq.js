@@ -1,16 +1,18 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useHighlight } from "../../hooks/useHighlight";
 import SearchBox from "./SearchBox";
 import Pagination from "./Pagination";
 
 function Faq() {
-    //호출한 데이터 저장
+    //호출한 데이터
     const [ data, setData ] = useState([]);
-    //화면에 띄울 데이터 저장
+    //화면에 띄울 데이터
     const [ items, setItems ] = useState([]);
-    //하이라이트 처리할 검색어 저장
+    //검색어 하이라이트
     const [ highlight, setHighlight ] = useState("");
-    //질문 클릭시 보여줄 답변 데이터 저장
+    const highlightText = useHighlight(highlight);
+    //질문 클릭시 보여줄 답변 데이터
     const [ answer, setAnswer ] = useState({ code: "" });
     
     //FAQ 타입
@@ -79,18 +81,6 @@ function Faq() {
         isOn 
         ? setAnswer({ code: "" }) 
         : setAnswer({ code: code });
-    };
-
-    //검색시 검색어 하이라이트 처리 함수
-    const highlightText = (words)=> {
-        if(highlight) {
-            const text = words.split(new RegExp(`(${highlight})`, 'gi'));
-            return text.map((txt, index)=> 
-                txt===highlight 
-                ? <mark key={index}>{txt}</mark>
-                : txt
-            )
-        }
     };
 
     return (
