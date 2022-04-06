@@ -1,9 +1,10 @@
+import { useRef } from "react";
 import Visual from "../components/common/Visual_sub";
 import Intro from "../components/about/Intro";
 import Members from "../components/about/Members";
 import Services from "../components/about/Services";
 import { useScrollEffect } from "../hooks/useScrollEffect";
-import { useRef } from "react";
+import { useScrollDown } from "../hooks/useScrollDown";
 
 function About() {
     const intro = useRef(null);
@@ -14,16 +15,9 @@ function About() {
     const sections = [ intro, members, services ];
     useScrollEffect(sections);
 
-    //탭 버튼 클릭시 스크롤 다운 함수
-    const scrollDown = (target)=> {
-        const pos = target.current.offsetTop;
-
-        window.scrollTo({
-            top: pos,
-            behavior: 'smooth',
-        });
-    };
-
+    //탭 버튼 클릭시 스크롤 다운
+    const scrollDown = useScrollDown();
+    
     const visual = {
         title : "ABOUT US",
         pic : { background: "url(../img/visual_sub_about.jpg) top/cover" },

@@ -2,19 +2,15 @@ import { useRef } from "react";
 import Visual from "../components/common/Visual_sub";
 import Getintouch from "../components/contact/Getintouch";
 import Location from "../components/contact/Location";
+import { useScrollEffect } from "../hooks/useScrollEffect";
+import { useScrollDown } from "../hooks/useScrollDown";
 
 function Contact() {
     const getintouch = useRef(null);
     const location = useRef(null);
 
-    const scroll = (target)=> {
-        const pos = target.current.offsetTop;
-
-        window.scrollTo({
-            top: pos,
-            behavior: 'smooth',
-        });
-    };
+    //탭 버튼 클릭시 스크롤 다운
+    const scrollDown = useScrollDown();
     
     const visual = {
         title : "CONTACT",
@@ -24,12 +20,12 @@ function Contact() {
             {
                 name: "get in touch",
                 event: ()=> {
-                    scroll(getintouch);
+                    scrollDown(getintouch);
                 }
             }, {
                 name: "location",
                 event: ()=> {
-                    scroll(location);
+                    scrollDown(location);
                 }
             } 
         ]
