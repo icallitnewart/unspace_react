@@ -22,6 +22,21 @@
     
     // Get in touch CSS
     .container.getintouch {
+        //Scroll Animation : Start
+        &.on .inner {
+            .contactForm, .contactDetail {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        .inner {
+            .contactForm, .contactDetail {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: 1s;
+            }
+        }
+        //Scroll Animation : End
 
         .success {
             display: flex;
@@ -235,6 +250,18 @@
 
     .container.location {
         margin-bottom: 150px;
+
+        //Scroll Animation : Start
+        &.on .inner .location {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        .inner .location {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1s;
+        }
+        //Scroll Animation : End
 
         .location {
             position: relative;

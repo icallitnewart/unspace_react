@@ -9,6 +9,10 @@ function Contact() {
     const getintouch = useRef(null);
     const location = useRef(null);
 
+    //스크롤 애니메이션 효과
+    const sections = [ getintouch, location ];
+    useScrollEffect(sections);
+
     //탭 버튼 클릭시 스크롤 다운
     const scrollDown = useScrollDown();
     

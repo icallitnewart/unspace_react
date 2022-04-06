@@ -2758,6 +2758,13 @@ a {
       font: 600 30px/1.3 Montserrat;
       color: #3a3e46;
       text-align: right; }
+.contact .container.getintouch.on .inner .contactForm, .contact .container.getintouch.on .inner .contactDetail {
+  opacity: 1;
+  transform: translateY(0px); }
+.contact .container.getintouch .inner .contactForm, .contact .container.getintouch .inner .contactDetail {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s; }
 .contact .container.getintouch .success {
   display: flex;
   flex-wrap: wrap;
@@ -2907,6 +2914,13 @@ a {
       margin-right: 3px; }
 .contact .container.location {
   margin-bottom: 150px; }
+  .contact .container.location.on .inner .location {
+    opacity: 1;
+    transform: translateY(0px); }
+  .contact .container.location .inner .location {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s; }
   .contact .container.location .location {
     position: relative;
     width: 100%;
@@ -3158,7 +3172,7 @@ a {
     transform: translateY(0px); } }
 @keyframes moveUp {
   0% {
-    transform: translateY(100px); }
+    transform: translateY(30px); }
   100% {
     transform: translateY(0px); } }
 
