@@ -21,14 +21,13 @@ function Gallery(prop, ref) {
     useEffect(()=> {
         setFlickrData(flickr);
     }, [flickr]);
-    
-    //console.log(flickrData);
 
     useEffect(()=> {
         setBigImg(flickrData[0]);
     }, [flickrData]);
 
     return (
+        <>
         <section id="gallery" ref={ref}>
             <div className="inner">
                 <h1>Choose Your Style</h1>
@@ -61,14 +60,15 @@ function Gallery(prop, ref) {
                 </div>
                 }
             </div>
-            {popup.isVisible && 
-                <Popup 
-                    type="flickr" 
-                    targetItem={popup.targetItem} 
-                    setPopup={setPopup} 
-                />
-            }
         </section>
+        {popup.isVisible && 
+            <Popup 
+                type="flickr" 
+                targetItem={popup.targetItem} 
+                setPopup={setPopup} 
+            />
+        }
+        </>
     )
 }
 
