@@ -1529,6 +1529,23 @@ a {
 .about .intro {
   width: 100%;
   padding: 120px 0px 50px; }
+  .about .intro.on .inner .wrap article:nth-of-type(1), .about .intro.on .inner .wrap article:nth-of-type(2), .about .intro.on .inner .wrap article:nth-of-type(3) h1, .about .intro.on .inner .wrap article:nth-of-type(3) p {
+    transform: translateY(0px) !important;
+    opacity: 1; }
+  .about .intro .inner .wrap article:nth-of-type(1), .about .intro .inner .wrap article:nth-of-type(2), .about .intro .inner .wrap article:nth-of-type(3) h1, .about .intro .inner .wrap article:nth-of-type(3) p {
+    opacity: 0;
+    transition: 1s; }
+  .about .intro .inner .wrap article:nth-of-type(1) {
+    transform: translateY(-30px); }
+  .about .intro .inner .wrap article:nth-of-type(2) {
+    transform: translateY(30px);
+    transition-delay: .3s; }
+  .about .intro .inner .wrap article:nth-of-type(3) h1 {
+    transition-delay: .3s;
+    transform: translateY(-20px); }
+  .about .intro .inner .wrap article:nth-of-type(3) p {
+    transition-delay: .3s;
+    transform: translateY(20px); }
   .about .intro .inner {
     width: 1180px;
     margin: 0 auto; }
@@ -1585,6 +1602,19 @@ a {
 .about .members {
   width: 100%;
   padding: 100px 0px 50px; }
+  .about .members.on .inner .detail, .about .members.on .inner .photo, .about .members.on .inner .textBox, .about .members.on .inner > button {
+    transform: translateY(0px);
+    opacity: 1; }
+  .about .members .inner .detail, .about .members .inner .photo, .about .members .inner .textBox, .about .members .inner > button {
+    opacity: 0;
+    transition: 1s; }
+  .about .members .inner .detail {
+    transform: translateY(-30px); }
+  .about .members .inner .photo {
+    transform: translateY(30px); }
+  .about .members .inner .textBox {
+    transform: translateY(30px);
+    transition-delay: .3s; }
   .about .members.sliderOn .inner .detail h1 span {
     animation: slider 0.5s; }
   .about .members.sliderOn .inner .textBox p span {
@@ -1698,6 +1728,37 @@ a {
 .about .services {
   width: 100%;
   padding: 100px 0px 150px; }
+  .about .services.on .inner .wrap article .textBox i, .about .services.on .inner .wrap article .textBox span, .about .services.on .inner .wrap article .textBox p {
+    opacity: 1;
+    transform: translateY(0px); }
+  .about .services.on .inner .wrap article .pic {
+    opacity: 1;
+    transform: translateX(0px); }
+  .about .services.on .inner .textBox h1, .about .services.on .inner .textBox p {
+    opacity: 1;
+    transform: translateY(0px); }
+  .about .services .inner .wrap article .textBox i, .about .services .inner .wrap article .textBox span, .about .services .inner .wrap article .textBox p {
+    opacity: 0;
+    transition: 1s; }
+  .about .services .inner .wrap article .textBox i, .about .services .inner .wrap article .textBox span {
+    transform: translateY(-20px); }
+  .about .services .inner .wrap article .textBox p {
+    transform: translateY(20px); }
+  .about .services .inner .wrap article .pic {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: 1s; }
+  .about .services .inner .wrap article:nth-of-type(2) .pic {
+    transition-delay: .3s; }
+  .about .services .inner .wrap article:nth-of-type(3) .pic {
+    transition-delay: .6s; }
+  .about .services .inner .textBox h1, .about .services .inner .textBox p {
+    opacity: 0;
+    transition: 1s; }
+  .about .services .inner .textBox h1 {
+    transform: translateY(-20px); }
+  .about .services .inner .textBox p {
+    transform: translateY(20px); }
   .about .services .inner {
     display: flex;
     width: 1180px;
@@ -3034,6 +3095,13 @@ a {
         .popup > .inner .closeBtn span:nth-of-type(2) {
           transform: translate(-50%, -50%) rotate(-45deg); }
 
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: translateY(var(--num)); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
 @keyframes slider {
   0% {
     opacity: 0;

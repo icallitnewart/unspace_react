@@ -4,6 +4,39 @@
     width: 100%;
     padding: 120px 0px 50px;
 
+    //Scroll Animation : Start
+    &.on .inner .wrap {
+        article {
+            &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3) h1, &:nth-of-type(3) p  {
+                transform: translateY(0px) !important;
+                opacity: 1;
+            }
+        }
+    }
+    .inner .wrap article {
+        &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3) h1, &:nth-of-type(3) p {
+            opacity: 0;
+            transition: 1s;
+        }
+        &:nth-of-type(1) { 
+            transform: translateY(-30px); 
+        }
+        &:nth-of-type(2) { 
+            transform: translateY(30px); transition-delay: .3s;
+        }
+        &:nth-of-type(3) {
+            h1 { 
+                transition-delay: .3s;
+                transform: translateY(-20px); 
+            }
+            p {
+                transition-delay: .3s;
+                transform: translateY(20px); 
+            }
+        }
+    }
+    //Scroll Animation : End
+
     .inner {
         width: 1180px;
         margin: 0 auto;
@@ -39,13 +72,11 @@
 
                 &:nth-of-type(1) {
                     align-items: flex-start;
-                    //background: url(../img/about_intro1.jpg) center/cover;
                     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
                 }
 
                 &:nth-of-type(2) {
                     align-items: flex-end;
-                    //background: url(../img/about_intro2.jpg) center/cover;
                     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
                 }
 
@@ -91,6 +122,32 @@
     width: 100%;
     padding: 100px 0px 50px;
 
+    //Scroll Animation : Start
+    &.on .inner {
+        .detail, .photo, .textBox, >button {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+    .inner {
+        .detail, .photo, .textBox, >button {
+            opacity: 0;
+            transition: 1s;
+        }
+        .detail {
+            transform: translateY(-30px);
+        }
+        .photo {
+            transform: translateY(30px);
+        }
+        .textBox {
+            transform: translateY(30px);
+            transition-delay: .3s;
+        }
+    }
+    //Scroll Animation : End
+
+    //Slider Animation
     &.sliderOn .inner {
         .detail h1 span {
             animation: slider 0.5s;
@@ -234,6 +291,72 @@
     width: 100%;
     padding: 100px 0px 150px;
 
+    //Scroll Animation : Start
+    &.on .inner { 
+        .wrap {
+            article {    
+                .textBox {
+                    i, span, p {
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
+                }
+
+                .pic {
+                    opacity: 1;
+                    transform: translateX(0px);
+                }
+            }
+        }
+
+        .textBox {
+            h1, p { 
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    }
+    .inner { 
+        .wrap {
+            article {
+                .textBox {
+                    i, span, p {
+                        opacity: 0;
+                        transition: 1s;
+                    }
+
+                    i, span { transform: translateY(-20px); }
+
+                    p { transform: translateY(20px); }
+                }
+
+                .pic {
+                    opacity: 0;
+                    transform: translateX(30px);
+                    transition: 1s;
+                }
+
+                &:nth-of-type(2) .pic {
+                    transition-delay: .3s;
+                }
+                &:nth-of-type(3) .pic {
+                    transition-delay: .6s;
+                }
+            }
+        }
+
+        .textBox {
+            h1, p { 
+                opacity: 0;
+                transition: 1s;
+            }
+
+            h1 { transform: translateY(-20px); }
+            p { transform: translateY(20px); }
+        }
+    }
+    //Scroll Animation : End
+
     .inner {
         display: flex;
         width: 1180px;
@@ -247,7 +370,6 @@
             width: calc(100% / 3 * 2);
             height: 100%;
             background: linear-gradient(to right, $subColor1 450px, transparent 0%);
-
 
             article {
                 display: flex;

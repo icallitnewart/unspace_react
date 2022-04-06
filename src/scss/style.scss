@@ -143,6 +143,16 @@ $mobile: 599px;
 
 
 //animation
+@keyframes scroll {
+    0% {
+        opacity: 0;
+        transform: translateY(var(--num));
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 @keyframes slider {
     0% {
         opacity: 0;

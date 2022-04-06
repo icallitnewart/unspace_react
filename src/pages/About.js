@@ -2,6 +2,7 @@ import Visual from "../components/common/Visual_sub";
 import Intro from "../components/about/Intro";
 import Members from "../components/about/Members";
 import Services from "../components/about/Services";
+import { useScrollEffect } from "../hooks/useScrollEffect";
 import { useRef } from "react";
 
 function About() {
@@ -9,14 +10,19 @@ function About() {
     const members = useRef(null);
     const services = useRef(null);
 
-    const scroll = (target)=> {
+    //스크롤 애니메이션 효과
+    const sections = [ intro, members, services ];
+    useScrollEffect(sections);
+
+    //탭 버튼 클릭시 스크롤 다운 함수
+    const scrollDown = (target)=> {
         const pos = target.current.offsetTop;
 
         window.scrollTo({
             top: pos,
             behavior: 'smooth',
         });
-    }
+    };
 
     const visual = {
         title : "ABOUT US",
@@ -26,17 +32,17 @@ function About() {
             {
                 name: "intro",
                 event: ()=> {
-                    scroll(intro);
+                    scrollDown(intro);
                 }
             }, {
                 name: "members",
                 event: ()=> {
-                    scroll(members);
+                    scrollDown(members);
                 }
             }, {
                 name: "services",
                 event: ()=> {
-                    scroll(services);
+                    scrollDown(services);
                 }
             }  
         ]
