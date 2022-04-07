@@ -368,7 +368,7 @@
 
         .buttons { 
             transform: translateY(30px); 
-            transition-delay: .6s; 
+            transition-delay: .4s; 
         }
 
         .textBox { 
@@ -377,6 +377,17 @@
         }
     }
     //Scroll Animation : End
+
+    //Tab Animation : Start
+    &.tabOn .inner {
+        .textBox {
+            animation: fadeIn 1s, moveUp 1s;
+        }
+        img { 
+            animation: fadeIn 1s, boxShadow 1s;
+        }
+    }
+    //Tab Animation : End
 
     .inner {
         position: relative;
@@ -394,11 +405,13 @@
             height: 100%;
             margin-left: 50px;
             
-            a {
+            button {
                 display: inline-flex;
                 width: 100px;
                 height: 100px;
                 background-color: #eee;
+                border: 0px;
+                cursor: pointer;
                 color: $mainColor;
                 flex-direction: column;
                 justify-content: center;
@@ -431,40 +444,167 @@
 
         .textBox {
             width: 400px;
-            padding: 50px 0;
+            height: 400px;
+            padding-top: 40px;
 
             h1 {
                 font: bold 36px/1 Montserrat;
                 letter-spacing: 1px;
                 color: #3a3e46;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
 
                 span {
                     color: $pointColor;
                 }
             }
 
-            p {
-                font: 14px/1.5 $font2;
-                color: #666;
-                margin-bottom: 30px;
+            .intro {
+                p {
+                    font: 14px/1.4 $font1;
+                    color: #666;
+                    margin-bottom: 30px;
+                }
+    
+                ul {
+                    width: 100%;
+    
+                    li {
+                        font: 14px/1.4 $font1;
+                        color: #666;
+                        margin: 5px 0;
+    
+                        &::before {
+                            content: "\f110";
+                            color: $mainColor;
+                            display: inline;
+                            font-family: FontAwesome;
+                            font-weight: bold;
+                            margin-right: 10px;
+                        }
+                    }
+                }
             }
 
-            ul {
+            .contact {
                 width: 100%;
 
-                li {
-                    font: 14px/1.4 $font2;
-                    color: #666;
-                    margin: 5px 0;
+                .success {
+                    padding: 20px;
+                    text-align: center;
 
-                    &::before {
-                        content: "\f110";
+                    span {
+                        display: inline-block;
+                        margin-bottom: 25px;
+
+                        i {
+                            font-size: 60px;
+                            color: $subColor1;
+                            animation: upAndDown .5s infinite;
+                        }
+                    }
+                    
+                    h2 {
+                        font: 20px/1.7 $font1;
                         color: $mainColor;
-                        display: inline;
-                        font-family: FontAwesome;
-                        font-weight: bold;
-                        margin-right: 10px;
+                    }
+                }
+
+                .contactForm {
+                    padding-right: 30px;
+                    
+                    table {
+                        width: 100%;
+
+                        tr {
+                            display: flex;
+                            flex-wrap: wrap;
+                            padding-bottom: 10px;
+                            
+                            &.btn {
+                                padding-bottom: 0px;
+
+                                th {
+                                    justify-content: flex-end;
+                                    padding: 0px;
+
+                                    input[type=submit] {
+                                        width: 90px;
+                                        height: 35px;
+                                        border: 0px;
+                                        background: $subColor1;
+                                        color: #fff;
+                                        font: 12px/1 $font1;
+                                        letter-spacing: 1px;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+
+                            th {
+                                display: flex;
+                                justify-content: space-between;
+                                width: 100%;
+                                padding-bottom: 3px;
+
+                                label {
+                                    font: 600 12px/1 $font1;
+                                    color: $subColor1;
+                                }
+
+                                span {
+                                    font: 12px/1 $font1;
+                                    color: $pointColor;
+
+                                    &::before {
+                                        content: "*";
+                                    }
+                                }
+                            }
+
+                            td {
+                                width: 100%;
+
+                                input, textarea {
+                                    width: 100%;
+                                    border: 0px;
+                                    background: #eee;
+                                    outline: none;
+                                    padding: 1em;
+                                    font: 12px/1 $font1;
+                                }
+
+                                input {
+                                    height: 35px;
+                                }
+
+                                textarea {
+                                    height: 100px;
+                                    resize: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .idea {
+                padding: 10px 10px 0px 0px;
+
+                li {
+                    h2 {
+                        font: 600 14px/1 $font1;
+                        color: $subColor1;
+                        margin-bottom: 10px;
+
+                        i {
+                            margin-right: 3px;
+                        }
+                    }
+
+                    p {
+                        font: 14px/1.4 $font1;
+                        margin-bottom: 20px;
+                        color: #666;
                     }
                 }
             }
@@ -472,7 +612,7 @@
 
         img {
             width: 100%;
-            filter: brightness(80%);
+            filter: brightness(95%);
             object-fit: cover;
             max-width: 400px;
             height: auto;

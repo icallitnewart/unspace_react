@@ -400,10 +400,14 @@ a {
     transition: 1s; }
   #about .inner .buttons {
     transform: translateY(30px);
-    transition-delay: .6s; }
+    transition-delay: .4s; }
   #about .inner .textBox {
     transform: translateY(-30px);
     transition-delay: .3s; }
+  #about.tabOn .inner .textBox {
+    animation: fadeIn 1s, moveUp 1s; }
+  #about.tabOn .inner img {
+    animation: fadeIn 1s, boxShadow 1s; }
   #about .inner {
     position: relative;
     display: flex;
@@ -418,58 +422,137 @@ a {
       width: 100px;
       height: 100%;
       margin-left: 50px; }
-      #about .inner .buttons a {
+      #about .inner .buttons button {
         display: inline-flex;
         width: 100px;
         height: 100px;
         background-color: #eee;
+        border: 0px;
+        cursor: pointer;
         color: #3a3e46;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-bottom: 20px;
         transition: .5s; }
-        #about .inner .buttons a:last-child {
+        #about .inner .buttons button:last-child {
           margin-bottom: 0; }
-        #about .inner .buttons a.on, #about .inner .buttons a:hover {
+        #about .inner .buttons button.on, #about .inner .buttons button:hover {
           background-color: #3a3e46; }
-        #about .inner .buttons a.on i, #about .inner .buttons a.on span, #about .inner .buttons a:hover i, #about .inner .buttons a:hover span {
+        #about .inner .buttons button.on i, #about .inner .buttons button.on span, #about .inner .buttons button:hover i, #about .inner .buttons button:hover span {
           color: #fff; }
-        #about .inner .buttons a i {
+        #about .inner .buttons button i {
           font-size: 30px;
           margin-bottom: 10px; }
-        #about .inner .buttons a span {
+        #about .inner .buttons button span {
           font: 600 10px/1 Montserrat; }
     #about .inner .textBox {
       width: 400px;
-      padding: 50px 0; }
+      height: 400px;
+      padding-top: 40px; }
       #about .inner .textBox h1 {
         font: bold 36px/1 Montserrat;
         letter-spacing: 1px;
         color: #3a3e46;
-        margin-bottom: 20px; }
+        margin-bottom: 30px; }
         #about .inner .textBox h1 span {
           color: salmon; }
-      #about .inner .textBox p {
-        font: 14px/1.5 Open Sans;
+      #about .inner .textBox .intro p {
+        font: 14px/1.4 Montserrat;
         color: #666;
         margin-bottom: 30px; }
-      #about .inner .textBox ul {
+      #about .inner .textBox .intro ul {
         width: 100%; }
-        #about .inner .textBox ul li {
-          font: 14px/1.4 Open Sans;
+        #about .inner .textBox .intro ul li {
+          font: 14px/1.4 Montserrat;
           color: #666;
           margin: 5px 0; }
-          #about .inner .textBox ul li::before {
+          #about .inner .textBox .intro ul li::before {
             content: "\f110";
             color: #3a3e46;
             display: inline;
             font-family: FontAwesome;
             font-weight: bold;
             margin-right: 10px; }
+      #about .inner .textBox .contact {
+        width: 100%; }
+        #about .inner .textBox .contact .success {
+          padding: 20px;
+          text-align: center; }
+          #about .inner .textBox .contact .success span {
+            display: inline-block;
+            margin-bottom: 25px; }
+            #about .inner .textBox .contact .success span i {
+              font-size: 60px;
+              color: #767e8f;
+              animation: upAndDown .5s infinite; }
+          #about .inner .textBox .contact .success h2 {
+            font: 20px/1.7 Montserrat;
+            color: #3a3e46; }
+        #about .inner .textBox .contact .contactForm {
+          padding-right: 30px; }
+          #about .inner .textBox .contact .contactForm table {
+            width: 100%; }
+            #about .inner .textBox .contact .contactForm table tr {
+              display: flex;
+              flex-wrap: wrap;
+              padding-bottom: 10px; }
+              #about .inner .textBox .contact .contactForm table tr.btn {
+                padding-bottom: 0px; }
+                #about .inner .textBox .contact .contactForm table tr.btn th {
+                  justify-content: flex-end;
+                  padding: 0px; }
+                  #about .inner .textBox .contact .contactForm table tr.btn th input[type=submit] {
+                    width: 90px;
+                    height: 35px;
+                    border: 0px;
+                    background: #767e8f;
+                    color: #fff;
+                    font: 12px/1 Montserrat;
+                    letter-spacing: 1px;
+                    cursor: pointer; }
+              #about .inner .textBox .contact .contactForm table tr th {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding-bottom: 3px; }
+                #about .inner .textBox .contact .contactForm table tr th label {
+                  font: 600 12px/1 Montserrat;
+                  color: #767e8f; }
+                #about .inner .textBox .contact .contactForm table tr th span {
+                  font: 12px/1 Montserrat;
+                  color: salmon; }
+                  #about .inner .textBox .contact .contactForm table tr th span::before {
+                    content: "*"; }
+              #about .inner .textBox .contact .contactForm table tr td {
+                width: 100%; }
+                #about .inner .textBox .contact .contactForm table tr td input, #about .inner .textBox .contact .contactForm table tr td textarea {
+                  width: 100%;
+                  border: 0px;
+                  background: #eee;
+                  outline: none;
+                  padding: 1em;
+                  font: 12px/1 Montserrat; }
+                #about .inner .textBox .contact .contactForm table tr td input {
+                  height: 35px; }
+                #about .inner .textBox .contact .contactForm table tr td textarea {
+                  height: 100px;
+                  resize: none; }
+      #about .inner .textBox .idea {
+        padding: 10px 10px 0px 0px; }
+        #about .inner .textBox .idea li h2 {
+          font: 600 14px/1 Montserrat;
+          color: #767e8f;
+          margin-bottom: 10px; }
+          #about .inner .textBox .idea li h2 i {
+            margin-right: 3px; }
+        #about .inner .textBox .idea li p {
+          font: 14px/1.4 Montserrat;
+          margin-bottom: 20px;
+          color: #666; }
     #about .inner img {
       width: 100%;
-      filter: brightness(80%);
+      filter: brightness(95%);
       object-fit: cover;
       max-width: 400px;
       height: auto;
@@ -3123,6 +3206,18 @@ a {
         .popup > .inner .closeBtn span:nth-of-type(2) {
           transform: translate(-50%, -50%) rotate(-45deg); }
 
+@keyframes upAndDown {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(5px); }
+  100% {
+    transform: translateY(0px); } }
+@keyframes boxShadow {
+  0% {
+    box-shadow: none; }
+  100% {
+    box-shadow: 20px 20px 0px #3a3e46; } }
 @keyframes scroll {
   0% {
     opacity: 0;

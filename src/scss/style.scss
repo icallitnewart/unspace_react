@@ -143,6 +143,21 @@ $mobile: 599px;
 
 
 //animation
+@keyframes upAndDown {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes boxShadow {
+    0% { box-shadow: none; }
+    100% { box-shadow: 20px 20px 0px $mainColor; }
+}
 @keyframes scroll {
     0% {
         opacity: 0;
