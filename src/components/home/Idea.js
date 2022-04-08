@@ -1,7 +1,7 @@
 function Idea () {
     const content = [
         {
-            icon: <i class="fa-regular fa-comments"></i>,
+            icon: <i className="fa-regular fa-comments"></i>,
             title: "Communicative",
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolores odio necessitatibus quae vero. Modi quia temporibus nisi consectetur placeat.",
         },
@@ -11,7 +11,7 @@ function Idea () {
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolores odio.",
         },
         {
-            icon: <i class="fa-solid fa-handshake"></i>,
+            icon: <i className="fa-solid fa-handshake"></i>,
             title: "Customer-oriented",
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolores.",
         }
