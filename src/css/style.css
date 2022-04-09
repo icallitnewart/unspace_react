@@ -86,8 +86,10 @@ a {
   #footer .inner {
     width: 100%;
     padding: 30px 5vw 0px; }
-    #footer .inner ul li {
-      padding: 30px 0px; }
+    #footer .inner ul {
+      flex-wrap: wrap; }
+      #footer .inner ul li {
+        padding: 10px 0px; }
     #footer .inner .wrap > a {
       display: none; } }
 #visual {
@@ -281,9 +283,9 @@ a {
         font: bold 36px/1 Montserrat;
         letter-spacing: 1px;
         color: #3a3e46;
-        margin-bottom: 20px; }
+        margin-bottom: 30px; }
       #trending .inner > .textBox p {
-        font: normal 16px/1.4 Open Sans;
+        font: normal 16px/1.6 Montserrat;
         color: #444; }
     #trending .inner .slider {
       width: 55%;
@@ -316,7 +318,7 @@ a {
             margin-left: 4%;
             height: 100%;
             background: #fff;
-            padding: 30px 20px; }
+            padding: 30px; }
             #trending .inner .slider .wrap article .textBox span {
               display: inline-block;
               font: bold 100px/1 Montserrat;
@@ -329,7 +331,7 @@ a {
               margin-bottom: 20px; }
             #trending .inner .slider .wrap article .textBox p {
               padding-right: 50px;
-              font: normal 14px/1.5 Open Sans;
+              font: normal 14px/1.5 Montserrat;
               color: #555;
               margin-bottom: 20px; }
             #trending .inner .slider .wrap article .textBox a {
@@ -340,7 +342,7 @@ a {
               border-radius: 3px;
               font: 600 12px/1 Montserrat;
               position: absolute;
-              right: 0; }
+              right: 10px; }
     #trending .inner .prevBtn, #trending .inner .nextBtn {
       position: absolute;
       top: 50%;
@@ -364,25 +366,7 @@ a {
         font: bold 8px/1 Open Sans;
         color: #fff; }
       #trending .inner .prevBtn:hover, #trending .inner .nextBtn:hover {
-        position: absolute;
-        top: 50%;
-        right: 0px;
-        transform: translateY(-50%);
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 50px;
-        height: 50px;
-        background-color: #767e8f;
-        transition: 0.7s; }
-        #trending .inner .prevBtn:hover i, #trending .inner .nextBtn:hover i {
-          font-size: 10px;
-          color: #fff;
-          margin-bottom: 3px; }
-        #trending .inner .prevBtn:hover span, #trending .inner .nextBtn:hover span {
-          font: bold 8px/1 Open Sans;
-          color: #fff; }
+        background: #767e8f; }
     #trending .inner .prevBtn {
       left: 0px; }
     #trending .inner .nextBtn {
@@ -451,7 +435,7 @@ a {
       height: 400px;
       padding-top: 40px; }
       #about .inner .textBox h1 {
-        font: bold 36px/1 Montserrat;
+        font: bold 36px/1.2 Montserrat;
         letter-spacing: 1px;
         color: #3a3e46;
         margin-bottom: 30px; }
@@ -625,7 +609,7 @@ a {
         margin-bottom: 30px;
         color: #3a3e46; }
       #philosophy .inner .textBox p {
-        font: 14px/1.4 Open Sans;
+        font: 14px/1.4 Montserrat;
         color: #666;
         margin-bottom: 60px; }
       #philosophy .inner .textBox a {
@@ -935,64 +919,56 @@ a {
     flex-wrap: wrap;
     width: 100%;
     height: auto;
-    padding: 50px 5vw; }
+    padding: 50px 5vw 70px; }
     #trending .inner > .textBox {
       width: 100%;
       padding: 0px 0px 30px; }
     #trending .inner .slider {
       width: 100%;
+      padding: 0px;
       box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3); }
-      #trending .inner .slider article {
-        flex-wrap: wrap; }
-        #trending .inner .slider article video {
-          width: 100%;
-          height: 25vw;
-          min-height: 200px;
-          filter: grayscale(0);
-          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); }
-          #trending .inner .slider article video:hover {
-            transform: scale(1); }
-        #trending .inner .slider article .textBox {
-          display: flex;
-          width: 100%;
-          margin-left: 0%;
-          height: auto;
-          min-height: 200px;
-          padding: 30px 20px 70px; }
-          #trending .inner .slider article .textBox span {
-            margin-top: -10px;
-            margin-right: 20px; }
-          #trending .inner .slider article .textBox h2 {
-            margin-right: 20px; }
-          #trending .inner .slider article .textBox a {
-            right: 20px;
-            bottom: 20px; }
+      #trending .inner .slider .wrap article video, #trending .inner .slider .wrap article .textBox {
+        width: 50%;
+        margin-left: 0; }
+      #trending .inner .slider .wrap article video {
+        filter: grayscale(0); }
+      #trending .inner .slider .wrap article .textBox p {
+        padding-right: 0px; }
     #trending .inner .prevBtn, #trending .inner .nextBtn {
       top: auto;
-      bottom: 50px;
+      bottom: 70px;
       transform: translateY(0); }
     #trending .inner .prevBtn {
-      left: 5vw; }
+      left: auto;
+      right: calc(5vw + 50px); }
     #trending .inner .nextBtn {
-      right: auto;
-      left: calc(5vw + 50px); }
+      right: 5vw; }
 
   #about .inner {
     flex-wrap: wrap-reverse;
     width: 100%;
-    padding: 50px 5vw 70px; }
+    padding: 50px 5vw 100px; }
     #about .inner .buttons {
       flex-direction: row;
       width: 100%;
+      margin-bottom: 50px;
       margin-left: 0; }
-      #about .inner .buttons a {
-        margin: 0px 10px 40px; }
+      #about .inner .buttons button {
+        margin: 0px 10px; }
     #about .inner .textBox {
-      width: calc(100% - 400px - 50px);
-      min-width: calc(50% - 50px); }
+      width: calc(100% - 400px - 5vw);
+      min-width: calc(50% - 5vw);
+      padding-top: 30px; }
+      #about .inner .textBox h1 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 20px; }
+      #about .inner .textBox .contact .contactForm {
+        padding-right: 0px; }
     #about .inner img {
       width: 50%;
-      margin-right: 50px; }
+      margin-right: 5vw;
+      box-shadow: none !important; }
 
   #philosophy .inner {
     width: 100%; }
@@ -1086,24 +1062,45 @@ a {
     #visual .inner .wrap {
       display: none; }
 
-  #trending .inner .slider article .textBox {
+  #trending .inner .slider .wrap article {
     flex-wrap: wrap;
-    padding: 10px 20px 50px; }
-    #trending .inner .slider article .textBox span {
-      margin-top: 0px;
-      margin-bottom: 0; }
-    #trending .inner .slider article .textBox h2 {
+    height: auto; }
+    #trending .inner .slider .wrap article video {
+      width: 100%;
+      height: 25vw;
+      margin-left: 0;
+      min-height: 300px;
+      filter: grayscale(0);
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); }
+      #trending .inner .slider .wrap article video:hover {
+        transform: scale(1); }
+    #trending .inner .slider .wrap article .textBox {
       display: flex;
-      align-items: flex-end; }
-    #trending .inner .slider article .textBox p {
-      padding: 0; }
+      width: 100%;
+      margin-left: 0%;
+      height: auto;
+      min-height: 200px;
+      padding: 25px; }
+      #trending .inner .slider .wrap article .textBox span {
+        margin: -10px 20px 0px 0px; }
+      #trending .inner .slider .wrap article .textBox h2 {
+        margin-right: 20px; }
+      #trending .inner .slider .wrap article .textBox a {
+        right: 0px;
+        bottom: 10px; }
+  #trending .inner .prevBtn {
+    left: 5vw; }
+  #trending .inner .nextBtn {
+    right: auto;
+    left: calc(5vw + 50px); }
 
   #about .inner {
     flex-wrap: wrap;
     justify-content: center;
     padding: 30px 5vw; }
     #about .inner .buttons {
-      order: 0; }
+      order: 0;
+      margin-bottom: 25px; }
     #about .inner .textBox {
       order: 2;
       width: 100%;
@@ -1135,12 +1132,18 @@ a {
     width: 100px; }
 
   #gallery > .inner {
-    padding: 50px 2vw 70px 2vw; }
+    padding: 50px 3vw 70px; }
+    #gallery > .inner h1 {
+      text-align: center; }
     #gallery > .inner .hashtags {
+      display: flex;
+      flex-wrap: wrap;
       margin: 0;
-      margin-left: calc(2vw + 3px); }
+      margin-left: 1vw; }
       #gallery > .inner .hashtags li {
-        margin-right: 0; }
+        display: flex;
+        margin-right: 1vw;
+        margin-bottom: 7px; }
         #gallery > .inner .hashtags li a {
           font-size: 1vw; }
     #gallery > .inner .wrap {
@@ -1150,11 +1153,11 @@ a {
       flex-wrap: wrap;
       height: auto; }
       #gallery > .inner .wrap article {
-        width: calc((100% / 4) - 2vw);
-        margin-right: 1vw;
-        margin-bottom: 1vw; }
+        width: calc((100% / 4) - 1.5vw);
+        margin-right: 1.5vw;
+        margin-bottom: 1.5vw; }
         #gallery > .inner .wrap article:first-child {
-          width: calc(100% - 5vw);
+          width: calc(100% - 1.5vw);
           aspect-ratio: 2 / 1;
           margin-right: 0; }
         #gallery > .inner .wrap article:last-child {

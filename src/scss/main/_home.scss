@@ -245,11 +245,11 @@
                 font: bold 36px/1 $font1;
                 letter-spacing: 1px;
                 color: $mainColor;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
             }
 
             p {
-                font: normal 16px/1.4 $font2;
+                font: normal 16px/1.6 $font1;
                 color: #444;
             }
         }
@@ -292,7 +292,7 @@
                         margin-left: 4%;
                         height: 100%;
                         background: #fff;
-                        padding: 30px 20px;
+                        padding: 30px;
 
                         span {
                             display: inline-block;
@@ -310,7 +310,7 @@
 
                         p {
                             padding-right: 50px;
-                            font: normal 14px/1.5 $font2;
+                            font: normal 14px/1.5 $font1;
                             color: #555;
                             margin-bottom: 20px;
                         }
@@ -318,7 +318,7 @@
                         a {
                             @include viewBtn($bgColor: transparent, $color: $pointColor);
                             position: absolute;
-                            right: 0;
+                            right: 10px;
                         }
                     }
                 }
@@ -333,7 +333,7 @@
             border: 0;
 
             &:hover {
-                @include nextBtn($color: #fff, $bgColor: $subColor1, $size: 50px);
+                background: $subColor1;
             }
         }
 
@@ -346,6 +346,7 @@
         }
     }
 }
+
 
 #about {
     width: 100%;
@@ -448,7 +449,7 @@
             padding-top: 40px;
 
             h1 {
-                font: bold 36px/1 Montserrat;
+                font: bold 36px/1.2 Montserrat;
                 letter-spacing: 1px;
                 color: #3a3e46;
                 margin-bottom: 30px;
@@ -722,7 +723,7 @@
             }
 
             p {
-                font: 14px/1.4 $font2;
+                font: 14px/1.4 $font1;
                 color: #666;
                 margin-bottom: 60px;
             }
@@ -1158,7 +1159,7 @@
         flex-wrap: wrap;   
         width: 100%;   
         height: auto;  
-        padding: 50px 5vw;  
+        padding: 50px 5vw 70px;  
 
         >.textBox {
             width: 100%; 
@@ -1167,43 +1168,22 @@
 
         .slider {
             width: 100%;
+            padding: 0px;
             box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 
-            article {
-                flex-wrap: wrap;    
-
-                video {
-                    width: 100%;    
-                    height: 25vw;   
-                    min-height: 200px;  
-                    filter: grayscale(0);   
-                    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-
-                    &:hover {
-                        transform: scale(1);  
-                    }
-                }
-
-                .textBox {
-                    display: flex; 
-                    width: 100%;    
-                    margin-left: 0%;    
-                    height: auto;   
-                    min-height: 200px;  
-                    padding: 30px 20px 70px; 
-
-                    span {
-                        margin-top: -10px;  
-                        margin-right: 20px; 
+            .wrap {
+                article {
+                    video, .textBox {
+                        width: 50%;
+                        margin-left: 0;
                     }
 
-                    h2 {
-                        margin-right: 20px; 
+                    video {
+                        filter: grayscale(0);
                     }
-                    
-                    a {
-                        right: 20px;
-                        bottom: 20px;
+
+                    .textBox p {
+                        padding-right: 0px;
                     }
                 }
             }
@@ -1212,17 +1192,17 @@
 
         .prevBtn, .nextBtn {
             top: auto;   
-            bottom: 50px;   
+            bottom: 70px;   
             transform: translateY(0);   
         }
 
         .prevBtn {
-            left: 5vw; 
+            left: auto;
+            right: calc(5vw + 50px); 
         }
 
         .nextBtn {
-            right: auto;    
-            left: calc(5vw + 50px);    
+            right: 5vw;     
         }
     }
 }
@@ -1232,26 +1212,42 @@
     .inner {
         flex-wrap: wrap-reverse;    
         width: 100%;   
-        padding: 50px 5vw 70px; 
+        padding: 50px 5vw 100px; 
 
         .buttons {
             flex-direction: row;    
             width: 100%; 
+            margin-bottom: 50px;
             margin-left: 0;  
             
-            a {
-                margin: 0px 10px 40px;  
+            button {
+                margin: 0px 10px;  
             }
         }
 
         .textBox {
-            width: calc(100% - 400px - 50px);   
-            min-width: calc(50% - 50px);    
+            width: calc(100% - 400px - 5vw);   
+            min-width: calc(50% - 5vw);    
+            padding-top: 30px;
+
+            h1 {
+                text-align: center;
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+            
+            .contact {
+                .contactForm {
+                    padding-right: 0px;
+                }
+            }
         }
+
 
         img {
             width: 50%; 
-            margin-right: 50px; 
+            margin-right: 5vw; 
+            box-shadow: none !important;
         }
     }
 }
@@ -1435,27 +1431,57 @@
 
         .slider {
 
-            article {
+            .wrap {
 
-                .textBox {
-                    flex-wrap: wrap;
-                    padding: 10px 20px 50px; 
+                article {
+                    flex-wrap: wrap;  
+                    height: auto;  
 
-                    span {
-                        margin-top: 0px;  
-                        margin-bottom: 0;   
+                    video {
+                        width: 100%;    
+                        height: 25vw;  
+                        margin-left: 0; 
+                        min-height: 300px;  
+                        filter: grayscale(0);   
+                        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+
+                        &:hover {
+                            transform: scale(1);  
+                        }
                     }
 
-                    h2 {
-                        display: flex;
-                        align-items: flex-end;
-                    }
+                    .textBox {
+                        display: flex; 
+                        width: 100%;    
+                        margin-left: 0%;    
+                        height: auto;   
+                        min-height: 200px;  
+                        padding: 25px; 
 
-                    p {
-                        padding: 0; 
+                        span {
+                            margin: -10px 20px 0px 0px;
+                        }
+
+                        h2 {
+                            margin-right: 20px; 
+                        }
+                        
+                        a {
+                            right: 0px;
+                            bottom: 10px;
+                        }
                     }
                 }
             }
+        }
+
+        .prevBtn {
+            left: 5vw; 
+        }
+
+        .nextBtn {
+            right: auto;    
+            left: calc(5vw + 50px);    
         }
     }
 }
@@ -1469,6 +1495,7 @@
 
         .buttons {
             order: 0;
+            margin-bottom: 25px;
         }
 
         .textBox {
@@ -1528,14 +1555,22 @@
 #gallery {
 
     >.inner {
-        padding: 50px 2vw 70px 2vw;    
+        padding: 50px 3vw 70px;  
+        
+        h1 {
+            text-align: center;
+        }
 
         .hashtags {
+            display: flex;
+            flex-wrap: wrap;
             margin: 0;
-            margin-left: calc(2vw + 3px);  
+            margin-left: 1vw; 
 
             li {
-                margin-right: 0;
+                display: flex;
+                margin-right: 1vw;
+                margin-bottom: 7px;
 
                 a {
                     font-size: 1vw;    
@@ -1551,12 +1586,12 @@
             height: auto;
 
             article {
-                width: calc((100% / 4) - 2vw); 
-                margin-right: 1vw;
-                margin-bottom: 1vw;
+                width: calc((100% / 4) - 1.5vw); 
+                margin-right: 1.5vw;
+                margin-bottom: 1.5vw;
                 
                 &:first-child {
-                    width: calc(100% - 5vw); 
+                    width: calc(100% - 1.5vw); 
                     aspect-ratio: 2 / 1;
                     margin-right: 0;
                 }
