@@ -28,7 +28,6 @@ function Home() {
 
     return (
         <>
-            <Header type="main" />
             <Visual ref={visual} />
             <Trending ref={trending} />
             <About ref={about} />

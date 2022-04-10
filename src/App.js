@@ -17,11 +17,8 @@ function App() {
   
   return (
     <div className="App">
-      <Switch>
-        <Route exact path="/" component={Home}></Route>
-        <Route path="/"><Header type="sub" /></Route>
-      </Switch>
-      
+      <Route path="/" component={Header}></Route>
+      <Route exact path="/" component={Home}></Route>
       <Route exact path="/about" component={About}></Route>
       <Route exact path="/media/:type" component={Media}></Route>
       <Route exact path="/community/:type/:id?" component={Community}></Route>
