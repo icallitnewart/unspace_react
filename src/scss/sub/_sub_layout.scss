@@ -128,4 +128,107 @@
 
 }
 
+//Tablet-------------------------------------------
+@media screen and (max-width: $tablet) {
+.content {
+
+.visual_sub {
+    padding: 80px 30px 50px;  
+
+    .inner {
+        width: 100%;    
+        height: auto;   
+
+        main {
+            flex-wrap: wrap; 
+            height: auto;   
+
+            .textBox {
+                width: 100%; 
+                padding-right: 5vw; 
+                border-bottom: 1px solid #ccc;  
+                margin-bottom: 30px;    
+
+                .title {
+                    display: flex;  
+                    height: auto;   
+                    padding: 0px 0px 20px;  
+
+                    h1 {
+                        min-width: 300px;   
+                        font: 600 40px/1 $font1;   
+                        border-bottom: 0px; 
+                        margin-bottom: 0px; 
+                    }
+                }
+            }
+
+            .guide {
+                width: 100%; 
+
+                div {
+                    margin-right: 30px; 
+
+                    span {
+
+                        &:nth-of-type(1) {
+                            font: 600 45px/1 $font1;    
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+}
+}
+
+
+//Mobile-------------------------------------------
+@media screen and (max-width: $mobile) {
+.content {
+
+.visual_sub {
+    padding: 80px 4vw 30px;  
+
+    .inner {
+
+        main {
+            padding: 30px 10px 0px; 
+
+            .textBox {
+                margin-bottom: 20px;  
+
+                .title {
+                    flex-wrap: wrap;    
+                    padding: 0px 0px 15px;
+
+                    p {
+                        width: 100%;    
+                    }
+                }
+            }
+
+            .guide {
+
+                div {
+                    margin-right: 20px;  
+
+                    span {
+                        &:nth-of-type(2) {
+                            padding: 20px 10px; 
+                            font-size: 16px;   
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+}
+}
 
