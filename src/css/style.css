@@ -2806,6 +2806,109 @@ a {
         .media .youtube > .inner .playlist article:nth-of-type(even) .playBtn {
           left: 30px; }
 
+@media screen and (max-width: 1179px) {
+  .media .projects {
+    padding: 70px 2.5vw; }
+    .media .projects > .inner {
+      flex-wrap: wrap;
+      width: 100%; }
+      .media .projects > .inner .title {
+        width: 100%; }
+        .media .projects > .inner .title h1 {
+          text-align: center;
+          margin-bottom: 10px;
+          text-transform: uppercase; }
+      .media .projects > .inner .gallery {
+        width: 100%; }
+        .media .projects > .inner .gallery .hashtags {
+          justify-content: center; }
+          .media .projects > .inner .gallery .hashtags li span {
+            font: 500 13px/1 Montserrat;
+            margin: 3px; }
+        .media .projects > .inner .gallery .wrap article {
+          padding: 1vw; }
+          .media .projects > .inner .gallery .wrap article .textBox {
+            top: 1vw;
+            left: 1vw;
+            min-width: 100px;
+            height: calc(100% - 2vw);
+            padding: 2vw; }
+            .media .projects > .inner .gallery .wrap article .textBox h2 {
+              font: 5vw/1 Montserrat; }
+            .media .projects > .inner .gallery .wrap article .textBox p {
+              font: 2.5vw/1 Montserrat; }
+            .media .projects > .inner .gallery .wrap article .textBox span {
+              font: 1vw/1 Open Sans; }
+  .media .youtube {
+    padding: 70px 3.5vw; }
+    .media .youtube > .inner {
+      flex-wrap: wrap;
+      width: 100%; }
+      .media .youtube > .inner .title {
+        width: 100%; }
+        .media .youtube > .inner .title h1 {
+          text-align: center;
+          margin-bottom: 30px;
+          text-transform: uppercase; }
+      .media .youtube > .inner .playlist {
+        width: 100%; }
+        .media .youtube > .inner .playlist article {
+          width: 100%;
+          margin: 0px 0px 20px; }
+          .media .youtube > .inner .playlist article .textBox {
+            min-width: 280px; } }
+@media screen and (max-width: 599px) {
+  .media .projects {
+    padding: 50px 2.5vw; }
+    .media .projects > .inner .gallery .hashtags {
+      flex-wrap: wrap;
+      margin-top: 10px;
+      margin-bottom: 0px;
+      margin-right: 0px;
+      padding: 0px 50px; }
+      .media .projects > .inner .gallery .hashtags li {
+        height: 28px;
+        margin-bottom: 7px; }
+    .media .projects > .inner .gallery .wrap article {
+      width: 100%;
+      padding: 2vw 1vw; }
+      .media .projects > .inner .gallery .wrap article .textBox {
+        top: 2vw;
+        height: calc(100% - 4vw);
+        padding: 3vw; }
+        .media .projects > .inner .gallery .wrap article .textBox h2 {
+          font: 10vw/1 Montserrat; }
+        .media .projects > .inner .gallery .wrap article .textBox p {
+          font: 3vw/1 Montserrat; }
+        .media .projects > .inner .gallery .wrap article .textBox span {
+          font: 2.5vw/1 Open Sans; }
+  .media .youtube {
+    padding: 50px 3vw; }
+    .media .youtube > .inner .title h1 {
+      margin-bottom: 20px; }
+    .media .youtube > .inner .playlist article {
+      height: 200px;
+      margin-bottom: 15px; }
+      .media .youtube > .inner .playlist article .textBox {
+        min-width: 170px; }
+        .media .youtube > .inner .playlist article .textBox p {
+          bottom: 10px;
+          font: 12px/1.4 Montserrat; }
+        .media .youtube > .inner .playlist article .textBox .playBtn {
+          top: 15px; }
+          .media .youtube > .inner .playlist article .textBox .playBtn span:nth-of-type(1) {
+            width: 35px;
+            height: 35px; }
+          .media .youtube > .inner .playlist article .textBox .playBtn span:nth-of-type(2) {
+            display: none; }
+      .media .youtube > .inner .playlist article:nth-of-type(odd) p {
+        right: 10px; }
+      .media .youtube > .inner .playlist article:nth-of-type(odd) .playBtn {
+        right: 15px; }
+      .media .youtube > .inner .playlist article:nth-of-type(even) p {
+        left: 10px; }
+      .media .youtube > .inner .playlist article:nth-of-type(even) .playBtn {
+        left: 15px; } }
 .community .container {
   width: 100%;
   padding-top: 50px; }
@@ -3431,9 +3534,8 @@ a {
   background: rgba(0, 0, 0, 0.6); }
   .popup > .inner {
     position: relative;
-    width: 60%;
-    max-width: 1000px;
-    min-width: 600px;
+    width: 80%;
+    max-width: 800px;
     aspect-ratio: 1.5 / 1; }
     .popup > .inner .video {
       width: 100%;
@@ -3483,6 +3585,16 @@ a {
         .popup > .inner .closeBtn span:nth-of-type(2) {
           transform: translate(-50%, -50%) rotate(-45deg); }
 
+@media screen and (max-width: 599px) {
+  .popup > .inner .pic span {
+    top: -25px;
+    height: 25px;
+    font: 12px/25px Montserrat; }
+  .popup > .inner .closeBtn {
+    top: -26px;
+    right: -26px;
+    width: 25px;
+    height: 25px; } }
 @keyframes upAndDown {
   0% {
     transform: translateY(0px); }

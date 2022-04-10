@@ -287,3 +287,220 @@
 }
 
 }
+
+//Tablet---------------------------------------
+@media screen and (max-width: $tablet) {
+.media {
+
+.projects {
+    padding: 70px 2.5vw;
+
+    >.inner {
+        flex-wrap: wrap;
+        width: 100%;
+    
+        .title {
+            width: 100%;
+
+            h1 {
+                text-align: center;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+        }
+
+        .gallery {
+            width: 100%;
+
+            .hashtags {
+                justify-content: center;
+    
+                li {
+                    span {
+                        font: 500 13px/1 $font1;
+                        margin: 3px;
+                    }
+                }
+            }
+
+            .wrap {
+                article {
+                    padding: 1vw;
+    
+                    .textBox {
+                        top: 1vw; left: 1vw;
+                        min-width: 100px;
+                        height: calc(100% - 2vw);
+                        padding: 2vw;
+    
+                        h2 {
+                            font: 5vw/1 $font1;
+                        }
+    
+                        p {
+                            font: 2.5vw/1 $font1;
+                        }
+    
+                        span {
+                            font: 1vw/1 $font2;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.youtube {
+    padding: 70px 3.5vw;
+
+    >.inner {
+        flex-wrap: wrap;
+        width: 100%;
+    
+        .title {
+            width: 100%;
+
+            h1 {
+                text-align: center;
+                margin-bottom: 30px;
+                text-transform: uppercase;
+            }
+        }
+
+        .playlist {
+            width: 100%;
+
+            article {
+                width: 100%;
+                margin: 0px 0px 20px;
+
+                .textBox {
+                    min-width: 280px;
+                }
+            }
+        }
+    }
+}
+
+}
+}
+
+//Mobile---------------------------------------
+@media screen and (max-width: $mobile) {
+.media {
+
+.projects {
+    padding: 50px 2.5vw;
+
+    >.inner {
+        .gallery {
+
+            .hashtags {
+                flex-wrap: wrap;
+                margin-top: 10px;
+                margin-bottom: 0px;
+                margin-right: 0px;
+                padding: 0px 50px;
+    
+                li {
+                    height: 28px;
+                    margin-bottom: 7px;
+                }
+            }
+
+            .wrap {
+                article {
+                    width: 100%;
+                    padding: 2vw 1vw;
+    
+                    .textBox {
+                        top: 2vw; 
+                        height: calc(100% - 4vw);
+                        padding: 3vw;
+    
+                        h2 {
+                            font: 10vw/1 $font1;
+                        }
+    
+                        p {
+                            font: 3vw/1 $font1;
+                        }
+    
+                        span {
+                            font: 2.5vw/1 $font2;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.youtube {
+    padding: 50px 3vw;
+
+    >.inner {
+        .title {
+            h1 {
+                margin-bottom: 20px;
+            }
+        }
+
+        .playlist {
+            article {
+                height: 200px;
+                margin-bottom: 15px;
+                
+                .textBox {
+                    min-width: 170px;
+
+                    p {
+                        bottom: 10px; 
+                        font: 12px/1.4 $font1;
+                    }
+
+                    .playBtn {
+                        top: 15px;
+
+                        span:nth-of-type(1) {
+                            width: 35px;
+                            height: 35px;
+                        }
+
+                        span:nth-of-type(2) {
+                            display: none;
+                        }
+                    }
+
+                    
+
+                }
+                
+
+                &:nth-of-type(odd) {
+                    p {
+                        right: 10px;
+                    }
+
+                    .playBtn {
+                        right: 15px;
+                    }
+                }
+
+                &:nth-of-type(even) { 
+                    p {
+                        left: 10px;
+                    }
+                    .playBtn {
+                        left: 15px; 
+                    }
+                }
+            }
+        }
+    }
+}
+}
+}
