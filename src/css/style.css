@@ -1698,76 +1698,76 @@ a {
 .about .intro {
   width: 100%;
   padding: 120px 0px 50px; }
-  .about .intro.on .inner .wrap article:nth-of-type(1), .about .intro.on .inner .wrap article:nth-of-type(2), .about .intro.on .inner .wrap article:nth-of-type(3) h1, .about .intro.on .inner .wrap article:nth-of-type(3) p {
+  .about .intro.on .inner .pic article:nth-of-type(1), .about .intro.on .inner .pic article:nth-of-type(2), .about .intro.on .inner > .textBox h1, .about .intro.on .inner > .textBox p {
     transform: translateY(0px) !important;
     opacity: 1; }
-  .about .intro .inner .wrap article:nth-of-type(1), .about .intro .inner .wrap article:nth-of-type(2), .about .intro .inner .wrap article:nth-of-type(3) h1, .about .intro .inner .wrap article:nth-of-type(3) p {
+  .about .intro .inner .pic article, .about .intro .inner > .textBox h1, .about .intro .inner > .textBox p {
     opacity: 0;
     transition: 1s; }
-  .about .intro .inner .wrap article:nth-of-type(1) {
+  .about .intro .inner .pic article:nth-of-type(1) {
     transform: translateY(-30px); }
-  .about .intro .inner .wrap article:nth-of-type(2) {
+  .about .intro .inner .pic article:nth-of-type(2) {
     transform: translateY(30px);
     transition-delay: .3s; }
-  .about .intro .inner .wrap article:nth-of-type(3) h1 {
+  .about .intro .inner > .textBox h1 {
     transition-delay: .3s;
     transform: translateY(-20px); }
-  .about .intro .inner .wrap article:nth-of-type(3) p {
+  .about .intro .inner > .textBox p {
     transition-delay: .3s;
     transform: translateY(20px); }
   .about .intro .inner {
+    display: flex;
     width: 1180px;
     margin: 0 auto; }
-    .about .intro .inner .wrap {
-      width: 100%;
-      padding: 0px 50px; }
-      .about .intro .inner .wrap article {
+    .about .intro .inner .pic {
+      display: flex;
+      width: calc(100% / 3 * 2);
+      height: 500px; }
+      .about .intro .inner .pic article {
         display: flex;
-        width: calc(100% / 3 - 30px);
+        width: 50%;
         height: 500px;
-        float: left;
         margin: 0px 15px; }
-        .about .intro .inner .wrap article .textBox {
+        .about .intro .inner .pic article .textBox {
           display: flex;
           width: 100%;
           padding: 30px;
           background: rgba(62, 69, 82, 0.9); }
-          .about .intro .inner .wrap article .textBox span {
+          .about .intro .inner .pic article .textBox span {
             font: 600 36px/1 Montserrat;
             color: #eee;
             margin-right: 15px; }
-          .about .intro .inner .wrap article .textBox p {
+          .about .intro .inner .pic article .textBox p {
             font: 500 14px/1.4 Open Sans;
             color: #ccc; }
-        .about .intro .inner .wrap article:nth-of-type(1) {
+        .about .intro .inner .pic article:nth-of-type(1) {
           align-items: flex-start;
           box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); }
-        .about .intro .inner .wrap article:nth-of-type(2) {
+        .about .intro .inner .pic article:nth-of-type(2) {
           align-items: flex-end;
           box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); }
-        .about .intro .inner .wrap article:nth-of-type(3) {
-          flex-wrap: wrap;
-          align-content: center;
-          padding-left: 30px; }
-          .about .intro .inner .wrap article:nth-of-type(3) h1 {
-            width: 100%;
-            font: 600 30px/1.4 Montserrat;
-            color: #3a3e46;
-            letter-spacing: 2px;
-            margin-bottom: 20px; }
-          .about .intro .inner .wrap article:nth-of-type(3) span {
-            display: block;
-            width: 100px;
-            height: 1px;
-            background: #aaa;
-            margin-bottom: 40px; }
-          .about .intro .inner .wrap article:nth-of-type(3) p {
-            font: normal 14px/1.3 Open Sans;
-            color: #555; }
-      .about .intro .inner .wrap::after {
-        content: "";
+    .about .intro .inner > .textBox {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      width: calc(100% / 3 * 1 - 0px);
+      height: 500px;
+      padding-left: 30px; }
+      .about .intro .inner > .textBox h1 {
+        width: 100%;
+        font: 600 30px/1.4 Montserrat;
+        color: #3a3e46;
+        letter-spacing: 2px;
+        margin-bottom: 20px; }
+      .about .intro .inner > .textBox span {
         display: block;
-        clear: both; }
+        width: 100px;
+        height: 1px;
+        background: #aaa;
+        margin-bottom: 40px; }
+      .about .intro .inner > .textBox p {
+        font: normal 14px/1.3 Open Sans;
+        color: #555; }
 .about .members {
   width: 100%;
   padding: 100px 0px 50px; }
@@ -1835,7 +1835,8 @@ a {
       .about .members .inner .photo .wrap {
         width: 100%;
         height: 400%;
-        transform: translateY(-25%); }
+        transform: translateY(-25%);
+        font-size: 0; }
         .about .members .inner .photo .wrap img {
           width: 100%;
           height: 25%;
@@ -2014,6 +2015,210 @@ a {
         font: 600 12px/1 Montserrat;
         border-radius: 0; }
 
+@media screen and (max-width: 1179px) {
+  .about .intro {
+    padding: 70px 30px 50px; }
+    .about .intro .inner {
+      width: 100%; }
+      .about .intro .inner .pic {
+        flex-wrap: wrap; }
+        .about .intro .inner .pic article {
+          width: 100%;
+          height: 240px;
+          margin: 0px; }
+          .about .intro .inner .pic article:first-child {
+            margin-bottom: 20px; }
+          .about .intro .inner .pic article .textBox {
+            flex-wrap: wrap;
+            width: 30%;
+            min-width: 180px;
+            height: 100%;
+            padding: 30px 20px; }
+            .about .intro .inner .pic article .textBox span {
+              margin-bottom: 10px; }
+          .about .intro .inner .pic article:nth-of-type(1) {
+            justify-content: flex-end; }
+          .about .intro .inner .pic article:nth-of-type(2) {
+            justify-content: flex-start; }
+      .about .intro .inner > .textBox {
+        padding-left: 30px; }
+        .about .intro .inner > .textBox h1 {
+          text-align: center;
+          margin-bottom: 20px; }
+        .about .intro .inner > .textBox span {
+          margin: 0 auto;
+          margin-bottom: 30px; }
+        .about .intro .inner > .textBox p {
+          text-align: center; }
+  .about .members .inner {
+    width: 100%;
+    height: 550px; }
+    .about .members .inner .detail {
+      height: 300px;
+      padding-top: 5vw;
+      padding-left: 5vw; }
+      .about .members .inner .detail h1 {
+        font: 600 20px/1.3 Montserrat;
+        margin-top: 0px;
+        margin-bottom: 30px;
+        padding-right: 0px; }
+      .about .members .inner .detail > span {
+        text-align: left; }
+      .about .members .inner .detail p {
+        display: none; }
+    .about .members .inner .textBox {
+      left: auto;
+      right: 50%;
+      bottom: 0px;
+      width: 50%;
+      padding: 20px; }
+      .about .members .inner .textBox p {
+        padding: 15px 20px; }
+    .about .members .inner > button {
+      z-index: 10; }
+      .about .members .inner > button.prevBtn {
+        bottom: 301px; }
+      .about .members .inner > button.nextBtn {
+        bottom: 250px; }
+  .about .services {
+    padding: 50px 0px 0px; }
+    .about .services .inner .wrap article .textBox i, .about .services .inner .wrap article .textBox span, .about .services .inner .wrap article .textBox p {
+      transition-delay: .5s; }
+    .about .services .inner .wrap article .pic {
+      transition-delay: .5s; }
+    .about .services .inner .wrap article:nth-of-type(2) .pic {
+      transition-delay: .8s; }
+    .about .services .inner .wrap article:nth-of-type(3) .pic {
+      transition-delay: 1.1s; }
+    .about .services .inner {
+      flex-wrap: wrap;
+      width: 100%;
+      height: auto; }
+      .about .services .inner .wrap {
+        order: 1;
+        width: 100%;
+        background: linear-gradient(to right, #767e8f 100%, transparent 0%);
+        padding: 50px 5vw; }
+        .about .services .inner .wrap article {
+          flex-wrap: wrap;
+          height: 200px;
+          margin-bottom: 30px; }
+          .about .services .inner .wrap article .textBox {
+            padding: 0px 5vw 0px 0px; }
+      .about .services .inner > .textBox {
+        position: relative;
+        order: 0;
+        display: flex;
+        width: 100%;
+        height: auto;
+        padding: 0px 5vw; }
+        .about .services .inner > .textBox h1 {
+          width: auto;
+          font: bold 30px/1.3 Montserrat;
+          padding-right: 50px; }
+        .about .services .inner > .textBox .viewBtn {
+          position: absolute;
+          bottom: 30px;
+          right: 50px; } }
+@media screen and (max-width: 599px) {
+  .about .intro {
+    padding: 50px 5vw; }
+    .about .intro .inner .pic article:nth-of-type(1) {
+      transition-delay: .3s; }
+    .about .intro .inner .pic article:nth-of-type(2) {
+      transition-delay: .6s; }
+    .about .intro .inner > .textBox h1 {
+      transition-delay: 0s; }
+    .about .intro .inner > .textBox p {
+      transition-delay: 0s; }
+    .about .intro .inner {
+      flex-wrap: wrap; }
+      .about .intro .inner .pic {
+        order: 1;
+        width: 100%; }
+      .about .intro .inner > .textBox {
+        order: 0;
+        width: 100%;
+        height: auto;
+        padding-left: 0px;
+        margin-bottom: 40px; }
+  .about .members {
+    padding: 50px 0px; }
+    .about .members .inner {
+      height: 500px; }
+      .about .members .inner .detail {
+        padding-top: 7vw;
+        padding-right: 20px; }
+        .about .members .inner .detail h1 {
+          font: 600 16px/1.3 Montserrat;
+          margin-bottom: 20px; }
+        .about .members .inner .detail > span:nth-of-type(1) {
+          font: 600 14px/1 Montserrat; }
+        .about .members .inner .detail > span:nth-of-type(2) {
+          font: 600 12px/1 Montserrat; }
+      .about .members .inner .photo {
+        height: 300px; }
+      .about .members .inner .textBox {
+        right: 0px;
+        width: 100%;
+        height: 200px;
+        padding: 7vw; }
+        .about .members .inner .textBox p {
+          padding: 0px;
+          border: 0px; }
+      .about .members .inner > button {
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        transform: translateY(-50%);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 40px;
+        height: 40px;
+        background-color: #767e8f;
+        transition: 0.7s;
+        right: 50%;
+        top: auto; }
+        .about .members .inner > button i {
+          font-size: 10px;
+          color: #fff;
+          margin-bottom: 3px; }
+        .about .members .inner > button span {
+          font: bold 8px/1 Open Sans;
+          color: #fff; }
+        .about .members .inner > button.prevBtn {
+          bottom: 241px; }
+        .about .members .inner > button.nextBtn {
+          bottom: 200px; }
+  .about .services {
+    padding: 0px; }
+    .about .services.on .inner .wrap article .pic {
+      transform: translate(0px, 0px); }
+    .about .services .inner .wrap article .pic {
+      transform: translate(0px, 20px); }
+    .about .services .inner .wrap article {
+      height: 400px;
+      margin-bottom: 20px; }
+      .about .services .inner .wrap article .pic {
+        order: 0;
+        width: 100%;
+        height: 50%; }
+      .about .services .inner .wrap article .textBox {
+        order: 1;
+        width: 100%;
+        height: 50%;
+        padding: 10px 0px 0px 0px; }
+    .about .services .inner > .textBox {
+      height: 270px;
+      padding: 0px 5vw; }
+      .about .services .inner > .textBox h1 {
+        padding-right: 3vw; }
+      .about .services .inner > .textBox .viewBtn {
+        padding: 12px 20px;
+        bottom: 25px;
+        right: 5vw; } }
 .join .signUp .inner {
   position: relative;
   width: 1180px;
