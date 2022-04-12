@@ -2933,26 +2933,26 @@ a {
           color: #555; }
       .community .container .inner .board .category {
         display: flex;
+        justify-content: space-between;
         width: 100%;
         height: 150px;
         margin-bottom: 20px;
         border: 1px solid #767e8f;
-        cursor: pointer; }
+        cursor: pointer;
+        background: #767e8f; }
         .community .container .inner .board .category li {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          width: 25%;
+          width: calc(25% - (3px / 4));
           height: 100%;
-          border-right: 1px solid #767e8f;
-          transition: .5s; }
+          transition: .5s;
+          background: #fff; }
           .community .container .inner .board .category li.on, .community .container .inner .board .category li:hover {
             background: #767e8f; }
             .community .container .inner .board .category li.on i, .community .container .inner .board .category li.on span, .community .container .inner .board .category li:hover i, .community .container .inner .board .category li:hover span {
               color: #fff; }
-          .community .container .inner .board .category li:last-child {
-            border-right: 0; }
           .community .container .inner .board .category li i {
             font-size: 40px;
             color: #3a3e46;
@@ -3059,13 +3059,10 @@ a {
       width: 80%;
       max-width: 564px;
       padding: 20px 50px 20px 20px;
-      font: 14px/1.3 Open Sans;
       background: #fff;
+      font: 14px/1.5 Open Sans;
       color: #333;
       border-bottom: 1px solid #eee;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
       transition: .5s; }
       .community .faqBoard .board .boardForm tr td .viewMore {
         position: absolute;
@@ -3159,7 +3156,7 @@ a {
     text-align: left; }
     .community .noticeBoard .board .noticePost tbody .title td {
       padding: 20px;
-      font: 14px/1 Open Sans;
+      font: 14px/1.4 Open Sans;
       color: #eee; }
   .community .noticeBoard .board .noticePost tbody .extraDetail {
     background: #eee;
@@ -3223,6 +3220,70 @@ a {
       display: block;
       clear: both; }
 
+@media screen and (max-width: 1179px) {
+  .community .container .inner {
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px auto 50px; }
+    .community .container .inner .title {
+      width: 100%;
+      font: 600 30px/1.3 Montserrat;
+      text-align: center;
+      margin-bottom: 30px;
+      text-transform: uppercase; }
+    .community .container .inner .board {
+      width: 100%;
+      padding: 0 5vw; }
+  .community .noticeBoard .board .boardForm tbody tr td {
+    max-width: 164px; } }
+@media screen and (max-width: 599px) {
+  .community .container .inner {
+    margin: 0px auto 50px; }
+    .community .container .inner .title {
+      font: 600 26px/1.3 Montserrat;
+      margin-bottom: 20px; }
+    .community .container .inner .board .category {
+      flex-wrap: wrap;
+      align-content: space-between;
+      height: 200px; }
+      .community .container .inner .board .category li {
+        width: calc(50% - 0.5px);
+        height: calc(50% - 0.5px); }
+        .community .container .inner .board .category li i {
+          font-size: 30px; }
+        .community .container .inner .board .category li span {
+          font: 600 12px/1 Montserrat; }
+    .community .container .inner .board .searchBox .searchInput {
+      width: 60%;
+      max-width: 200px; }
+    .community .container .inner .board .pagination ul {
+      margin: 0 5px; }
+      .community .container .inner .board .pagination ul li {
+        margin: 0 5px; }
+  .community .faqBoard .board .boardForm tr th {
+    min-width: 80px; }
+  .community .faqBoard .board .boardForm tr td {
+    padding: 5vw; }
+    .community .faqBoard .board .boardForm tr td .viewMore {
+      display: none !important; }
+  .community .noticeBoard .board .boardForm thead tr th:first-child, .community .noticeBoard .board .boardForm thead tr th:nth-of-type(3), .community .noticeBoard .board .boardForm thead tr th:last-child {
+    display: none; }
+  .community .noticeBoard .board .boardForm tbody tr td {
+    padding: 15px 10px; }
+    .community .noticeBoard .board .boardForm tbody tr td.idx {
+      display: none; }
+    .community .noticeBoard .board .boardForm tbody tr td.title {
+      width: 100%; }
+    .community .noticeBoard .board .boardForm tbody tr td.author {
+      display: none; }
+    .community .noticeBoard .board .boardForm tbody tr td.date {
+      display: none; }
+  .community .noticeBoard .board .noticePost tbody .title td {
+    font: 14px/1.5 Open Sans; }
+  .community .noticeBoard .board .noticePost tbody .moveTo td p a, .community .noticeBoard .board .noticePost tbody .moveTo td p span {
+    font: 13px/1.3 Open Sans; }
+  .community .noticeBoard .board .noticePost tbody .viewBtns button {
+    width: 80px; } }
 .contact .container {
   width: 100%;
   padding-top: 50px; }
