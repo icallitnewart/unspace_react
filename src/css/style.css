@@ -3400,7 +3400,7 @@ a {
           width: 100%;
           height: 45px;
           border: 0;
-          text-indent: 1em;
+          padding: 1em;
           font: 14px/1 Montserrat;
           color: #333;
           outline: none;
@@ -3414,8 +3414,7 @@ a {
           font: 14px/1 Montserrat;
           color: #333;
           outline: none;
-          text-indent: 1em;
-          padding: 20px 0;
+          padding: 1em;
           border: 1px solid #767e8f;
           border-bottom: 4px solid #767e8f; }
 .contact .container.getintouch .contactDetail {
@@ -3556,6 +3555,157 @@ a {
       display: block;
       clear: both; }
 
+@media screen and (max-width: 1179px) {
+  .contact .container .inner {
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px auto 0px; }
+    .contact .container .inner .title {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+      text-transform: uppercase; }
+  .contact .container.getintouch .success {
+    width: 60%;
+    padding: 5vw; }
+    .contact .container.getintouch .success .mailIcon {
+      display: block;
+      width: 100%; }
+    .contact .container.getintouch .success h2 {
+      font: bold 24px/1.3 Montserrat; }
+    .contact .container.getintouch .success p {
+      font: 16px/1.5 Montserrat; }
+  .contact .container.getintouch .contactForm {
+    width: 60%;
+    padding: 0px 5vw 30px; }
+    .contact .container.getintouch .contactForm h2 {
+      text-align: left; }
+    .contact .container.getintouch .contactForm table tr.formBtns th input {
+      width: 100px;
+      height: 40px; }
+  .contact .container.getintouch .contactDetail {
+    width: 40%;
+    padding: 5vw; }
+  .contact .container.location {
+    margin-bottom: 100px; }
+    .contact .container.location .location {
+      height: auto;
+      margin: 0 5vw; }
+      .contact .container.location .location #map {
+        width: 100%;
+        height: 250px; }
+      .contact .container.location .location .branchBtns {
+        top: 59px;
+        right: 15px; }
+      .contact .container.location .location .address {
+        display: flex;
+        width: 100%;
+        margin-left: 0%;
+        height: 250px;
+        border-top: 0px; }
+        .contact .container.location .location .address .officeTitle {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-content: center;
+          width: 30%;
+          padding: 0px; }
+          .contact .container.location .location .address .officeTitle h2 {
+            width: 100%; }
+          .contact .container.location .location .address .officeTitle h3 {
+            width: 100%; }
+        .contact .container.location .location .address .addressDetail {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-content: center;
+          width: 70%;
+          height: auto;
+          padding: 0px; }
+          .contact .container.location .location .address .addressDetail h4 {
+            width: 100%;
+            font: 600 14px/1.4 Montserrat;
+            margin-bottom: 15px; }
+            .contact .container.location .location .address .addressDetail h4::after {
+              margin-top: 10px; }
+          .contact .container.location .location .address .addressDetail p {
+            width: 100%;
+            font: 600 12px/1.3 Montserrat; } }
+@media screen and (max-width: 599px) {
+  .contact .container .inner {
+    margin: 0px auto; }
+    .contact .container .inner .title {
+      font: 600 26px/1.3 Montserrat;
+      margin-bottom: 20px; }
+  .contact .container.getintouch .success {
+    width: 100%;
+    margin-bottom: 50px; }
+    .contact .container.getintouch .success h2 {
+      font: bold 20px/1.3 Montserrat;
+      margin-bottom: 30px; }
+    .contact .container.getintouch .success div {
+      margin-bottom: 30px; }
+    .contact .container.getintouch .success p {
+      font: 14px/1.5 Montserrat; }
+  .contact .container.getintouch .contactForm {
+    width: 100%; }
+    .contact .container.getintouch .contactForm h2 {
+      text-align: right; }
+      .contact .container.getintouch .contactForm h2 span {
+        font: 600 16px/1 Montserrat; }
+    .contact .container.getintouch .contactForm table tr.formBtns th {
+      padding-top: 0px; }
+    .contact .container.getintouch .contactForm table tr th:not(:last-child) .errMsg {
+      font: 600 10px/1 Montserrat; }
+    .contact .container.getintouch .contactForm table tr td input[type=text], .contact .container.getintouch .contactForm table tr td input[type=number], .contact .container.getintouch .contactForm table tr td input[type=email] {
+      font: 12px/1 Montserrat; }
+    .contact .container.getintouch .contactForm table tr td textarea {
+      font: 12px/1.3 Montserrat; }
+  .contact .container.getintouch .contactDetail {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 10vw;
+    border: 0px;
+    background: #767e8f; }
+    .contact .container.getintouch .contactDetail div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px; }
+      .contact .container.getintouch .contactDetail div:last-child {
+        margin-bottom: 0px; }
+      .contact .container.getintouch .contactDetail div h3, .contact .container.getintouch .contactDetail div h4, .contact .container.getintouch .contactDetail div h5 {
+        font: 16px/1 Montserrat;
+        color: #eee; }
+      .contact .container.getintouch .contactDetail div p {
+        color: #ddd;
+        text-align: center; }
+      .contact .container.getintouch .contactDetail div a {
+        color: #ddd; }
+  .contact .container.location {
+    margin-bottom: 70px; }
+    .contact .container.location .location {
+      height: auto;
+      margin: 0 3vw; }
+      .contact .container.location .location h1 {
+        font: 600 18px/1 Montserrat; }
+      .contact .container.location .location #map {
+        height: 300px; }
+      .contact .container.location .location .branchBtns {
+        top: calc(38px + 5px);
+        right: 5px;
+        width: 110px; }
+        .contact .container.location .location .branchBtns li {
+          width: 110px; }
+      .contact .container.location .location .address {
+        border: 1px solid #eee; }
+        .contact .container.location .location .address .officeTitle h2 {
+          font: bold 16px/1.3 Montserrat; }
+        .contact .container.location .location .address .officeTitle h3 {
+          font: 600 12px/1 Montserrat; }
+        .contact .container.location .location .address .addressDetail h4 {
+          font: 600 12px/1.4 Montserrat; } }
 .loader {
   display: flex;
   justify-content: center;
