@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import Loader from "../common/Loader";
 import Popup from "../common/Popup";
 
@@ -11,7 +11,6 @@ function Youtube() {
         isVisible: false,
         targetItem: null
     });
-    const playlist = useRef(null);
 
     useEffect(()=> {
         callData();
@@ -48,8 +47,7 @@ function Youtube() {
                 <div className="title">
                     <h1>youtube</h1>
                 </div>
-                <div className={loadEffect ? "playlist on" : "playlist"} ref={playlist}>
-                
+                <div className={loadEffect ? "playlist on" : "playlist"}>
                 {
                     !isLoaded
                     ? <Loader />
