@@ -6,13 +6,12 @@ import Popup from "../common/Popup";
 function Youtube() {
     const [ videos, setVideos ] = useState([]);
     const [ isLoaded, setIsLoaded ] = useState(null);
+    const [ loadEffect, setLoadEffect ] = useState(false);
     const [ popup, setPopup ] = useState({
         isVisible: false,
         targetItem: null
     });
     const playlist = useRef(null);
-
-    console.log(popup.video);
 
     useEffect(()=> {
         callData();
@@ -20,7 +19,7 @@ function Youtube() {
 
     useEffect(()=> {
         if(isLoaded) {
-            const activateTimer = setTimeout(()=> {playlist.current.classList.add("on")}, 0);
+            const activateTimer = setTimeout(()=> {setLoadEffect(true)}, 0);
             return ()=> clearTimeout(activateTimer);
         }
     }, [isLoaded]);
@@ -49,7 +48,7 @@ function Youtube() {
                 <div className="title">
                     <h1>youtube</h1>
                 </div>
-                <div className="playlist" ref={playlist}>
+                <div className={loadEffect ? "playlist on" : "playlist"} ref={playlist}>
                 
                 {
                     !isLoaded
