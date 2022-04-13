@@ -48,7 +48,7 @@
                             letter-spacing: 2px;
                             color: #fff;
 
-                            label, span {
+                            label {
                                 display: inline-block;
                                 width: 100%;
                                 background: $mainColor;
@@ -86,8 +86,14 @@
                                 }
                             }
                         }
+
+                        &.check th span {
+                            display: flex;
+                            justify-content: center;
+                            background: $mainColor;
+                        }
     
-                        .check {
+                        &.check td  {
                             >div {
                                 background: #eee;
                             }
@@ -467,85 +473,125 @@
 @media screen and (max-width: $tablet) {
 .join {
 
-.inner {
-    width: 100%;
-    padding: 0 5vw;
-
-    .signUp {
-        margin-top: 30px; 
-        margin-bottom: 100px;
+.signUp {
+    .inner {
+        width: 100%;
+        padding: 70px 7vw;
     
-        .title {
-            transform: translate(0, -40px);
-            text-align: center;
+        .content {
+            .textBox {
+                padding: 0px;
     
-            h1 {
-                span {
-                    font: bold 40px/1 $font1;
-                }
-            }
-        }
+                table {
+                    tr {
+                        th:not(.buttons) {
+                            font: 600 11px/50px $font1;
+                        }
     
-        .textBox {
-            padding: 0 5vw 5vw; 
-
-            table {
-
-                tr {
-
-                    th {
-                        min-width: 120px;
-                        font: 500 12px/50px $font1;
-                    }
-
-                    td {
-                        input[type=text], input[type=password] {
-                            font: 500 12px/50px $font1;
+                        &.check td {
+                            >div {
+                                padding: 0px 1.5em;
+                            }
+                            
+                            label {
+                                &:first-child {
+                                    margin-left: 0;
+                                }
+                            }
                         }
                     }
 
-                    .check {
-                        label {
-                            font: 500 12px/50px $font1;
-                            margin-right: 10px;
+                    .buttons {
+                        padding-top: 30px;
+                
+                        input {
+                            width: 120px;
+                            height: 45px;
                         }
                     }
-                    
-                }
-            }
-
-        }
-    }
-
-    .policy {
-        margin-bottom: 50px;
-    
-        .title {
-            transform: translate(0, -40px);
-            text-align: center;
-    
-            h1 {
-                span {
-                    font: bold 40px/1 $font1;
                 }
             }
         }
-    
-        .textBox {
-            padding: 0 5vw 5vw;
-        }
     }
+}
 
-    .buttons {
-        margin-bottom: 100px;
+.policy {
+    .inner {
+        width: 100%;
+        padding: 120px 5vw 0px;
 
-        input {
-            width: 130px;
-            font: 500 12px/1 $font1;
+        .content{
+            margin-bottom: 70px;
+        
+            .title {
+                transform: translate(0px, -40px);
+                text-align: center;
+        
+                h1 {
+                    span {
+                        font: bold 36px/1 $font1;
+                    }
+                }
+            }
+        
+            .textBox {
+                padding: 0px 5vw;
+    
+                label {
+                    margin: 10px 0px 40px 0px;
+                    font: bold 14px/1.4 $font2;
+    
+                    input[type=checkbox] {
+                        margin-top: 3px;
+                    }
+                }
+            }
+
+            .button {
+                padding: 0px 5vw 5vw;
+
+                .agreeBtn {
+                    font: 16px/1 $font1;
+                }
+            }
         }
     }
 
 }
+
+.login {
+    .inner {
+        width: 100%;
+        height: 650px;
+        padding: 70px 5vw;
+
+        .loginForm {
+            width: 50%;
+            padding: 5vw;
+            padding-left: 0;
+        }
+
+        .banner {
+            width: 50%;
+
+            .textBox {
+                h2 {
+                    font: 2vw/1 $font1;
+                }
+    
+                h3 {
+                    font: 600 4vw/1 $font1;
+                }
+
+                a {
+                    font: 3vw/1 $font1;
+                }
+            }
+
+        }
+    }
+}
+
 }
 }
 
@@ -554,81 +600,117 @@
 @media screen and (max-width: $mobile) {
 .join {
 
-.inner {
-    padding: 0;
-
-    .signUp {
-        border: 0; 
-        margin-top: 50px; 
-        margin-bottom: 80px;
+.signUp {
+    .inner {
+        padding: 50px 3vw;
     
-        .title {
-            transform: translate(0, -25px);
-    
-            h1 {
-                span {
-                    font: bold 30px/1 $font1;
-                }
-            }
-        }
-    
-        .textBox {
-            padding: 0 3vw 3vw; 
-
-            h2 {
-                margin-bottom: 10px;
-            }
-
-            table {
-                tr {
-                    .check {
-                        padding: 1em;
-
-                        label {
-                            height: 30px;
-                            font: 500 12px/30px $font1;
-                            margin-right: 5px;
-
-                            &:first-child {
-                                margin-left: 0;
-                            }
+        .content {
+            .textBox {
+                table {
+                    tr {
+                        th:not(.buttons) {
+                            min-width: 120px;
+                            font: 600 10px/50px $font1;
                         }
                     }
-                    
-                }
-            }
 
-        }
-    }
-
-    .policy {
-        border: 0;
-        margin-bottom: 25px;
-    
-        .title {
-            transform: translate(0, -25px);
-    
-            h1 {
-                span {
-                    font: bold 30px/1 $font1;
+                    .buttons {
+                        padding-top: 20px;
+                
+                        input {
+                            width: 110px;
+                            height: 40px;
+                        }
+                    }
                 }
             }
         }
-    
-        .textBox {
-            padding: 0 3vw 3vw;
-        }
     }
+}
 
-    .buttons {
-        margin-bottom: 50px;
+.policy {
+    .inner {
+        padding: 70px 3vw 0px;
 
-        input {
-            width: 120px;
-            height: 40px;
+        .content{
+            margin-bottom: 50px;
+        
+            .title {
+                transform: translate(0px, -30px);
+        
+                h1 {
+                    span {
+                        font: bold 30px/1 $font1;
+                    }
+        
+                    &::before {
+                        display:none;
+                    }
+                }
+            }
+        
+            .textBox {
+                h2, h3 {
+                    font: bold 20px/1 $font1;
+                }
+
+                label {
+                    margin: 10px 0px 30px 0px;
+                }
+            }
+
+            .button {
+                padding: 0px 5vw 7vw;
+
+                .agreeBtn {
+                    font: 14px/1 $font1;
+                }
+            }
         }
     }
 
 }
+
+.login {
+    .inner {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 50px 0px 0px;
+
+        .loginForm {
+            width: 100%;
+            padding: 0px 10vw;
+            margin-bottom: 50px;
+
+            h1 {
+                margin-bottom: 0px;
+
+                span {
+                    padding: 0px;
+                }
+            }
+        }
+
+        .banner {
+            width: 100%;
+
+            .textBox {
+
+                h2 {
+                    font: 16px/1 $font1;
+                }
+    
+                h3 {
+                    font: 600 30px/1 $font1;
+                }
+
+                a {
+                    font: 24px/1 $font1;
+                }
+            }
+        }
+    }
+}
+
 }
 }

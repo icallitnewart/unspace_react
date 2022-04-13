@@ -51,7 +51,7 @@ function SignupForm() {
         if(!value.pwd2 || value.pwd2 !== value.pwd1) {
             errs.pwd2 = "Please enter the same password again.";
         }
-        if(!value.username || value.username.length < 5) {
+        if(!value.username || value.username.length < 4) {
             errs.username = "Please enter at least 4 letters for your name.";
         }
         if(!value.email || !/@/.test(value.email) || !/[.]/.test(value.email)) {
@@ -246,11 +246,11 @@ function SignupForm() {
                                             }
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr className="check">
                                         <th scope="row">
                                             <span>INTERESTS</span>
                                         </th>
-                                        <td className="check">
+                                        <td>
                                             <div>
                                             <label htmlFor="modern">
                                                 <input 

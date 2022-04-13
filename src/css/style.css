@@ -2254,7 +2254,7 @@ a {
             font: 600 12px/50px Montserrat;
             letter-spacing: 2px;
             color: #fff; }
-            .join .signUp .inner .content .textBox table tr th:not(.buttons) label, .join .signUp .inner .content .textBox table tr th:not(.buttons) span {
+            .join .signUp .inner .content .textBox table tr th:not(.buttons) label {
               display: inline-block;
               width: 100%;
               background: #3a3e46; }
@@ -2280,18 +2280,22 @@ a {
               .join .signUp .inner .content .textBox table tr td .errMsg::before {
                 content: "*";
                 vertical-align: middle; }
-          .join .signUp .inner .content .textBox table tr .check > div {
+          .join .signUp .inner .content .textBox table tr.check th span {
+            display: flex;
+            justify-content: center;
+            background: #3a3e46; }
+          .join .signUp .inner .content .textBox table tr.check td > div {
             background: #eee; }
-          .join .signUp .inner .content .textBox table tr .check label {
+          .join .signUp .inner .content .textBox table tr.check td label {
             display: inline-flex;
             align-items: center;
             height: 50px;
             font: 600 12px/50px Montserrat;
             color: #333;
             margin-right: 25px; }
-            .join .signUp .inner .content .textBox table tr .check label:first-child {
+            .join .signUp .inner .content .textBox table tr.check td label:first-child {
               margin-left: 2em; }
-            .join .signUp .inner .content .textBox table tr .check label input[type=checkbox] {
+            .join .signUp .inner .content .textBox table tr.check td label input[type=checkbox] {
               margin-right: 5px; }
           .join .signUp .inner .content .textBox table tr .textArea {
             display: flex;
@@ -2535,78 +2539,108 @@ a {
       background: rgba(58, 62, 70, 0.5); }
 
 @media screen and (max-width: 1179px) {
-  .join .inner {
+  .join .signUp .inner {
     width: 100%;
-    padding: 0 5vw; }
-    .join .inner .signUp {
-      margin-top: 30px;
-      margin-bottom: 100px; }
-      .join .inner .signUp .title {
-        transform: translate(0, -40px);
+    padding: 70px 7vw; }
+    .join .signUp .inner .content .textBox {
+      padding: 0px; }
+      .join .signUp .inner .content .textBox table tr th:not(.buttons) {
+        font: 600 11px/50px Montserrat; }
+      .join .signUp .inner .content .textBox table tr.check td > div {
+        padding: 0px 1.5em; }
+      .join .signUp .inner .content .textBox table tr.check td label:first-child {
+        margin-left: 0; }
+      .join .signUp .inner .content .textBox table .buttons {
+        padding-top: 30px; }
+        .join .signUp .inner .content .textBox table .buttons input {
+          width: 120px;
+          height: 45px; }
+  .join .policy .inner {
+    width: 100%;
+    padding: 120px 5vw 0px; }
+    .join .policy .inner .content {
+      margin-bottom: 70px; }
+      .join .policy .inner .content .title {
+        transform: translate(0px, -40px);
         text-align: center; }
-        .join .inner .signUp .title h1 span {
-          font: bold 40px/1 Montserrat; }
-      .join .inner .signUp .textBox {
-        padding: 0 5vw 5vw; }
-        .join .inner .signUp .textBox table tr th {
-          min-width: 120px;
-          font: 500 12px/50px Montserrat; }
-        .join .inner .signUp .textBox table tr td input[type=text], .join .inner .signUp .textBox table tr td input[type=password] {
-          font: 500 12px/50px Montserrat; }
-        .join .inner .signUp .textBox table tr .check label {
-          font: 500 12px/50px Montserrat;
-          margin-right: 10px; }
-    .join .inner .policy {
-      margin-bottom: 50px; }
-      .join .inner .policy .title {
-        transform: translate(0, -40px);
-        text-align: center; }
-        .join .inner .policy .title h1 span {
-          font: bold 40px/1 Montserrat; }
-      .join .inner .policy .textBox {
-        padding: 0 5vw 5vw; }
-    .join .inner .buttons {
-      margin-bottom: 100px; }
-      .join .inner .buttons input {
-        width: 130px;
-        font: 500 12px/1 Montserrat; } }
+        .join .policy .inner .content .title h1 span {
+          font: bold 36px/1 Montserrat; }
+      .join .policy .inner .content .textBox {
+        padding: 0px 5vw; }
+        .join .policy .inner .content .textBox label {
+          margin: 10px 0px 40px 0px;
+          font: bold 14px/1.4 Open Sans; }
+          .join .policy .inner .content .textBox label input[type=checkbox] {
+            margin-top: 3px; }
+      .join .policy .inner .content .button {
+        padding: 0px 5vw 5vw; }
+        .join .policy .inner .content .button .agreeBtn {
+          font: 16px/1 Montserrat; }
+  .join .login .inner {
+    width: 100%;
+    height: 650px;
+    padding: 70px 5vw; }
+    .join .login .inner .loginForm {
+      width: 50%;
+      padding: 5vw;
+      padding-left: 0; }
+    .join .login .inner .banner {
+      width: 50%; }
+      .join .login .inner .banner .textBox h2 {
+        font: 2vw/1 Montserrat; }
+      .join .login .inner .banner .textBox h3 {
+        font: 600 4vw/1 Montserrat; }
+      .join .login .inner .banner .textBox a {
+        font: 3vw/1 Montserrat; } }
 @media screen and (max-width: 599px) {
-  .join .inner {
-    padding: 0; }
-    .join .inner .signUp {
-      border: 0;
-      margin-top: 50px;
-      margin-bottom: 80px; }
-      .join .inner .signUp .title {
-        transform: translate(0, -25px); }
-        .join .inner .signUp .title h1 span {
-          font: bold 30px/1 Montserrat; }
-      .join .inner .signUp .textBox {
-        padding: 0 3vw 3vw; }
-        .join .inner .signUp .textBox h2 {
-          margin-bottom: 10px; }
-        .join .inner .signUp .textBox table tr .check {
-          padding: 1em; }
-          .join .inner .signUp .textBox table tr .check label {
-            height: 30px;
-            font: 500 12px/30px Montserrat;
-            margin-right: 5px; }
-            .join .inner .signUp .textBox table tr .check label:first-child {
-              margin-left: 0; }
-    .join .inner .policy {
-      border: 0;
-      margin-bottom: 25px; }
-      .join .inner .policy .title {
-        transform: translate(0, -25px); }
-        .join .inner .policy .title h1 span {
-          font: bold 30px/1 Montserrat; }
-      .join .inner .policy .textBox {
-        padding: 0 3vw 3vw; }
-    .join .inner .buttons {
+  .join .signUp .inner {
+    padding: 50px 3vw; }
+    .join .signUp .inner .content .textBox table tr th:not(.buttons) {
+      min-width: 120px;
+      font: 600 10px/50px Montserrat; }
+    .join .signUp .inner .content .textBox table .buttons {
+      padding-top: 20px; }
+      .join .signUp .inner .content .textBox table .buttons input {
+        width: 110px;
+        height: 40px; }
+  .join .policy .inner {
+    padding: 70px 3vw 0px; }
+    .join .policy .inner .content {
       margin-bottom: 50px; }
-      .join .inner .buttons input {
-        width: 120px;
-        height: 40px; } }
+      .join .policy .inner .content .title {
+        transform: translate(0px, -30px); }
+        .join .policy .inner .content .title h1 span {
+          font: bold 30px/1 Montserrat; }
+        .join .policy .inner .content .title h1::before {
+          display: none; }
+      .join .policy .inner .content .textBox h2, .join .policy .inner .content .textBox h3 {
+        font: bold 20px/1 Montserrat; }
+      .join .policy .inner .content .textBox label {
+        margin: 10px 0px 30px 0px; }
+      .join .policy .inner .content .button {
+        padding: 0px 5vw 7vw; }
+        .join .policy .inner .content .button .agreeBtn {
+          font: 14px/1 Montserrat; }
+  .join .login .inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 50px 0px 0px; }
+    .join .login .inner .loginForm {
+      width: 100%;
+      padding: 0px 10vw;
+      margin-bottom: 50px; }
+      .join .login .inner .loginForm h1 {
+        margin-bottom: 0px; }
+        .join .login .inner .loginForm h1 span {
+          padding: 0px; }
+    .join .login .inner .banner {
+      width: 100%; }
+      .join .login .inner .banner .textBox h2 {
+        font: 16px/1 Montserrat; }
+      .join .login .inner .banner .textBox h3 {
+        font: 600 30px/1 Montserrat; }
+      .join .login .inner .banner .textBox a {
+        font: 24px/1 Montserrat; } }
 .media .projects {
   width: 100%;
   padding: 100px 0px 120px; }
