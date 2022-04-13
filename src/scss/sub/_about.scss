@@ -147,7 +147,7 @@
     //Scroll Animation : End
 
     //Slider Animation
-    &.sliderOn .inner {
+    .inner.sliderOn {
         .detail h1 span {
             animation: slider 0.5s;
         }

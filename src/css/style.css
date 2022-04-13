@@ -1816,9 +1816,9 @@ a {
   .about .members .inner .textBox {
     transform: translateY(30px);
     transition-delay: .3s; }
-  .about .members.sliderOn .inner .detail h1 span {
+  .about .members .inner.sliderOn .detail h1 span {
     animation: slider 0.5s; }
-  .about .members.sliderOn .inner .textBox p span {
+  .about .members .inner.sliderOn .textBox p span {
     animation: slider 0.5s; }
   .about .members .inner {
     position: relative;

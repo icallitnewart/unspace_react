@@ -1,4 +1,4 @@
-import { forwardRef, useEffect } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import { useSlider } from "../../hooks/useSlider.js";
 
 function Members(props, ref) {
@@ -49,20 +49,21 @@ function Members(props, ref) {
         moveSlide 
     } = useSlider(data, 500, true);
 
+    const [ sliderEffect, setSliderEffect ] = useState(false);
     const activeItem = items.filter((item)=> item.idx === activeIndex);
 
     //슬라이더 텍스트 애니메이션 효과
     useEffect(()=> {
         if(isClicked) { //버튼 클릭시 
-            ref.current.classList.remove("sliderOn");
+            setSliderEffect(false);
             const timer = setTimeout(()=> 
-            ref.current.classList.add("sliderOn"), 0);
+            setSliderEffect(true), 0);
 
             return ()=> clearTimeout(timer);
         } 
         else {  //자동 재생시
-            ref.current.classList.add("sliderOn");
-            const timer = setTimeout(()=> ref.current.classList.remove("sliderOn"), 2000);
+            setSliderEffect(true);
+            const timer = setTimeout(()=> setSliderEffect(false), 2000);
     
             return ()=> clearTimeout(timer);
         }
@@ -70,7 +71,7 @@ function Members(props, ref) {
     
     return (
         <section className="members" ref={ref}>
-            <div className="inner">
+            <div className={sliderEffect ? "inner sliderOn" : "inner"}>
                 <div className="detail">
                     <h1><span>{`"${activeItem[0].greeting}"`}</span></h1>
                     <span>{activeItem[0].name}</span>
