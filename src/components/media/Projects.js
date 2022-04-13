@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useFetchFlickrData } from "../../hooks/useFetchFlickrData.js";
 import Loader from "../common/Loader";
 import Popup from "../common/Popup";
@@ -9,7 +9,7 @@ function Projects() {
         isVisible: false,
         targetItem: null
     });
-    const pics = useRef(null);
+    const [ loadEffect, setLoadEffect ] = useState(false);
 
     //flickr 데이터 타입
     const tags = [ "popular", "modern", "contemporary", "minimalist", "mid-century" ];
@@ -21,7 +21,8 @@ function Projects() {
 
     useEffect(()=> {
         if(isLoaded) {
-            const activateTimer = setTimeout(()=> {pics.current.classList.add("on")}, 0);
+            if(loadEffect) setLoadEffect(false);
+            const activateTimer = setTimeout(()=> {setLoadEffect(true)}, 0);
             setEnableClick(true);
             return ()=> clearTimeout(activateTimer);
         }
@@ -58,7 +59,7 @@ function Projects() {
                     </ul>
                     {!isLoaded 
                     ? <Loader />
-                    : <div className="wrap" ref={pics}>
+                    : <div className={loadEffect ? "wrap on" : "wrap"}>
                         {
                             flickrData.map((item, index)=> {
                                 const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_w.jpg`;
