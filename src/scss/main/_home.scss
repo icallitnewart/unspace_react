@@ -380,7 +380,7 @@
     //Scroll Animation : End
 
     //Tab Animation : Start
-    &.tabOn .inner {
+    .inner.tabOn  {
         .textBox {
             animation: fadeIn 1s, moveUp 1s;
         }

@@ -388,9 +388,9 @@ a {
   #about .inner .textBox {
     transform: translateY(-30px);
     transition-delay: .3s; }
-  #about.tabOn .inner .textBox {
+  #about .inner.tabOn .textBox {
     animation: fadeIn 1s, moveUp 1s; }
-  #about.tabOn .inner img {
+  #about .inner.tabOn img {
     animation: fadeIn 1s, boxShadow 1s; }
   #about .inner {
     position: relative;

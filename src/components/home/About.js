@@ -5,6 +5,7 @@ import Contact from "./Contact";
 
 function About(prop, ref) {
     const [ tab, setTab ] = useState(1);
+    const [ tabEffect, setTabEffect ] = useState(false);
 
     const btns = [
         {
@@ -47,14 +48,15 @@ function About(prop, ref) {
 
     //탭버튼 클릭시 탭컨텐츠 애니메이션 효과 적용
     useEffect(()=> {
-        ref.current.classList.remove("tabOn");
-        const timer = setTimeout(()=> ref.current.classList.add("tabOn"), 0);
+        setTabEffect(false);
+        const timer = setTimeout(()=> 
+        setTabEffect(true), 10);
         return ()=> clearTimeout(timer);
     }, [tab]);
 
     return (
         <section id="about" ref={ref}>
-            <div className="inner">
+            <div className={tabEffect ? "inner tabOn" : "inner"}>
                 <img src={"img/" + tabContent[tab - 1].img} alt="" />
                 <div className="textBox">
                     <h1>{tabContent[tab - 1].title}</h1>
