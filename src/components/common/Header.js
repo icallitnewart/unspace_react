@@ -12,13 +12,19 @@ function Header() {
         color: "salmon"
     };
 
+    //모바일 사이드바 메뉴 열기
     useEffect(()=> {
-        (mobileMenu) && setSlideEffect(true)
+        if(mobileMenu) {
+            setSlideEffect(true);
+            document.body.style.overflow = "hidden";
+        }
     }, [mobileMenu]);
 
+    //모바일 사이드바 메뉴 닫기
     useEffect(()=> {
         if(!slideEffect) {
             const timer = setTimeout(()=> setMobileMenu(false), 1000);
+            document.body.style.overflow = "auto";
             return ()=> clearTimeout(timer);
         }
     }, [slideEffect]);
