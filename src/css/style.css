@@ -915,6 +915,23 @@ a {
       #visual .inner .wrap article {
         width: 20vw; }
 
+  #trending.on .inner .slider, #trending.on .inner button {
+    opacity: 1 !important;
+    transform: translateY(0px);
+    bottom: 70px !important; }
+  #trending .inner button {
+    opacity: 0 !important;
+    bottom: 40px !important; }
+  #trending .inner .slider {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s; }
+    #trending .inner .slider .wrap article video, #trending .inner .slider .wrap article .textBox {
+      opacity: 1; }
+    #trending .inner .slider .wrap article video {
+      transform: translateY(0px); }
+    #trending .inner .slider .wrap article .textBox {
+      transform: translateY(0px); }
   #trending .inner {
     flex-wrap: wrap;
     width: 100%;
@@ -1062,6 +1079,10 @@ a {
     #visual .inner .wrap {
       display: none; }
 
+  #trending .inner > .textBox h1 {
+    margin-bottom: 20px; }
+  #trending .inner > .textBox p {
+    font-size: 13px; }
   #trending .inner .slider .wrap article {
     flex-wrap: wrap;
     height: auto; }
@@ -1076,15 +1097,26 @@ a {
         transform: scale(1); }
     #trending .inner .slider .wrap article .textBox {
       display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
       width: 100%;
       margin-left: 0%;
-      height: auto;
-      min-height: 200px;
+      height: 300px;
       padding: 25px; }
       #trending .inner .slider .wrap article .textBox span {
-        margin: -10px 20px 0px 0px; }
+        display: inline-block;
+        font-size: 80px;
+        margin: -10px 15px 0px 0px; }
       #trending .inner .slider .wrap article .textBox h2 {
-        margin-right: 20px; }
+        display: flex;
+        align-self: flex-end;
+        width: calc(100% - 80px);
+        margin: 0px;
+        padding: 10px 0px;
+        text-transform: uppercase; }
+      #trending .inner .slider .wrap article .textBox p {
+        padding-top: 5px;
+        font-size: 13px; }
       #trending .inner .slider .wrap article .textBox a {
         right: 0px;
         bottom: 10px; }

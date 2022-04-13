@@ -1154,6 +1154,41 @@
 }
 
 #trending {
+    //Scroll Animation : Start
+    &.on .inner {
+        .slider, button {
+            opacity: 1 !important;
+            transform: translateY(0px);
+            bottom: 70px !important;
+        }
+    }
+    .inner {
+        button {
+            opacity: 0 !important;
+            bottom: 40px !important;
+        }
+
+        .slider {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1s;
+
+            .wrap article {
+                video, .textBox {
+                    opacity: 1;
+                }
+
+                video { 
+                    transform: translateY(0px); 
+                }
+
+                .textBox { 
+                    transform: translateY(0px);
+                }
+            }
+        }
+    }
+    //Scroll Animation : End
 
     .inner {
         flex-wrap: wrap;   
@@ -1426,8 +1461,15 @@
 }
 
 #trending {
-
     .inner {
+        >.textBox {
+            h1 {
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 13px;
+            }
+        }
 
         .slider {
 
@@ -1452,18 +1494,31 @@
 
                     .textBox {
                         display: flex; 
+                        flex-wrap: wrap;
+                        align-content: flex-start;
                         width: 100%;    
                         margin-left: 0%;    
-                        height: auto;   
-                        min-height: 200px;  
+                        height: 300px;   
                         padding: 25px; 
 
                         span {
-                            margin: -10px 20px 0px 0px;
+                            display: inline-block;
+                            font-size: 80px;
+                            margin: -10px 15px 0px 0px;
                         }
 
                         h2 {
-                            margin-right: 20px; 
+                            display: flex;
+                            align-self: flex-end;
+                            width: calc(100% - 80px);
+                            margin: 0px;
+                            padding: 10px 0px;
+                            text-transform: uppercase;
+                        }
+
+                        p {
+                            padding-top: 5px;
+                            font-size: 13px;
                         }
                         
                         a {
