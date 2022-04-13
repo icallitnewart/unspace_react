@@ -45,12 +45,12 @@ $mobile: 599px;
             width: 15px;
             height: 15px;
             border-radius: 15px;
-            animation: loading 2s infinite ease-in-out;
+            animation: loading .5s infinite;
             background-color: $subColor1;
 
             @for $i from 1 through 4 {
                 &:nth-child(#{$i}) {
-                    animation-delay: 0s + .5 * $i;
+                    animation-delay: 0s + .2 * $i;
                 }
             }
         }
@@ -170,10 +170,12 @@ $mobile: 599px;
         transform: translateY(0px);
     }
 }
+
 @keyframes boxShadow {
     0% { box-shadow: none; }
     100% { box-shadow: 20px 20px 0px $mainColor; }
 }
+
 @keyframes scroll {
     0% {
         opacity: 0;
@@ -184,6 +186,7 @@ $mobile: 599px;
         transform: translateY(0px);
     }
 }
+
 @keyframes slider {
     0% {
         opacity: 0;
@@ -194,6 +197,7 @@ $mobile: 599px;
         transform: translateY(0px);
     }
 }
+
 @keyframes arrow {
     0% {
         transform: translateX(3px);
