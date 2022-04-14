@@ -13,7 +13,7 @@ function About() {
 
     //스크롤 애니메이션 효과
     const sections = [ intro, members, services ];
-    useScrollEffect(sections);
+    const scrollEffect = useScrollEffect(sections);
 
     //탭 버튼 클릭시 스크롤 다운
     const scrollDown = useScrollDown();
@@ -45,9 +45,15 @@ function About() {
     return (
         <section className="content about">
             <Visual {...visual} />
-            <Intro ref={intro} />
-            <Members ref={members} />
-            <Services ref={services} />
+            <Intro 
+                ref={intro} 
+                scrollEffect={intro.current && scrollEffect[intro.current.className]} />
+            <Members 
+                ref={members} 
+                scrollEffect={members.current && scrollEffect[members.current.className]} />
+            <Services 
+                ref={services} 
+                scrollEffect={services.current && scrollEffect[services.current.className]} />
         </section>
     )
 }

@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 
-function Services(props, ref) {
+function Services({ scrollEffect }, ref) {
     return (
-        <section className="services" ref={ref}>
+        <section className={scrollEffect ?`services ${scrollEffect}` : "services"} ref={ref}>
             <div className="inner">
                 <div className="wrap">
                     <article>

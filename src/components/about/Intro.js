@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 
-function Intro(props, ref) {
+function Intro({ scrollEffect }, ref) {
     return (
-        <section className="intro" ref={ref}>
+        <section className={scrollEffect ?`intro ${scrollEffect}` : "intro"} ref={ref}>
             <div className="inner">
                 <div className="pic">
                     <article style={{ 

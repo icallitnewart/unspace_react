@@ -1,7 +1,7 @@
 import { forwardRef, useEffect, useState } from "react";
 import { useSlider } from "../../hooks/useSlider.js";
 
-function Members(props, ref) {
+function Members({ scrollEffect }, ref) {
     const data = [
         {
             idx: 1,
@@ -70,7 +70,7 @@ function Members(props, ref) {
     }, [activeIndex, isClicked]);
     
     return (
-        <section className="members" ref={ref}>
+        <section  className={scrollEffect ?`members ${scrollEffect}` : "members"} ref={ref}>
             <div className={sliderEffect ? "inner sliderOn" : "inner"}>
                 <div className="detail">
                     <h1><span>{`"${activeItem[0].greeting}"`}</span></h1>
