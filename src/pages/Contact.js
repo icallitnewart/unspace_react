@@ -11,7 +11,7 @@ function Contact() {
 
     //스크롤 애니메이션 효과
     const sections = [ getintouch, location ];
-    useScrollEffect(sections);
+    const scrollEffect = useScrollEffect(sections);
 
     //탭 버튼 클릭시 스크롤 다운
     const scrollDown = useScrollDown();
@@ -38,8 +38,12 @@ function Contact() {
     return (
         <section className="content contact">
             <Visual {...visual} />
-            <Getintouch ref={getintouch} />
-            <Location ref={location} />
+            <Getintouch 
+                ref={getintouch}
+                scrollEffect={getintouch.current && scrollEffect[getintouch.current.className]} />
+            <Location 
+                ref={location}
+                scrollEffect={location.current && scrollEffect[location.current.className]} />
         </section>
     )
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, forwardRef, useRef, useState } from "react";
 import { useKakaoMap } from "../../hooks/useKakaoMap.js";
 
-function Location(props, ref) {
+function Location({ scrollEffect }, ref) {
     const mapContainer = useRef(null);
     const btns = useRef(null);
 
@@ -20,7 +20,7 @@ function Location(props, ref) {
 
 
     return (
-        <section className="container location" ref={ref}>
+        <section className={scrollEffect ? `container location ${scrollEffect}` : "container location"} ref={ref}>
             <div className="inner">
                 <div className="title">
                     <h1>Location</h1>

@@ -1,6 +1,6 @@
 import { useEffect, useState, forwardRef } from "react";
 
-function Getintouch(props, ref) {
+function Getintouch({ scrollEffect }, ref) {
     const initValue = {
         username: "",
         phoneNum: "",
@@ -53,7 +53,7 @@ function Getintouch(props, ref) {
     }, [err]);
 
     return (
-        <section className="container getintouch" ref={ref}>
+        <section className={scrollEffect ? `container getintouch ${scrollEffect}` : "container getintouch"} ref={ref}>
             <div className="inner">
                 <div className="title">
                     <h1>Get in touch</h1>
