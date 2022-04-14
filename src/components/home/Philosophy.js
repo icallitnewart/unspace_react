@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 
-function Philosophy(prop, ref) {
+function Philosophy({ scrollEffect }, ref) {
     return (
-        <section id="philosophy" ref={ref}>
+        <section id="philosophy" className={scrollEffect} ref={ref}>
             <div className="inner">
                 <div className="textBox">
                     <div className="lines">

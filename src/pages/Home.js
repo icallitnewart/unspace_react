@@ -24,18 +24,33 @@ function Home() {
 
     //스크롤 애니메이션 효과
     const sections = [ visual, trending, about, philosophy, quote, subscribe, gallery, location ];
-    useScrollEffect(sections);
+    const scrollEffect = useScrollEffect(sections);
 
     return (
         <>
-            <Visual ref={visual} />
-            <Trending ref={trending} />
-            <About ref={about} />
-            <Philosophy ref={philosophy} />
-            <Quote ref={quote} />
-            <Subscribe ref={subscribe} />
-            <Gallery ref={gallery} />
-            <Location ref={location} />
+            <Visual 
+                ref={visual} scrollEffect={visual.current && scrollEffect[visual.current.id]} />
+            <Trending 
+                ref={trending} 
+                scrollEffect={trending.current && scrollEffect[trending.current.id]} />
+            <About 
+                ref={about} 
+                scrollEffect={about.current && scrollEffect[about.current.id]} />
+            <Philosophy 
+                ref={philosophy} 
+                scrollEffect={philosophy.current && scrollEffect[philosophy.current.id]} />
+            <Quote 
+                ref={quote} 
+                scrollEffect={quote.current && scrollEffect[quote.current.id]} />
+            <Subscribe 
+                ref={subscribe} 
+                scrollEffect={subscribe.current && scrollEffect[subscribe.current.id]} />
+            <Gallery 
+                ref={gallery} 
+                scrollEffect={gallery.current && scrollEffect[gallery.current.id]} />
+            <Location 
+                ref={location} 
+                scrollEffect={location.current && scrollEffect[location.current.id]} />
         </>
     )
 }

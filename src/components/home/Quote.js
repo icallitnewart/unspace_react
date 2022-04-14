@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 
-function Quote(prop, ref) {
+function Quote({ scrollEffect }, ref) {
     return (
-        <section id="quote" ref={ref}>
+        <section id="quote" className={scrollEffect} ref={ref}>
             <div className="inner">
                 <p>"New needs need new techniques. And the modern artists have found new ways and new means of making their statements... the modern painter cannot express this age, the airplane, the atom bomb, the radio, in the old forms of the Renaissance or of any other past culture"</p>
                 <span>Jackson Pollock</span>

@@ -1,6 +1,6 @@
 import { useEffect, useState, forwardRef } from "react";
 
-function Visual(prop, ref) {
+function Visual({ scrollEffect }, ref) {
     const [ activeBg, setActiveBg ] = useState(0);
     const [ stop, setStop ] = useState(false);
 
@@ -52,7 +52,7 @@ function Visual(prop, ref) {
     }, [activeBg]);
 
     return (       
-        <figure id="visual" ref={ref}>
+        <figure id="visual" className={scrollEffect} ref={ref}>
             <div className="bgs">
                 {imgs.map((img, index)=> 
                         <img 

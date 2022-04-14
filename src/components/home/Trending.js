@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { useSlider } from "../../hooks/useSlider.js";
 
-function Trending(prop, ref) {
+function Trending({ scrollEffect }, ref) {
     const data= [
         {
             idx : 1,
@@ -36,7 +36,7 @@ function Trending(prop, ref) {
     } = useSlider(data, 500);
 
     return (
-        <section id="trending" ref={ref}>
+        <section id="trending" className={scrollEffect} ref={ref}>
             <div className="inner">
                 <div className="textBox">
                     <h1>Trending</h1>

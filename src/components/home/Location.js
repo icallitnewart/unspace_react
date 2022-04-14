@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, forwardRef } from "react";
 import { useKakaoMap } from "../../hooks/useKakaoMap.js";
 
-function Location(prop, ref) {
+function Location({ scrollEffect }, ref) {
     const mapContainer = useRef(null);
     const btns = useRef(null);
 
@@ -18,7 +18,7 @@ function Location(prop, ref) {
     }, [activeIndex, branchOptions]);
 
     return (
-        <section id="location" ref={ref}>
+        <section id="location" className={scrollEffect} ref={ref}>
             <div className="container">
                 <div id="map" ref={mapContainer}></div>
                 <ul className="branchBtns" ref={btns}>

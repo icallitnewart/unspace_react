@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 
-function Subscribe(prop, ref) {
+function Subscribe({ scrollEffect }, ref) {
     return (
-        <section id="subscribe" ref={ref}>
+        <section id="subscribe" className={scrollEffect} ref={ref}>
             <div className="inner">
                 <h1>SUBSCRIBE</h1>
                 <h2>Don't miss out the latest trends!</h2>

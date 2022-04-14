@@ -5,7 +5,7 @@ import Loader from "../common/Loader";
 import Popup from "../common/Popup";
 
 
-function Gallery(prop, ref) {
+function Gallery({ scrollEffect }, ref) {
     const [ popup, setPopup ] = useState({
         isVisible: false,
         targetItem: null
@@ -41,7 +41,7 @@ function Gallery(prop, ref) {
 
     return (
         <>
-        <section id="gallery" ref={ref}>
+        <section id="gallery" className={scrollEffect} ref={ref}>
             <div className="inner">
                 <h1>Choose Your Style</h1>
                 <ul className="hashtags">

@@ -3,7 +3,7 @@ import Idea from "./Idea";
 import Intro from "./Intro";
 import Contact from "./Contact";
 
-function About(prop, ref) {
+function About({ scrollEffect }, ref) {
     const [ tab, setTab ] = useState(1);
     const [ tabEffect, setTabEffect ] = useState(false);
 
@@ -55,7 +55,7 @@ function About(prop, ref) {
     }, [tab]);
 
     return (
-        <section id="about" ref={ref}>
+        <section id="about" className={scrollEffect} ref={ref}>
             <div className={tabEffect ? "inner tabOn" : "inner"}>
                 <img src={"img/" + tabContent[tab - 1].img} alt="" />
                 <div className="textBox">
