@@ -785,7 +785,8 @@ a {
         overflow: hidden;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4); }
         #gallery > .inner .wrap article:first-child {
-          width: calc((100% / 2) - 20px); }
+          width: calc((100% / 2) - 20px);
+          cursor: default; }
         #gallery > .inner .wrap article:not(:first-child):hover img {
           transform: scale(1.1); }
         #gallery > .inner .wrap article img {
@@ -1044,7 +1045,8 @@ a {
       margin: 0px;
       border: 20px solid #c3cee6;
       background: #fff;
-      box-shadow: none; }
+      box-shadow: none;
+      transform: translateX(0px); }
       #location .inner .address .officeTitle {
         padding: 25px 2vw; }
         #location .inner .address .officeTitle h2 {

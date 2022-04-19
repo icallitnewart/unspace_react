@@ -951,6 +951,7 @@
                 
                 &:first-child {
                     width: calc((100% / 2) - 20px);
+                    cursor: default;
                 }
                 
                 &:not(:first-child):hover img {
@@ -1375,10 +1376,8 @@
     }
 
     .inner {
-        width: 100%;    
+        width: 100%;   
 
-
-        
         .address {
             width: 35%;
             min-width: 250px;
@@ -1387,7 +1386,7 @@
             border: 20px solid $subColor2;
             background: #fff;
             box-shadow: none;
-
+            transform: translateX(0px);
             
             .officeTitle {
                 padding: 25px 2vw;  
