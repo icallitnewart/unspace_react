@@ -73,6 +73,7 @@ function Faq() {
         const category = e.currentTarget.querySelector("span").textContent;
         setType(category);
         if(highlight) setHighlight("");
+        if(answer.code) setAnswer({ code : "" });
     };
 
     //질문 클릭시 답변 보기/닫기
