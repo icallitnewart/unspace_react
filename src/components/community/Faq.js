@@ -140,6 +140,7 @@ function Faq() {
                         data={data}
                         setItems={setItems}
                         setHighlight={setHighlight}
+                        resetPage={setPage}
                     />
                     <Pagination
                         totalItems={totalItems}

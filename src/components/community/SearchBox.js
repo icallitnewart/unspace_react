@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function SearchBox({ type, data, setItems, setHighlight }) {
+function SearchBox({ type, data, setItems, setHighlight, resetPage }) {
     const [ input, setInput ] = useState("");
 
     const handleChange = (e)=> {
@@ -25,6 +25,7 @@ function SearchBox({ type, data, setItems, setHighlight }) {
         
         setItems(foundItems);
         setHighlight(input);
+        resetPage(1);
     };
 
     return (
