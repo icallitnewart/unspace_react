@@ -1,5 +1,5 @@
 function Pagination({ totalItems, maxItems, page, setPage }) {
-    const itemsPerPage = totalItems / maxItems;
+    const itemsPerPage = Math.ceil(totalItems / maxItems);
     const pageRange = (itemsPerPage < 1) ? [1] : Array(itemsPerPage).fill().map((arr, i)=> i + 1);
     const pageLimit = 5;
 
@@ -7,7 +7,6 @@ function Pagination({ totalItems, maxItems, page, setPage }) {
     const endIndex = (calculatePage + 1) * pageLimit;
     const startIndex = endIndex - pageLimit + 1;
 
-    console.log(pageRange);
     return (
         <div className="pagination">
             <button 
