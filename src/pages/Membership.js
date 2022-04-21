@@ -11,7 +11,7 @@ function Membership() {
     const visual = {
         title : "MEMBERSHIP",
         pic : { background: "url(../img/visual_sub_join.jpg) center/cover" },
-        desc : "This is a portfolio website with an interior design concept. There are sections for login and sign up here. You can explore them by clicking a tab option on the right side.",
+        desc : "Nullam nec egestas orci. Aliquam scelerisque dolor sit amet arcu rhoncus gravida. Proin cursus, diam eget blandit molestie, nisl diam convallis mauris, finibus dapibus tellus ex vel dolor.",
         tab: [ 
             { 
                 name: "login",

@@ -9,7 +9,7 @@ function Media() {
     const visual = {
         title : "MEDIA",
         pic : { background: "url(../img/visual_sub_media.jpg) center/cover" },
-        desc : "This is a portfolio website with an interior design concept. The images used for projects section are from Flickr and youtube API is used to present videos for interior trends.",
+        desc : "Vestibulum ac felis consequat, pretium felis a, sollicitudin nunc. Ut id lectus sagittis, dictum sapien id, pharetra ex. Vestibulum ac ullamcorper dui.",
         tab: [ 
             {
                 name: "projects",

@@ -19,7 +19,7 @@ function Contact() {
     const visual = {
         title : "CONTACT",
         pic : { background: "url(../img/visual_sub_contact.jpg) top/cover" },
-        desc : "This is a portfolio website with an interior design concept. In get in touch, you can fill in a form to leave a message. Kakaomap API is used in the location section. You can explore them by clicking a tab option on the right side.",
+        desc : "Sed eget odio neque. Vivamus interdum pulvinar nulla, vel pharetra neque interdum sit amet. Sed elementum dapibus lacus, in volutpat est ultricies nec.",
         tab: [ 
             {
                 name: "get in touch",

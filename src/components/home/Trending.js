@@ -6,26 +6,26 @@ function Trending({ scrollEffect }, ref) {
         {
             idx : 1,
             src : "trending1.mp4",
-            title : "Lorem Ipsum",
-            content : "tr1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde eum sed, quod ipsam, quae odio consequatur nam accusantium deserunt amet veritatis iusto id. Illo, mollitia neque aliquam velit tempora vitae."
+            title : "Modern",
+            content : "Modern design is an interior design style characterized by a monochromatic color palette, clean lines, minimalism, natural materials, and natural light."
         },
         {
             idx : 2,
             src : "trending2.mp4",
-            title : "Lorem Ipsum",
-            content : "tr2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde eum sed, quod ipsam, quae odio consequatur nam accusantium deserunt amet veritatis iusto id. Illo, mollitia neque aliquam velit tempora vitae."
+            title : "Contemporary",
+            content : "A contemporary style of decorating is defined by simplicity, subtle sophistication, deliberate use of texture, and clean lines."
         },
         {
             idx : 3,
             src : "trending3.mp4",
-            title : "Lorem Ipsum",
-            content : "tr3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde eum sed, quod ipsam, quae odio consequatur nam accusantium deserunt amet veritatis iusto id. Illo, mollitia neque aliquam velit tempora vitae."
+            title : "Mid-century",
+            content : "Mid-century style is typically characterized by clean, simple lines and honest use of materials, and it generally does not include decorative embellishments."
         },
         {
             idx : 4,
             src : "trending4.mp4",
-            title : "Lorem Ipsum",
-            content : "tr4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde eum sed, quod ipsam, quae odio consequatur nam accusantium deserunt amet veritatis iusto id. Illo, mollitia neque aliquam velit tempora vitae."
+            title : "Minimalist",
+            content : "The concept of minimalist architecture is to strip everything down to its essential quality and achieve simplicity."
         }
     ];
     
@@ -40,7 +40,7 @@ function Trending({ scrollEffect }, ref) {
             <div className="inner">
                 <div className="textBox">
                     <h1>Trending</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam placeat quas deleniti expedita culpa molestiae aspernatur, impedit eaque deserunt distinctio neque ab inventore officiis dolorem?</p>
+                    <p>What's trending now? The latest interior design trends are introduced in this section. People often aspire to ride the current waves of contemporaries' interest while attaining their own originality. Spaces are no exception.</p>
                 </div>
                 <div className="slider">
                     <div 

@@ -21,7 +21,7 @@ function About() {
     const visual = {
         title : "ABOUT US",
         pic : { background: "url(../img/visual_sub_about.jpg) top/cover" },
-        desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ipsum distinctio repellat soluta, quae natus inventore deleniti atque impedit molestias.",
+        desc : "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi at orci sed nisl feugiat semper.",
         tab: [ 
             {
                 name: "intro",

@@ -6,8 +6,9 @@ function Footer() {
                 <ul>
                     <li>
                         <h2>ADDRESS</h2>
-                        <p>1715 Hideway Road</p>
-                        <p>San Jose, CA 95118</p>
+                        <p>513 Yeongdong-daero</p>
+                        <p>Samseong-dong</p>
+                        <p>Gangnam-gu Seoul</p>
                     </li>
                     <li>
                         <h2>PHONE & FAX</h2>

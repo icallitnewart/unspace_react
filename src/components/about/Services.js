@@ -10,7 +10,7 @@ function Services({ scrollEffect }, ref) {
                             <i className="fas fa-record-vinyl"></i>
                             <span>CREATIVITY</span>
                             <span className="line"></span>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas veritatis maiores beatae, exercitationem quas non error architecto reiciendis odit dolores.</p>
+                            <p>We reject any platitude in design. Originality and curiosity are the main elements of our design.</p>
                         </div>
                         <div className="pic">
                             <img src="img/about_services1.jpg" alt="" />
@@ -21,7 +21,7 @@ function Services({ scrollEffect }, ref) {
                             <i className="fas fa-suitcase"></i>
                             <span>COMMUNICATION</span>
                             <span className="line"></span>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas veritatis maiores beatae, exercitationem quas non error architecto reiciendis odit dolores.</p>
+                            <p>We are always open to communication and adopt flexible approaches to matters.</p>
                         </div>
                         <div className="pic">
                             <img src="img/about_services2.jpg" alt="" />
@@ -30,9 +30,9 @@ function Services({ scrollEffect }, ref) {
                     <article>
                         <div className="textBox">
                             <i className="fas fa-chart-pie"></i>
-                            <span>PRESENTATION</span>
+                            <span>CLIENT-ORIENTED</span>
                             <span className="line"></span>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas veritatis maiores beatae, exercitationem quas non error architecto reiciendis odit dolores.</p>
+                            <p>Clients' needs and opinions are our first priority. It is always welcome and important that clients share their ideas and worries if there is any.</p>
                         </div>
                         <div className="pic">
                             <img src="img/about_services3.jpg" alt="" />
@@ -42,7 +42,7 @@ function Services({ scrollEffect }, ref) {
                 
                 <div className="textBox">
                     <h1>What <br />We <br />Promise</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis nobis repudiandae corrupti incidunt eaque aspernatur doloremque, quia iste quam vitae deleniti quod sapiente voluptas deserunt voluptatem eius nulla architecto libero!</p>
+                    <p>Our company ensures the best quality of services and always thinks ahead for clients' possible needs. Not only do we consider realistic aspects of "living", we also respect and try to reflect the philosophy of a "liver" into designing a space.</p>
                     <a href="#" className="viewBtn">view more</a>
                 </div>
             </div>

@@ -3,17 +3,17 @@ function Idea () {
         {
             icon: <i className="fa-regular fa-comments"></i>,
             title: "Communicative",
-            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolores odio necessitatibus quae vero. Modi quia temporibus nisi consectetur placeat.",
+            text: "We are always open to communication and adopt flexible approaches to matters.",
         },
         {
             icon: <i className="fa-solid fa-palette"></i>,
             title: "Creative",
-            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolores odio.",
+            text: "We reject any platitude in design. Originality and curiosity are the main elements of our design.",
         },
         {
             icon: <i className="fa-solid fa-handshake"></i>,
-            title: "Customer-oriented",
-            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolores.",
+            title: "Client-oriented",
+            text: "Clients' needs and opinions are our first priority. It is always welcome and important that clients share their ideas and worries if there is any.",
         }
     ];
 

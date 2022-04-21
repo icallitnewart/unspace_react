@@ -10,7 +10,7 @@ function Community() {
     const visual = {
         title : "COMMUNITY",
         pic : { background: "url(../img/visual_sub_community.jpg) center/cover" },
-        desc : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores natus, nostrum aliquam error voluptas laudantium eum assumenda quam a eius!",
+        desc : "Duis ut odio eu ipsum vestibulum cursus ut id nunc. Curabitur mollis felis eget nunc accumsan, ac finibus magna commodo.",
         tab: [ 
             {
                 name: "faq", 

@@ -9,14 +9,14 @@ function Intro({ scrollEffect }, ref) {
                     background: "url(../img/about_intro1.jpg) center/cover" }}>
                         <div className="textBox">
                             <span>01</span>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, ipsa incidunt. Quam nihil distinctio vel!</p>
+                            <p>Simple yet powerful. Living in an environment where one may rest as well as focus enriches a quality of life and develops it into a more elegant one.</p>
                         </div>
                     </article>
                     <article style={{ 
                     background: "url(../img/about_intro2.jpg) center/cover" }}>
                         <div className="textBox">
                             <span>02</span>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, ipsa incidunt. Quam nihil distinctio vel!</p>
+                            <p>An artistic style does not necessarily mean inconvenience. Efficiency can be compatible with aesthetic pleasure.</p>
                         </div>
                     </article>
                 </div>
