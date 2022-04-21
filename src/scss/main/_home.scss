@@ -989,6 +989,7 @@
     
     .container {
         position: absolute;
+        z-index: 1;
         width: calc(((100% - 1180px) / 2) + (1180px * 0.7));
         //width: 70%;
         height: 100%;

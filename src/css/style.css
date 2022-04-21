@@ -810,6 +810,7 @@ a {
     transform: translateX(20px); }
   #location .container {
     position: absolute;
+    z-index: 1;
     width: calc(((100% - 1180px) / 2) + (1180px * 0.7));
     height: 100%;
     float: left; }
