@@ -18,9 +18,9 @@ function SearchBox({ type, data, setItems, setHighlight }) {
         let foundItems = [];
 
         if(type==="notice") {
-            foundItems = data.filter((item)=> item.title.match(input) || item.author.match(searchTerm));
+            foundItems = data.filter((item)=> item.title.match(searchTerm) || item.author.match(searchTerm) || item.content.match(searchTerm));
         } else if(type==="faq") {
-            foundItems = data.filter((item)=> item.question.match(input) || item.answer.match(input));
+            foundItems = data.filter((item)=> item.question.match(searchTerm) || item.answer.match(searchTerm));
         }
         
         setItems(foundItems);
