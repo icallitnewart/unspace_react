@@ -1,6 +1,6 @@
 **작성 중입니다.**
 ## 📖 Contents
-1. [Description](#-description)
+1. [Description](#%EF%B8%8F-description)
 2. [Tech Stacks](#-tech-stacks)
 3. [Getting Started](#-getting-started)
 4. [Features](#-features)
