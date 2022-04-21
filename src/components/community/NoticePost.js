@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 
-function NoticePost({ id }) {
+function NoticePost({ id, highlight, highlightText }) {
     const history = useHistory();
     const reduxData = useSelector(state=> state.noticeReducer.notice);
     const [ items, setItems ] = useState({
@@ -10,6 +10,8 @@ function NoticePost({ id }) {
         prev: {},
         next: {}
     });
+
+    console.log(items.target.title);
 
     useEffect(()=> {
         const idx = parseInt(id);
@@ -31,16 +33,20 @@ function NoticePost({ id }) {
             <caption className="hidden">Notice Post</caption>
             <tbody>
                 <tr className="title">
-                    <td colSpan="2">{items.target.title}</td>
+                    <td colSpan="2">
+                        {highlight && items.target.title ? highlightText(items.target.title) : items.target.title}
+                    </td>
                 </tr>
                 <tr className="extraDetail">
-                    <td>{items.target.author}</td>
+                    <td>
+                        {highlight && items.target.author ? highlightText(items.target.author) : items.target.author}
+                    </td>
                     <td>{items.target.date}</td>
                 </tr>
                 <tr className="content">
                     <td colSpan="2">
                         <div className="contentBox">
-                            {items.target.content}
+                            {highlight && items.target.content ? highlightText(items.target.content) : items.target.content}
                         </div>
                     </td>
                 </tr>

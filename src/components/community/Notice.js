@@ -91,7 +91,11 @@ function Notice() {
                                 setPage={setPage}
                             />
                         </>
-                    :   <NoticePost id={id} />
+                    :   <NoticePost 
+                            id={id} 
+                            highlight={highlight}
+                            highlightText={highlightText}
+                        />
                     }
                 </div>
             </div>
