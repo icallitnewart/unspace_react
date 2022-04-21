@@ -1,0 +1,142 @@
+{
+    "data" : [
+        {
+            "type" : "Payment",
+            "code" : "pa1",
+            "question" : "How do I see my purchase history?",
+            "answer" : "You can check your purchase history on 'My Shopping' in MYPAGE section."
+        },
+        {
+            "type" : "Payment",
+            "code" : "pa2",
+            "question" : "What payment methods are available?",
+            "answer" : "Payment can be made using a credit card, a check card or a bank transfer"
+        },
+        {
+            "type" : "Payment",
+            "code" : "pa3",
+            "question" : "Can I pay interest-free installments on my credit card?",
+            "answer" : "It's different depending on which credit card you use and you can check it through the credit card company."
+        },
+        {
+            "type" : "Payment",
+            "code" : "pa4",
+            "question" : "What should I do if I want to change the payment method after ordering?",
+            "answer" : "It is not possible to change the payment information after payment. However, it can be changed by reordering after cancellation in the waiting for deposit and payment completion stage."
+        },
+        {
+            "type" : "Payment",
+            "code" : "pa5",
+            "question" : "Can I cancel my order?",
+            "answer" : "You can cancel your order at any time before it is confirmed in MYPAGE section. However, if the status of order is at the preparation stage, you cannot canel it."
+        },
+        {
+            "type" : "Payment",
+            "code" : "pa6",
+            "question" : "When will I get a refund after cancelling an order?",
+            "answer" : "The refund process is completed within 3 to 7 business days on average."
+        },
+        {
+            "type" : "Payment",
+            "code" : "pa7",
+            "question" : "I would like to get a cash receipt.",
+            "answer" : "You can request a cash receipt via live chat. It may take 10 to 20 minutes."
+        },
+        {
+            "type" : "Payment",
+            "code" : "pa8",
+            "question" : "I ordered several items, but can I cancel only a part of them?",
+            "answer" : "Depending on the delivery status, partial cancellation can be made after payment."
+        },
+        {
+            "type" : "Membership",
+            "code" : "me1",
+            "question" : "What are the UnSpace Membership benefits?",
+            "answer" : "If you join our membership, you are given a membership grade based on your purchase history. According to your membership grade, you will be gifted with vouchers and points on a different rate."
+        },
+        {
+            "type" : "Membership",
+            "code" : "me2",
+            "question" : "How do I earn points?",
+            "answer" : "You will earn points if you purchase a product on our interior mall. (*Please beware that points will expire after 3 years.)"
+        },
+        {
+            "type" : "Membership",
+            "code" : "me3",
+            "question" : "Can I use my points immediately after receiving them?",
+            "answer" : "Yes. You can use your points whenever you want once you purchase a product."
+        },
+        {
+            "type" : "Membership",
+            "code" : "me4",
+            "question" : "Is it possible to change my ID and password?",
+            "answer" : "You can change your password on MY PAGE section. However, changing your ID is not possible."
+        },
+        {
+            "type" : "Membership",
+            "code" : "me5",
+            "question" : "How do I withdraw from the membership?",
+            "answer" : "We are sorry to hear that you wish to withdraw. On MY PAGE section, you can fill in the form to withdraw. Your personal details will be deleted upon applying for a withdrawl."
+        },
+        {
+            "type" : "Membership",
+            "code" : "me6",
+            "question" : "I would like to receive (or stop receiving) new deals and marketing letters.",
+            "answer" : "You can select whether you would like to receive our news letters and deals via email or a letter on MYPAGE section."
+        },
+        {
+            "type" : "Products",
+            "code" : "pr1",
+            "question" : "I want to know the estimate right away, but do I have to make an actual measurement?",
+            "answer" : "It is difficult to inform the price range by wire because the situation varies greatly from house to house. In some cases, installation work may not be possible, so it is recommended that you measure and get an estimate."
+        },
+        {
+            "type" : "Products",
+            "code" : "pr2",
+            "question" : "How long does the overall remodeling work take?",
+            "answer" : "The time it takes varies greatly depending on the scope of the construction, so you can find out exactly when you decide the scope of the expected day while receiving consultation."
+        },
+        {
+            "type" : "Products",
+            "code" : "pr3",
+            "question" : "Is it possible to install a product right after I make an order?",
+            "answer" : "The installation date varies depending on the production period. It can be installed in at least 2 to 14 days excluding holidays."
+        },
+        {
+            "type" : "Products",
+            "code" : "pr4",
+            "question" : "Can I have a consultation or installation on the weekend?",
+            "answer" : "Visiting counseling is conducted only on weekdays, but construction is possible on the weekend."
+        },
+        {
+            "type" : "Products",
+            "code" : "pr5",
+            "question" : "Is it possible to adjust the height as I want?",
+            "answer" : "Yes, we can make an adjustment to the product as you wish. However, it can take extra 2-3 working days."
+        },
+        {
+            "type" : "Products",
+            "code" : "pr6",
+            "question" : "Is there an additional cost for removing the bathtub?",
+            "answer" : "Except for tiles and door frames, removal of equipment inside the bathroom is free."
+        },
+        {
+            "type" : "Products",
+            "code" : "pr7",
+            "question" : "How long does it take to make the order after the contract?",
+            "answer" : "Construction starts at 9 a.m. and takes 6 hours and can be extended by 1 to 2 hours depending on the site."
+        },
+        {
+            "type" : "A/S",
+            "code" : "as1",
+            "question" : "For how long can I request A/S?",
+            "answer" : "Unless it is a case of consumer negligence, the abnormality of the product itself is supported free of charge for the period of 6 months."
+        },
+        {
+            "type" : "A/S",
+            "code" : "as2",
+            "question" : "How do I request A/S?",
+            "answer" : "You can call us on +333 3333 3333 to consult on the problems you face and request A/S."
+        }
+    ]
+}

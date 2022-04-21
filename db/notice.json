@@ -1,0 +1,116 @@
+{
+    "data" : [
+        {
+            "idx" : 1,
+            "title" : "Event in March 2020",
+            "author" : "Emma Campbell",
+            "date": "2020.03.23",
+            "content" : "Event in March 2020. This is a dummy text. Nullam velit justo, molestie quis posuere a, accumsan ut urna. Aenean sed interdum enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id porta dui. Etiam ultricies pretium suscipit. Proin quam tellus, eleifend eget gravida id, feugiat vitae dolor."
+        },
+        {
+            "idx" : 2,
+            "title" : "This Month's Interior Trend: NIGHT SKY MINERALS",
+            "author" : "Emily Henderson",
+            "date": "2020.05.10",
+            "content" : "This Month's Interior Trend: NIGHT SKY MINERALS. This is a dummy text. Praesent nec iaculis leo, at bibendum odio. Suspendisse tempus vehicula risus, non cursus ante. Morbi ut ligula turpis. Ut imperdiet dui enim, ac lobortis sapien mattis ut. Morbi dapibus, orci eget vestibulum mollis, lorem ipsum vulputate leo, ut tincidunt justo nisi at nisi. Cras viverra vestibulum risus id ullamcorper. Etiam velit metus, pellentesque sit amet blandit sit amet, pellentesque nec erat. Pellentesque felis ex, dictum vel tincidunt nec, malesuada sit amet nibh. Sed libero metus."
+        },
+        {
+            "idx" : 3,
+            "title" : "This Month's Interior Trend: ARCHES",
+            "author" : "Emily Henderson",
+            "date": "2020.06.08",
+            "content" : "This Month's Interior Trend: ARCHES. This is a dummy text. Suspendisse potenti. Curabitur sapien dui, semper vitae metus eget, pretium sagittis elit. Pellentesque quis purus vel nunc efficitur tincidunt sit amet sit amet erat. Sed eleifend euismod placerat. Sed vel interdum justo. Ut vel vulputate turpis. Sed ut egestas ligula. Morbi a blandit tortor. Integer mollis euismod quam a hendrerit. Sed blandit viverra pharetra. Morbi elit dolor, scelerisque vitae mattis id, lobortis vitae tellus. Aliquam sit amet turpis elementum mauris luctus dictum eget et risus."
+        },
+        {
+            "idx" : 4,
+            "title" : "Event in July 2020",
+            "author" : "Emma Campbell",
+            "date": "2020.07.16",
+            "content" : "Event in July 2020. This is a dummy text. Etiam velit metus, pellentesque sit amet blandit sit amet, pellentesque nec erat. Pellentesque felis ex, dictum vel tincidunt nec, malesuada sit amet nibh. Sed libero metus, lobortis at rhoncus eget, euismod non massa."
+        },
+        {
+            "idx" : 5,
+            "title" : "This Month's Interior Trend: COLORED CONCRETE",
+            "author" : "Emily Henderson",
+            "date": "2020.09.21",
+            "content" : "This Month's Interior Trend: COLORED CONCRETE. This is a dummy text. Praesent sodales dictum enim, vel tempor neque. Curabitur lobortis ipsum ante, quis lacinia quam rutrum eget. Maecenas consectetur bibendum facilisis. Vivamus dictum nisi non accumsan commodo. Integer sapien arcu, pulvinar quis ultrices at, blandit vitae lorem. Nunc volutpat fermentum nisl, dapibus feugiat massa facilisis ac. Nulla facilisi. In vulputate elit accumsan, auctor lectus a, venenatis nisl. Curabitur suscipit elementum vestibulum. Nunc dapibus felis neque, et mollis massa ultricies vel."
+        },
+        {
+            "idx" : 6,
+            "title" : "Delivery and collection delays due to courier strikes.",
+            "author" : "Jeremy White",
+            "date": "2020.10.03",
+            "content" : "Delivery and collection delays due to courier strikes. This is a dummy text. Nulla vel odio vitae mi iaculis consequat. Proin malesuada id justo ac sodales. Aliquam orci leo, egestas non magna vitae, auctor malesuada felis. Duis ut varius mauris. Nam consectetur, ipsum vitae hendrerit faucibus, quam velit imperdiet massa, sit amet dignissim elit nibh eu ligula. Mauris sed dolor sed eros mollis facilisis. Sed at tellus tincidunt, varius ante id, sagittis lectus. Donec vulputate ipsum ante, quis convallis enim rhoncus in. Fusce at malesuada odio. Donec quis lacus vestibulum, accumsan sapien sit amet, suscipit est."
+        },
+        {
+            "idx" : 7,
+            "title" : "Event in November 2020",
+            "author" : "Emma Campbell",
+            "date": "2020.11.17",
+            "content" : "Event in November 2020. This is a dummy text. Proin pretium dolor a nibh elementum pellentesque. Vivamus metus justo, blandit eget aliquam nec, pellentesque vitae velit. Mauris dapibus quam vel orci tempor, eu hendrerit turpis ultrices. Vivamus mattis, augue sed sagittis varius, augue neque convallis eros, et commodo leo magna quis urna. Nullam sit amet mauris ex. Sed a ex quis nibh laoreet tempus. Morbi lacinia, metus ut pulvinar consequat, tortor orci mattis justo, sed tincidunt arcu mi ut purus. Mauris non ullamcorper nisl. Donec molestie vestibulum libero, nec mollis dui lobortis ut."
+        },
+        {
+            "idx" : 8,
+            "title" : "Revision of Terms of Use",
+            "author" : "UnSpace",
+            "date": "2020.12.28",
+            "content" : "Revision of Terms of Use. This is a dummy text. In bibendum, arcu non facilisis feugiat, neque erat commodo sapien, ut aliquet massa mi lacinia leo. Sed pharetra suscipit elit eget facilisis. Donec lacinia justo nibh. Pellentesque eget maximus sapien. Vestibulum vel vestibulum turpis, quis tristique ante. Donec luctus ante at dignissim congue. Cras imperdiet facilisis diam et tempus. Mauris at ex eget est eleifend tincidunt. Proin sapien risus, bibendum sit amet odio ut, vestibulum vestibulum metus. Curabitur ornare nisi massa, sit amet luctus nulla vulputate vitae."
+        },
+        {
+            "idx" : 9,
+            "title" : "This Month's Interior Trend: TECHNICOLOR CHECKED PATTERNS",
+            "author" : "Emily Henderson",
+            "date": "2021.01.31",
+            "content" : "This Month's Interior Trend: TECHNICOLOR CHECKED PATTERNS. This is a dummy text. Integer ut urna et magna faucibus fringilla. Mauris faucibus ultrices mauris, at ultricies nibh gravida sed. Etiam placerat, mauris id eleifend iaculis, risus velit posuere ipsum, sed efficitur nulla mauris et justo. Quisque arcu urna, cursus in quam et, viverra dignissim erat. Donec vitae volutpat magna. Praesent ornare, lorem eget congue scelerisque, risus mi pretium risus, eu euismod felis neque non dui. Phasellus mauris libero, varius eget eros eu, fringilla efficitur nisi. Suspendisse dignissim eget orci sit amet lacinia."
+        },
+        {
+            "idx" : 10,
+            "title" : "Event in Feburuary 2021",
+            "author" : "Emma Campbell",
+            "date": "2021.02.15",
+            "content" : "Event in Feburuary 2021. This is a dummy text. Morbi sollicitudin in elit eu molestie. Nullam velit justo, molestie quis posuere a, accumsan ut urna. Aenean sed interdum enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id porta dui. Etiam ultricies pretium suscipit. Proin quam tellus, eleifend eget gravida id, feugiat vitae dolor."
+        },
+        {
+            "idx" : 11,
+            "title" : "Announcement: Opening hours during national holidays",
+            "author" : "Jeremy White",
+            "date": "2021.05.13",
+            "content" : "Announcement: Opening hours during national holidays. This is a dummy text. In bibendum, arcu non facilisis feugiat, neque erat commodo sapien, ut aliquet massa mi lacinia leo. Sed pharetra suscipit elit eget facilisis. Donec lacinia justo nibh. Pellentesque eget maximus sapien. Vestibulum vel vestibulum turpis, quis tristique ante. Donec luctus ante at dignissim congue. Cras imperdiet facilisis diam et tempus. Mauris at ex eget est eleifend tincidunt. Proin sapien risus, bibendum sit amet odio ut, vestibulum vestibulum metus. Curabitur ornare nisi massa, sit amet luctus nulla vulputate vitae."
+        },
+        {
+            "idx" : 12,
+            "title" : "This Month's Interior Trend: CORK FLOORING",
+            "author" : "Emily Henderson",
+            "date": "2021.07.24",
+            "content" : "This Month's Interior Trend: CORK FLOORING. This is a dummy text. Cras in nibh at mauris euismod molestie eget nec turpis. Mauris euismod rhoncus risus nec finibus. Aliquam id arcu ante. Morbi et condimentum quam, id laoreet justo. Ut gravida gravida dolor vel cursus. Nunc pellentesque tempor nibh a luctus. Donec nec felis leo. Phasellus bibendum dui quis nisi consequat bibendum. Sed ut mattis diam, ac cursus nibh. Nulla ac velit at ex consequat ultrices. Integer sed pulvinar lorem. Integer luctus, arcu a vestibulum aliquam, nisi quam ultricies mi, vel lacinia velit mi vitae nisl."
+        },
+        {
+            "idx" : 13,
+            "title" : "Event in October 2021",
+            "author" : "Emma Campbell",
+            "date": "2021.10.30",
+            "content" : "Event in October 2021. This is a dummy text. In bibendum, arcu non facilisis feugiat, neque erat commodo sapien, ut aliquet massa mi lacinia leo. Sed pharetra suscipit elit eget facilisis. Donec lacinia justo nibh. Pellentesque eget maximus sapien. Vestibulum vel vestibulum turpis, quis tristique ante. Donec luctus ante at dignissim congue. Cras imperdiet facilisis diam et tempus. Mauris at ex eget est eleifend tincidunt. Proin sapien risus, bibendum sit amet odio ut, vestibulum vestibulum metus. Curabitur ornare nisi massa, sit amet luctus nulla vulputate vitae."
+        },
+        {
+            "idx" : 14,
+            "title" : "Revision of Personal Information Processing Policy",
+            "author" : "UnSpace",
+            "date": "2021.12.19",
+            "content" : "Revision of Personal Information Processing Policy. This is a dummy text. Nulla vel odio vitae mi iaculis consequat. Proin malesuada id justo ac sodales. Aliquam orci leo, egestas non magna vitae, auctor malesuada felis. Duis ut varius mauris. Nam consectetur, ipsum vitae hendrerit faucibus, quam velit imperdiet massa, sit amet dignissim elit nibh eu ligula. Mauris sed dolor sed eros mollis facilisis. Sed at tellus tincidunt, varius ante id, sagittis lectus. Donec vulputate ipsum ante, quis convallis enim rhoncus in. Fusce at malesuada odio. Donec quis lacus vestibulum, accumsan sapien sit amet, suscipit est."
+        },
+        {
+            "idx" : 15,
+            "title" : "Event in March 2022",
+            "author" : "Emma Campbell",
+            "date": "2022.03.16",
+            "content" : "Event in March 2022. This is a dummy text. Praesent nec iaculis leo, at bibendum odio. Suspendisse tempus vehicula risus, non cursus ante. Morbi ut ligula turpis. Ut imperdiet dui enim, ac lobortis sapien mattis ut. Morbi dapibus, orci eget vestibulum mollis, lorem ipsum vulputate leo, ut tincidunt justo nisi at nisi. Cras viverra vestibulum risus id ullamcorper. Etiam velit metus, pellentesque sit amet blandit sit amet, pellentesque nec erat. Pellentesque felis ex, dictum vel tincidunt nec, malesuada sit amet nibh. Sed libero metus, lobortis at rhoncus eget, euismod non massa. Proin varius massa tortor, porttitor aliquam velit placerat sit amet. Maecenas augue lorem, feugiat vel urna sit amet, rhoncus varius libero. Curabitur convallis lectus sed blandit laoreet. Donec vulputate sapien at felis accumsan, quis sodales est ultrices. Sed odio sem, porttitor ac laoreet et, viverra in odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+        },
+        {
+            "idx" : 16,
+            "title" : "VIP Membership Grade Policy Changes",
+            "author" : "UnSpace",
+            "date": "2022.04.10",
+            "content" : "VIP Membership Grade Policy Changes. This is a dummy text. Vivamus metus justo, blandit eget aliquam nec, pellentesque vitae velit. Mauris dapibus quam vel orci tempor, eu hendrerit turpis ultrices. Vivamus mattis, augue sed sagittis varius, augue neque convallis eros, et commodo leo magna quis urna. Nullam sit amet mauris ex."
+        }
+    ]
+}
