@@ -95,6 +95,8 @@ function Notice() {
                             id={id} 
                             highlight={highlight}
                             highlightText={highlightText}
+                            resetHighlight={setHighlight}
+                            resetItems={setItems}
                         />
                     }
                 </div>

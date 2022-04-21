@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 
-function NoticePost({ id, highlight, highlightText }) {
+function NoticePost({ id, highlight, highlightText, resetHighlight, resetItems }) {
     const history = useHistory();
     const reduxData = useSelector(state=> state.noticeReducer.notice);
     const [ items, setItems ] = useState({
@@ -10,8 +10,6 @@ function NoticePost({ id, highlight, highlightText }) {
         prev: {},
         next: {}
     });
-
-    console.log(items.target.title);
 
     useEffect(()=> {
         const idx = parseInt(id);
@@ -81,7 +79,11 @@ function NoticePost({ id, highlight, highlightText }) {
                     <td colSpan="2">
                         {items.prev && <button className="prevBtn" onClick={()=> history.push(`/community/notice/${items.prev.idx}`)}>PREV</button>}
                         {items.next && <button className="nextBtn" onClick={()=> history.push(`/community/notice/${items.next.idx}`)}>NEXT</button>}
-                        <button className="listBtn" onClick={()=> history.push('/community/notice')}>LIST</button>
+                        <button className="listBtn" onClick={()=> {
+                            history.push('/community/notice');
+                            resetItems(reduxData);
+                            resetHighlight("");
+                        }}>LIST</button>
                     </td>
                 </tr>
             </tbody>
