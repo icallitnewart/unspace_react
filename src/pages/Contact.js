@@ -18,7 +18,7 @@ function Contact() {
     
     const visual = {
         title : "CONTACT",
-        pic : { background: "url(../img/visual_sub_contact.jpg) top/cover" },
+        pic : { background: "url(img/visual_sub_contact.jpg) top/cover" },
         desc : "Sed eget odio neque. Vivamus interdum pulvinar nulla, vel pharetra neque interdum sit amet. Sed elementum dapibus lacus, in volutpat est ultricies nec.",
         tab: [ 
             {

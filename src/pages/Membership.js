@@ -10,7 +10,7 @@ function Membership() {
     const history = useHistory();
     const visual = {
         title : "MEMBERSHIP",
-        pic : { background: "url(../img/visual_sub_join.jpg) center/cover" },
+        pic : { background: "url(img/visual_sub_join.jpg) center/cover" },
         desc : "Nullam nec egestas orci. Aliquam scelerisque dolor sit amet arcu rhoncus gravida. Proin cursus, diam eget blandit molestie, nisl diam convallis mauris, finibus dapibus tellus ex vel dolor.",
         tab: [ 
             { 

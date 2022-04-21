@@ -20,7 +20,7 @@ function About() {
     
     const visual = {
         title : "ABOUT US",
-        pic : { background: "url(../img/visual_sub_about.jpg) top/cover" },
+        pic : { background: "url(img/visual_sub_about.jpg) top/cover" },
         desc : "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi at orci sed nisl feugiat semper.",
         tab: [ 
             {

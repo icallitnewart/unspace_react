@@ -6,14 +6,14 @@ function Intro({ scrollEffect }, ref) {
             <div className="inner">
                 <div className="pic">
                     <article style={{ 
-                    background: "url(../img/about_intro1.jpg) center/cover" }}>
+                    background: "url(img/about_intro1.jpg) center/cover" }}>
                         <div className="textBox">
                             <span>01</span>
                             <p>Simple yet powerful. Living in an environment where one may rest as well as focus enriches a quality of life and develops it into a more elegant one.</p>
                         </div>
                     </article>
                     <article style={{ 
-                    background: "url(../img/about_intro2.jpg) center/cover" }}>
+                    background: "url(img/about_intro2.jpg) center/cover" }}>
                         <div className="textBox">
                             <span>02</span>
                             <p>An artistic style does not necessarily mean inconvenience. Efficiency can be compatible with aesthetic pleasure.</p>

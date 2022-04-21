@@ -9,7 +9,7 @@ function Community() {
     const history = useHistory();
     const visual = {
         title : "COMMUNITY",
-        pic : { background: "url(../img/visual_sub_community.jpg) center/cover" },
+        pic : { background: "url(img/visual_sub_community.jpg) center/cover" },
         desc : "Duis ut odio eu ipsum vestibulum cursus ut id nunc. Curabitur mollis felis eget nunc accumsan, ac finibus magna commodo.",
         tab: [ 
             {

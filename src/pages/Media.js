@@ -8,7 +8,7 @@ function Media() {
     const history = useHistory();
     const visual = {
         title : "MEDIA",
-        pic : { background: "url(../img/visual_sub_media.jpg) center/cover" },
+        pic : { background: "url(img/visual_sub_media.jpg) center/cover" },
         desc : "Vestibulum ac felis consequat, pretium felis a, sollicitudin nunc. Ut id lectus sagittis, dictum sapien id, pharetra ex. Vestibulum ac ullamcorper dui.",
         tab: [ 
             {
