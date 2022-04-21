@@ -26,7 +26,7 @@
 
             li {
                 width: 200px;
-                padding: 40px;
+                padding: 40px 0px;
 
                 h2 {
                     text-align: center;
@@ -121,6 +121,7 @@
         ul {
             flex-wrap: wrap;
             li {
+                width: 100%;
                 padding: 10px 0px;  
             }
         }
