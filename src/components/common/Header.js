@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 
 function Header() {
+    const history = useHistory();
+    const path = history.location.pathname;
     const [ mobileMenu, setMobileMenu ] = useState(false);
     const [ slideEffect, setSlideEffect ] = useState(false);
     const active = {
@@ -37,10 +39,10 @@ function Header() {
                     <ul id="gnb">
                         <li><NavLink activeStyle={active} exact to="/">HOME</NavLink></li>
                         <li><NavLink activeStyle={active} exact to="/about">ABOUT US</NavLink></li>
-                        <li><NavLink activeStyle={active} exact to="/media/projects">MEDIA</NavLink></li>
-                        <li><NavLink activeStyle={active} exact to="/community/faq">COMMUNITY</NavLink></li>
+                        <li><NavLink activeStyle={active} isActive={()=> path.includes('/media')} exact to="/media/projects">MEDIA</NavLink></li>
+                        <li><NavLink activeStyle={active} isActive={()=> path.includes('/community')} exact to="/community/faq">COMMUNITY</NavLink></li>
                         <li><NavLink activeStyle={active} exact to="/contact">CONTACT</NavLink></li>
-                        <li><NavLink activeStyle={active} exact to="/membership/login">MY PAGE</NavLink></li>
+                        <li><NavLink activeStyle={active} isActive={()=> path.includes('/membership')} exact to="/membership/login">MY PAGE</NavLink></li>
                     </ul>
                 </nav>
         
