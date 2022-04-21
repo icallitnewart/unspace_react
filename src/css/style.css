@@ -3244,8 +3244,6 @@ a {
     border-bottom: 2px solid #3a3e46; }
     .community .noticeBoard .board .noticePost tbody .content .contentBox {
       width: 100%;
-      display: flex;
-      align-items: flex-start;
       min-height: 300px;
       padding: 30px 20px;
       font: 14px/1.4 Open Sans;
@@ -3298,8 +3296,7 @@ a {
       width: 100%;
       font: 600 30px/1.3 Montserrat;
       text-align: center;
-      margin-bottom: 30px;
-      text-transform: uppercase; }
+      margin-bottom: 30px; }
     .community .container .inner .board {
       width: 100%;
       padding: 0 5vw; }
