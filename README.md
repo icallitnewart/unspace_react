@@ -47,92 +47,92 @@ $  npm start
   - NEXT 버튼 클릭시 다음 슬라이드로 이동
   - 소이미지 클릭시 해당 슬라이드로 이동
   - 하단의 disc 클릭시 해당 슬라이드로 이동
-  - 📄 **ᴍᴀɪɴ** Visual.js
+  - 📄 **ᴍᴀɪɴ** [Visual.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/home/Visual.js)
 #### ✅ Carousel 슬라이드
   - 화살표 좌우 버튼 클릭시 이전/다음으로 이동
   - 무한 반복 슬라이드
   - 이미지 위에 마우스 hover시 영상 재생
-  - 📄 **ᴍᴀɪɴ** Trending.js &nbsp;**ʜᴏᴏᴋs** useSlider.js
+  - 📄 **ᴍᴀɪɴ** [Trending.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/home/Trending.js) &nbsp;**ʜᴏᴏᴋs** [useSlider.js](https://github.com/icallitnewart/unspace_react/blob/main/src/hooks/useSlider.js)
 #### ✅ 탭메뉴 구현
   - 애니메이션 효과 적용
   - 폼 유효성 검사
-  - 📄 **ᴍᴀɪɴ** About.js &nbsp;**sᴜʙ** Idea.js Intro.js Contact.js
+  - 📄 **ᴍᴀɪɴ** [About.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/home/About.js) &nbsp;**sᴜʙ** [Idea.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/home/Idea.js) [Intro.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/home/Intro.js) [Contact.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/home/Contact.js)
 #### ✅ Flickr API를 활용한 갤러리
   - 상단의 해쉬태그 버튼 클릭시 해당 이미지 데이터 호출 및 출력
    <br/>💬 최초 호출시에만 로딩 애니메이션 효과 적용
    <br/>💬 한번 호출한 데이터는 redux로 저장하여 다시 버튼 클릭해도 재호출 방지
   - 소이미지에 마우스 hover시 좌측의 큰 이미지로 해당 이미지 출력
   - 소이미지 클릭시 Modal 팝업창 띄우기 (모바일 사이즈는 미지원)
-  - 📄 **ᴍᴀɪɴ** Gallery.js &nbsp;**ʜᴏᴏᴋs** useFetchFlickrData.js
+  - 📄 **ᴍᴀɪɴ** [Gallery.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/home/Gallery.js) &nbsp;**ʜᴏᴏᴋs** [useFetchFlickrData.js](https://github.com/icallitnewart/unspace_react/blob/main/src/hooks/useFetchFlickrData.js)
 #### ✅ 카카오맵 API를 활용한 지도
   - 버튼 클릭시 해당 지점의 지도와 정보 불러오기
   - 스크린 사이즈 변경시 지도의 center 유지   
-  - 📄 **ᴍᴀɪɴ** Location.js &nbsp;**ʜᴏᴏᴋs** useKakaoMap.js
+  - 📄 **ᴍᴀɪɴ** [Location.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/home/Location.js) &nbsp;**ʜᴏᴏᴋs** [useKakaoMap.js](https://github.com/icallitnewart/unspace_react/commit/1a041bf8a682bfdc3596b5141541578e5e87958f)
 #### ✅ 스크롤시 각 섹션 fadeIn 애니메이션 효과 적용
-  - 📄 **ʜᴏᴏᴋs** useScrollEffect.js
+  - 📄 **ʜᴏᴏᴋs** [useScrollEffect.js](https://github.com/icallitnewart/unspace_react/blob/main/src/hooks/useScrollEffect.js)
 
 ### [About Page]
 #### ✅ 탭버튼 클릭시 해당 섹션으로 스크롤 다운
-  - 📄 **ᴍᴀɪɴ** Visual_sub.js &nbsp;**ʜᴏᴏᴋs** useScrollDown.js
+  - 📄 **ᴍᴀɪɴ** [Visual_sub.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/common/Visual_sub.js) &nbsp;**ʜᴏᴏᴋs** [useScrollDown.js](https://github.com/icallitnewart/unspace_react/blob/main/src/hooks/useScrollDown.js)
 #### ✅ Carousel 슬라이드
   - 자동 재생 기능
   - 상하 화살표 버튼 클릭시 이전/다음 슬라이드로 이동
   - 슬라이드 변환시 텍스트 애니메이션 효과 적용
-  - 📄 **ᴍᴀɪɴ** Members.js &nbsp;**ʜᴏᴏᴋs** useSlider.js
+  - 📄 **ᴍᴀɪɴ** [Members.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/about/Members.js) &nbsp;**ʜᴏᴏᴋs** [useSlider.js](https://github.com/icallitnewart/unspace_react/blob/main/src/hooks/useSlider.js)
 #### ✅ 스크롤시 각 섹션 fadeIn 애니메이션 효과 적용
-  - 📄 **ʜᴏᴏᴋs** useScrollEffect.js
+  - 📄 **ʜᴏᴏᴋs** [useScrollEffect.js](https://github.com/icallitnewart/unspace_react/blob/main/src/hooks/useScrollEffect.js)
 
 ### [Media Page]
 #### ✅ 탭버튼 클릭시 Projects 혹은 Youtube 섹션으로 이동
-  - 📄 **ᴍᴀɪɴ** Visual_sub.js
+  - 📄 **ᴍᴀɪɴ** [Visual_sub.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/common/Visual_sub.js)
 #### ✅ Flickr API를 활용한 갤러리
   - 상단의 해쉬태그 버튼 클릭시 해당 이미지 데이터 호출 및 출력
    <br/>💬 최초 호출시에만 로딩 애니메이션 효과 적용
    <br/>💬 한번 호출한 데이터는 redux로 저장하여 다시 버튼 클릭해도 재호출 방지
-  - 📄 **ᴍᴀɪɴ** Projects.js &nbsp;**ʜᴏᴏᴋs** useFetchFlickrData.js
+  - 📄 **ᴍᴀɪɴ** [Projects.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/media/Projects.js) &nbsp;**ʜᴏᴏᴋs** [useFetchFlickrData.js](https://github.com/icallitnewart/unspace_react/blob/main/src/hooks/useFetchFlickrData.js)
 #### ✅ Youtube API를 활용한 플레이리스트
-  - 📄 **ᴍᴀɪɴ** Youtube.js
+  - 📄 **ᴍᴀɪɴ** [Youtube.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/media/Youtube.js)
 #### ✅ Modal 팝업
-  - 📄 **ᴍᴀɪɴ** Popup.js
+  - 📄 **ᴍᴀɪɴ** [Popup.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/common/Popup.js)
 
 ### [Community Page]
 #### ✅ 탭버튼 클릭시 FAQ 혹은 Notice 게시판으로 이동
-  - 📄 **ᴍᴀɪɴ** Visual_sub.js
+  - 📄 **ᴍᴀɪɴ** [Visual_sub.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/common/Visual_sub.js)
 #### ✅ FAQ 게시판
   - 카테고리 메뉴 클릭시 해당 데이터만 불러오기
   - 글 제목 클릭시 내용 확인
-  - 📄 **ᴍᴀɪɴ** Faq.js
+  - 📄 **ᴍᴀɪɴ** [Faq.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/community/Faq.js)
 #### ✅ Notice 게시판
   - 게시글 클릭시 해당 포스트로 이동
   - 이전글, 다음글 보기
-  - 📄 **ᴍᴀɪɴ** Notice.js &nbsp;**sᴜʙ** NoticePost.js
+  - 📄 **ᴍᴀɪɴ** [Notice.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/community/Notice.js) &nbsp;**sᴜʙ** [NoticePost.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/community/NoticePost.js)
 #### ✅ 페이지네이션 기능
   - 번호 클릭시 해당 목록 리스트 보여주기
   - 화살표 버튼 클릭시 다음 번호로 이동
   - 첫/마지막 번호에 도달시 화살표 버튼 비활성화
-  - 📄 **ᴍᴀɪɴ** Pagination.js
+  - 📄 **ᴍᴀɪɴ** [Pagination.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/community/Pagination.js)
 #### ✅ 검색 기능
   - 검색시 하이라이트 기능 지원
   - 매치되는 데이터가 없을 때 결과 없음 표시 
-  - 📄 **ᴍᴀɪɴ** SearchBox.js &nbsp;**ʜᴏᴏᴋs** useHighlight.js
+  - 📄 **ᴍᴀɪɴ** [SearchBox.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/community/SearchBox.js) &nbsp;**ʜᴏᴏᴋs** [useHighlight.js](https://github.com/icallitnewart/unspace_react/blob/main/src/hooks/useHighlight.js)
   
 ### [Contact Page]
 #### ✅ 탭버튼 클릭시 해당 섹션으로 스크롤 다운
-  - 📄 **ᴍᴀɪɴ** Visual_sub.js &nbsp;**ʜᴏᴏᴋs** useScrollDown.js
+  - 📄 **ᴍᴀɪɴ** [Visual_sub.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/common/Visual_sub.js) &nbsp;**ʜᴏᴏᴋs** [useScrollDown.js](https://github.com/icallitnewart/unspace_react/blob/main/src/hooks/useScrollDown.js)
 #### ✅ 문의하기 폼 유효성 검사
-  - 📄 **ᴍᴀɪɴ** Getintouch.js
+  - 📄 **ᴍᴀɪɴ** [Getintouch.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/contact/Getintouch.js)
 #### ✅ 카카오맵 API를 활용한 지도
   - 버튼 클릭시 해당 지점의 지도와 정보 불러오기
   - 스크린 사이즈 변경시 지도의 center 유지   
-  - 📄 **ᴍᴀɪɴ** Location.js &nbsp;**ʜᴏᴏᴋs** useKaKaoMap.js
+  - 📄 **ᴍᴀɪɴ** [Location.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/contact/Location.js) &nbsp;**ʜᴏᴏᴋs** [useKaKaoMap.js](https://github.com/icallitnewart/unspace_react/blob/main/src/hooks/useKakaoMap.js)
 
 ### [Membership Page]
 #### ✅ 탭버튼 클릭시 로그인 혹은 회원가입 페이지로 이동
-  - 📄 **ᴍᴀɪɴ** Visual_sub.js
+  - 📄 **ᴍᴀɪɴ** [Visual_sub.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/common/Visual_sub.js)
 #### ✅ 이용 약관 동의 확인
-  - 📄 **ᴍᴀɪɴ** Policy.js **sᴜʙ** Signup.js
+  - 📄 **ᴍᴀɪɴ** [Policy.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/membership/Policy.js) **sᴜʙ** [Signup.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/membership/Signup.js)
 #### ✅ 회원가입 폼 유효성 검사
-  - 📄 **ᴍᴀɪɴ** SignupForm.js
+  - 📄 **ᴍᴀɪɴ** [SignupForm.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/membership/SignupForm.js)
 
 ## 📁 Structure
 ### [Overview]
