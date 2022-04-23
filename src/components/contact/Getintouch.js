@@ -165,17 +165,17 @@ function Getintouch({ scrollEffect }, ref) {
                     <div>
                         <h3>Call Us</h3>
                         <p>Our opening hours are from 10.00 am to 6.00 pm (MON - FRI).</p>
-                        <a href="#"><i className="fas fa-phone-alt"></i> +333 3333 3333</a>
+                        <a href="#" onClick={(e)=> e.preventDefault()}><i className="fas fa-phone-alt"></i> +333 3333 3333</a>
                     </div>
                     <div>
                         <h4>Visit Us</h4>
                         <p>You can find where we are located on the map if you click on the below. Please make sure to call us for making a reservation with us.</p>
-                        <a href="#"><i className="fas fa-map-marker-alt"></i> See Map</a>
+                        <a href="#" onClick={(e)=> e.preventDefault()}><i className="fas fa-map-marker-alt"></i> See Map</a>
                     </div>
                     <div>
                         <h5>Live Chat</h5>
                         <p>Got any questions? Just talk to us on a live chat during 10.00 am - 6.00 pm!</p>
-                        <a href="#"><i className="far fa-comments"></i> Live Chat</a>
+                        <a href="#" onClick={(e)=> e.preventDefault()}><i className="far fa-comments"></i> Live Chat</a>
                     </div>
         
                 </div>
