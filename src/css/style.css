@@ -2521,11 +2521,10 @@ a {
             margin-right: 3px; }
     .join .login .inner .loginForm p {
       text-align: right; }
-      .join .login .inner .loginForm p span {
+      .join .login .inner .loginForm p a {
         font: 14px/1 Open Sans;
         color: salmon;
-        text-decoration: underline;
-        cursor: pointer; }
+        text-decoration: underline; }
   .join .login .inner .banner {
     position: relative;
     width: 40%;

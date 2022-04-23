@@ -78,13 +78,22 @@ function Login() {
                                 </tr>
                                 <tr>
                                     <th scope="row">
-                                        <input type="submit" value="LOGIN" />
+                                        <input 
+                                            type="submit" 
+                                            value="LOGIN"
+                                            onClick={(e)=> e.preventDefault()}
+                                        />
                                     </th>
                                 </tr>
                             </tbody>
                         </table>
                     </fieldset>
-                    <p><span>Forgot your ID or password?</span></p>
+                    <p>
+                        <a 
+                            href="#"
+                            onClick={(e)=> e.preventDefault()}
+                        >Forgot your ID or password?</a>
+                    </p>
                 </form>
                 <div className="banner">
                     <img src="img/login.jpg" alt="sign up photo" />

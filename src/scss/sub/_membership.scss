@@ -396,12 +396,10 @@
             p {
                 text-align: right;
 
-                span {
+                a {
                     font: 14px/1 $font2;
                     color: $pointColor;
                     text-decoration: underline;
-                    cursor: pointer;
-                    
                 }
             }
         }

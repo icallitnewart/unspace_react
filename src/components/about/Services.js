@@ -43,7 +43,11 @@ function Services({ scrollEffect }, ref) {
                 <div className="textBox">
                     <h1>What <br />We <br />Promise</h1>
                     <p>Our company ensures the best quality of services and always thinks ahead for clients' possible needs. Not only do we consider realistic aspects of "living", we also respect and try to reflect the philosophy of a "liver" into designing a space.</p>
-                    <a href="#" className="viewBtn">view more</a>
+                    <a 
+                        href="#" 
+                        className="viewBtn" 
+                        onClick={(e)=> e.preventDefault()}
+                    >view more</a>
                 </div>
             </div>
         </section>
