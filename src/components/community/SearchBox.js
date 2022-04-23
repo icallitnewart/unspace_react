@@ -30,15 +30,23 @@ function SearchBox({ type, data, setItems, setHighlight, resetPage }) {
 
     return (
         <div className="searchBox">
+            <label className="hidden" htmlFor="search">
+                Search Box
+            </label>
             <input 
                 type="text" 
                 name="search" 
+                id="search"
                 className="searchInput" 
                 onChange={handleChange}
                 value={input}
                 onKeyPress={(e)=> (e.key === "Enter") && searchItem()}
             />
-            <button className="searchBtn" onClick={searchItem}>
+            <button 
+                className="searchBtn" 
+                onClick={searchItem}
+                aria-label="Search"
+            >
                 <i className="fas fa-search"></i>
             </button>
         </div>

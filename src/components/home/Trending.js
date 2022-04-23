@@ -60,17 +60,25 @@ function Trending({ scrollEffect }, ref) {
                                     <span>{item.idx}</span>
                                     <h2>{item.title}</h2>
                                     <p>{item.content}</p>
-                                    <a href="#">view more</a>
+                                    <a href="#" onClick={(e)=> e.preventDefault()}>view more</a>
                                 </div>
                             </article>
                         )
                     }
                     </div>
                 </div>
-                <button className="prevBtn" onClick={()=> moveSlide("left")}>
+                <button 
+                    className="prevBtn" 
+                    onClick={()=> moveSlide("left")}
+                    aria-label="Previous Slide"
+                >
                     <i className="fas fa-chevron-left"></i>
                 </button>
-                <button className="nextBtn" onClick={()=> moveSlide("right")}>
+                <button 
+                    className="nextBtn" 
+                    onClick={()=> moveSlide("right")}
+                    aria-label="Next Slide"
+                >
                     <i className="fas fa-chevron-right"></i>
                 </button>
             </div>

@@ -13,6 +13,7 @@ function Pagination({ totalItems, maxItems, page, setPage }) {
                 className="prevBtn" 
                 onClick={()=> setPage(page - 1)} 
                 disabled={(page === pageRange[0])}
+                aria-label="Previous Page"
             >
                 <i className="fas fa-chevron-left"></i>
             </button>
@@ -29,6 +30,7 @@ function Pagination({ totalItems, maxItems, page, setPage }) {
                 className="nextBtn" 
                 onClick={()=> setPage(page + 1)} 
                 disabled={(page === pageRange.length)}
+                aria-label="Next Page"
             >
                 <i className="fas fa-chevron-right"></i>
             </button>

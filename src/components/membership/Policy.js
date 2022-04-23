@@ -1,5 +1,77 @@
 import { useState } from "react";
 
+function Policy({ setIsAgreed }) {
+    const initValue = {
+        agree1: false,
+        agree2: false
+    };
+
+    const [ checkbox, setCheckbox ] = useState(initValue);
+
+    const handleCheck = (e)=> {
+        const { name } = e.target;
+        const isChecked = e.target.checked;
+
+        setCheckbox({ ...checkbox, [name] : isChecked });
+    };
+
+    const handleSubmit = ()=> {
+        if(!checkbox.agree1 || !checkbox.agree2) {
+            alert("Please tick the checkbox to agree.");
+        } else {
+            setIsAgreed(true);
+        }
+    }
+
+    return(
+        <section className="policy">
+            <div className="inner">         
+                <div className="content">
+                    <div className="title">
+                        <h1><span><span>Terms & Policy</span></span></h1>
+                    </div>
+                    <div className="textBox">
+                        <h2>
+                            <label htmlFor="terms">Terms and Conditions</label>
+                        </h2>
+                        <textarea name="terms" id="terms" readOnly defaultValue={terms}>
+                        </textarea>
+                        <label htmlFor="agree1">
+                            <input 
+                                type="checkbox" 
+                                name="agree1" 
+                                id="agree1" 
+                                onChange={handleCheck}
+                            />
+                            I have read, agree with, and accept all of the terms and conditions written above.
+                        </label>
+                        <h3>
+                            <label htmlFor="policy"> Privacy Policy</label>
+                        </h3>
+                        <textarea name="policy" id="policy" readOnly defaultValue={policy}>
+                        </textarea>
+                        <label htmlFor="agree2">
+                            <input 
+                                type="checkbox" 
+                                name="agree2" 
+                                id="agree2" 
+                                onChange={handleCheck}
+                            />
+                            I have read, agree with, and accept all of the privacy policies written above.
+                        </label>
+                    </div>
+                    <div className="button">
+                        <button className="agreeBtn" onClick={handleSubmit}>agree & proceed<i className="fa-solid fa-angles-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default Policy;
+
+
 const terms = `Generic Terms and Conditions Template
 Please read these terms and conditions ("terms and conditions", "terms") carefully before using [website] website (“website”, "service") operated by [name] ("us", 'we", "our").
 
@@ -41,71 +113,3 @@ Donec quis arcu venenatis, efficitur tortor nec, faucibus lorem. Mauris leo ipsu
 Sed non risus mollis, porttitor eros ut, luctus dui. Quisque vulputate ante enim, in vehicula turpis dictum sed. Curabitur eget odio semper, pharetra arcu ac, feugiat erat. Aliquam erat volutpat. Nullam egestas, enim ut viverra gravida, dui sem fermentum elit, vitae euismod justo urna non erat. Nam fringilla nunc quis justo mollis, eu vestibulum mauris auctor. Nunc congue ligula eget consequat tristique. Cras sem erat, finibus nec sagittis nec, pellentesque vel diam. Vivamus sit amet ante et sapien dictum ultricies quis sed sapien. Curabitur sit amet magna ac sapien porta sodales. Pellentesque rutrum nunc leo, nec laoreet turpis posuere eu. Sed porta diam ligula, feugiat accumsan quam dapibus sit amet.
 
 Pellentesque in laoreet lacus. Cras quis rhoncus dolor. Vivamus faucibus tristique urna id congue. Fusce varius felis et magna rutrum tempus. Vestibulum faucibus fermentum nibh in aliquet. Duis pretium elit tellus. Integer consectetur, velit in luctus porta, enim quam blandit tortor, vel bibendum neque diam sed nibh. Etiam tincidunt faucibus lacinia. Phasellus eget venenatis lacus. Nunc est libero, lacinia consectetur feugiat vel, venenatis eu justo. In sed est magna. Aliquam convallis odio sit amet tortor dapibus consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam aliquam vehicula molestie.`;
-
-function Policy({ setIsAgreed }) {
-    const initValue = {
-        agree1: false,
-        agree2: false
-    };
-
-    const [ checkbox, setCheckbox ] = useState(initValue);
-
-    const handleCheck = (e)=> {
-        const { name } = e.target;
-        const isChecked = e.target.checked;
-
-        setCheckbox({ ...checkbox, [name] : isChecked });
-    };
-
-    const handleSubmit = ()=> {
-        if(!checkbox.agree1 || !checkbox.agree2) {
-            alert("Please tick the checkbox to agree.");
-        } else {
-            setIsAgreed(true);
-        }
-    }
-
-    return(
-        <section className="policy">
-            <div className="inner">         
-                <div className="content">
-                    <div className="title">
-                        <h1><span><span>Terms & Policy</span></span></h1>
-                    </div>
-                    <div className="textBox">
-                        <h2>Terms and Conditions</h2>
-                        <textarea name="terms" id="terms" readOnly defaultValue={terms}>
-                        </textarea>
-                        <label htmlFor="agree1">
-                            <input 
-                                type="checkbox" 
-                                name="agree1" 
-                                id="agree1" 
-                                onChange={handleCheck}
-                            />
-                            I have read, agree with, and accept all of the terms and conditions written above.
-                        </label>
-        
-                        <h3>Privacy Policy</h3>
-                        <textarea name="terms" id="terms" readOnly defaultValue={policy}>
-                        </textarea>
-                        <label htmlFor="agree2">
-                            <input 
-                                type="checkbox" 
-                                name="agree2" 
-                                id="agree2" 
-                                onChange={handleCheck}
-                            />
-                            I have read, agree with, and accept all of the privacy policies written above.
-                        </label>
-                    </div>
-                    <div className="button">
-                        <button className="agreeBtn" onClick={handleSubmit}>agree & proceed<i className="fa-solid fa-angles-right"></i></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
-}
-
-export default Policy;

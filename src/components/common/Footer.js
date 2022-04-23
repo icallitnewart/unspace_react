@@ -1,8 +1,33 @@
 function Footer() {
+    const icons = [
+        {   
+            name: "google plus",
+            icon: "fab fa-google-plus-g"
+        },
+        {
+            name: "pinterest",
+            icon: "fab fa-pinterest-p"
+        },
+        {
+            name: "facebook",
+            icon: "fab fa-facebook-f"
+        },
+        {
+            name: "twitter",
+            icon: "fab fa-twitter"
+        },
+        {
+            name: "youtube",
+            icon: "fab fa-youtube"
+        }
+    ];
+
     return (
         <footer id="footer">
             <div className="inner">
-                <h1><a href="index.html">UNSPACE</a></h1>
+                <h1>
+                    <a href="index.html">UNSPACE</a>
+                </h1>
                 <ul>
                     <li>
                         <h2>ADDRESS</h2>
@@ -22,14 +47,20 @@ function Footer() {
                     </li>
                 </ul>
                 <div className="wrap">
-                    <a href="#">SUBSCRIBE</a>
+                    <a href="#" onClick={(e)=> e.preventDefault()}>SUBSCRIBE</a>
                     <p>&copy; 2021 UNSPACE</p>
                     <div className="icons">
-                        <a href="#"><i className="fab fa-google-plus-g"></i></a>
-                        <a href="#" className="on"><i className="fab fa-pinterest-p"></i></a>
-                        <a href="#"><i className="fab fa-facebook-f"></i></a>
-                        <a href="#"><i className="fab fa-twitter"></i></a>
-                        <a href="#"><i className="fab fa-youtube"></i></a>
+                        {icons.map((icon, index)=>
+                            <a 
+                                href="#" 
+                                key={index}
+                                onClick={(e)=> e.preventDefault()}
+                                aria-label={icon.name}
+                            >
+                                <i className={icon.icon}>
+                                </i>
+                            </a>
+                        )}
                     </div>
                 </div>
             </div>

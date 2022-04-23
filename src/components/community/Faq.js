@@ -117,7 +117,11 @@ function Faq() {
                                     </th>
                                     <td>
                                         {highlight ? highlightText(item.question) : item.question}
-                                        <a href="#" className="viewMore">
+                                        <a 
+                                            href="#" 
+                                            className="viewMore"
+                                            aria-label="View More"
+                                        >
                                             <span></span>
                                             <span></span>
                                         </a>

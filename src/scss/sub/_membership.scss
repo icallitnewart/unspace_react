@@ -237,10 +237,14 @@
                 padding: 0px 50px;
     
                 h2, h3 {
-                    font: bold 26px/1 $font1;
-                    color: #333;
-                    margin-bottom: 15px;
-                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+
+                    label {
+                        font: bold 26px/1 $font1;
+                        color: #333;
+                        margin-bottom: 20px;
+                    }
                 }
     
                 textarea {

@@ -94,10 +94,18 @@ function Members({ scrollEffect }, ref) {
                         <span>{activeItem[0].desc}</span>
                     </p>
                 </div>
-                <button className="prevBtn" onClick={()=> moveSlide("up")}>
+                <button 
+                    className="prevBtn" 
+                    onClick={()=> moveSlide("up")}
+                    aria-label="Previous Slide"
+                >
                     <i className="fas fa-chevron-up"></i>
                 </button>
-                <button className="nextBtn" onClick={()=> moveSlide("down")}>
+                <button 
+                    className="nextBtn" 
+                    onClick={()=> moveSlide("down")}
+                    aria-label="Next Slide"
+                >
                     <i className="fas fa-chevron-down"></i>
                 </button>
             </div>

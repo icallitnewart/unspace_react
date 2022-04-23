@@ -2415,10 +2415,12 @@ a {
       height: 100%;
       padding: 0px 50px; }
       .join .policy .inner .content .textBox h2, .join .policy .inner .content .textBox h3 {
-        font: bold 26px/1 Montserrat;
-        color: #333;
-        margin-bottom: 15px;
-        text-align: center; }
+        display: flex;
+        justify-content: center; }
+        .join .policy .inner .content .textBox h2 label, .join .policy .inner .content .textBox h3 label {
+          font: bold 26px/1 Montserrat;
+          color: #333;
+          margin-bottom: 20px; }
       .join .policy .inner .content .textBox textarea {
         border: 0;
         width: 100%;

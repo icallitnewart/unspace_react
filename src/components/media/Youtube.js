@@ -65,7 +65,11 @@ function Youtube() {
                                 isVisible: true,
                                 targetItem: video
                             })}>
-                                <img className="pic" src={video.snippet.thumbnails.maxres.url} />
+                                <img 
+                                    className="pic" 
+                                    src={video.snippet.thumbnails.maxres.url} 
+                                    alt={"Youtube Thumbnail: " + title}
+                                />
                                 <div className="textBox">
                                     <div className="playBtn">
                                         <span><i className="fas fa-play"></i></span>

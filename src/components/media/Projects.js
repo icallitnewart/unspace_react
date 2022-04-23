@@ -67,7 +67,11 @@ function Projects() {
 
                                 return (
                                     <article key={index} onClick={()=> setPopup({isVisible: true, targetItem: item})}>
-                                        <img className="pic" src={imgSrc} />
+                                        <img 
+                                            className="pic" 
+                                            src={imgSrc}
+                                            alt={item.title}
+                                        />
                                         <div className="textBox">
                                             <h2>{num}</h2>
                                             <p>{item.title}</p>

@@ -57,7 +57,11 @@ function Gallery({ scrollEffect }, ref) {
                 ? <Loader />
                 : <div className="wrap">
                     <article>
-                        {(bigImg) && <img src={`https://live.staticflickr.com/${bigImg.server}/${bigImg.id}_${bigImg.secret}_b.jpg`} />}
+                        {(bigImg) && 
+                        <img 
+                            src={`https://live.staticflickr.com/${bigImg.server}/${bigImg.id}_${bigImg.secret}_b.jpg`}
+                            alt={bigImg.title}
+                        />}
                     </article>
                     {
                         flickrData.slice(0, 4).map((item, index)=> {
