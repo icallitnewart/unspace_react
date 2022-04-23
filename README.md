@@ -1,4 +1,3 @@
-**작성 중입니다.**
 ## 📖 Contents
 1. [Description](#%EF%B8%8F-description)
 2. [Tech Stacks](#-tech-stacks)
@@ -21,7 +20,7 @@
 - **URL** [https://icallitnewart.github.io/unspace_react/](https://icallitnewart.github.io/unspace_react/)
 - **Concept** 인테리어를 주제로 한 기업형 홈페이지
 - **Aims** 
-  <br/>📌 애니메이션 관련 플러그인 없이 인터랙티브한 홈페이지 제작
+  <br/>📌 애니메이션 관련 플러그인 없이 **인터랙티브한 반응형** 홈페이지 제작
   <br/>📌 flickr API, youtube API, 카카오맵 API 등 다양한 외부 API들을 활용한 데이터 바인딩 
 
 ## 💻 Tech Stacks
@@ -44,6 +43,7 @@ $  npm start
 ## ✨ Features
 ### [Home Page]
 #### ✅ fadeIn, fadeOut 슬라이드 배너
+![Home_fade](https://user-images.githubusercontent.com/65598117/164884812-97faae00-14ab-46d1-b702-f23da00814c2.gif)
   - NEXT 버튼 클릭시 다음 슬라이드로 이동
   - 소이미지 클릭시 해당 슬라이드로 이동
   - 하단의 disc 클릭시 해당 슬라이드로 이동
