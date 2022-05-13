@@ -71,7 +71,7 @@ $  npm start
 ![Home_map](https://user-images.githubusercontent.com/65598117/164721443-cf1c41e3-24fa-44ae-8947-3f9d5e293a23.gif)
   - 버튼 클릭시 해당 지점의 지도와 정보 불러오기
   - 스크린 사이즈 변경시 지도의 center 유지   
-  - 📄 **ᴍᴀɪɴ** [Location.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/home/Location.js) &nbsp;**ʜᴏᴏᴋs** [useKakaoMap.js](https://github.com/icallitnewart/unspace_react/commit/1a041bf8a682bfdc3596b5141541578e5e87958f)
+  - 📄 **ᴍᴀɪɴ** [Location.js](https://github.com/icallitnewart/unspace_react/blob/main/src/components/home/Location.js) &nbsp;**ʜᴏᴏᴋs** [useKakaoMap.js](https://github.com/icallitnewart/unspace_react/blob/main/src/hooks/useKakaoMap.js)
 #### ✅ 스크롤시 각 섹션 fadeIn 애니메이션 효과 적용
 ![Home_scrollEffect](https://user-images.githubusercontent.com/65598117/164722836-266f1068-15ff-4726-9624-d52909a197ce.gif)
   - 📄 **ʜᴏᴏᴋs** [useScrollEffect.js](https://github.com/icallitnewart/unspace_react/blob/main/src/hooks/useScrollEffect.js)
